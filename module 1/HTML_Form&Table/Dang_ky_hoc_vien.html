@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký học viên</title>
+    <style>
+        label{color: darkblue}
+    </style>
+</head>
+<body>
+<h1 style="background: aquamarine;text-align: center">Đăng ký học viên
+</h1>
+<form style="width:100% ;height: 300px;border: 1px solid black" action="/login" method="post">
+
+    <label> Họ và tên  </label>
+    <input type="text" name="yourname">
+    <br>
+    <label> Ngày sinh </label>
+    <input type="date"  name="ngày sinh">
+    <br>
+    <label> Giới tính </label>
+    <input type="radio" name="gender" value="Nam" checked> Nam
+    <input type="radio" name="gender" value="Nữ"> Nữ
+    <br>
+    <label> Địa chỉ </label>
+    <input type="text" name="address">
+    <br>
+    <label> Lớp </label>
+    <select>
+        <option value="Lớp1">Lớp1</option>
+        <option value="Lớp2">Lớp2</option>
+        <option value="Lớp3">Lớp3</option>
+        <option value="Lớp4">Lớp4</option>
+        <option value="Lớp5">Lớp5</option>
+
+    </select>
+    <br>
+    <label> Email </label>
+    <input type="email" name="email">
+    <br>
+    <label> Số điện thoại </label>
+    <input type="text" name="số điện thoại">
+    <br>
+    <input type="submit" value="Đăng ký">
+    <input type="reset" value="Nhập lại">
+</form>
+</body>
+</html>
