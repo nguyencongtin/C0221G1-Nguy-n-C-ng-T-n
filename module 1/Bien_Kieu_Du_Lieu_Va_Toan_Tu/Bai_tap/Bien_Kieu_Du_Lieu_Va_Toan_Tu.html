@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập điểm</title>
+</head>
+<body>
+<script>
+    let diemMonVatLi = parseInt(prompt("Điểm môn vật lý "));
+    let diemMonHoaHoc = parseInt(prompt("Điểm môn hóa học "));
+    let diemMonSinhHoc = parseInt(prompt("Điểm môn sinh học "));
+    let tongDiem =diemMonVatLi+diemMonHoaHoc+diemMonSinhHoc ;
+    document.write("Tổng điểm là:"+ tongDiem);
+    document.write("<br>");
+    let diemTrungBinh = tongDiem /3;
+    document.write("Điểm trung bình là:"+diemTrungBinh);
+</script>
+</body>
+</html>

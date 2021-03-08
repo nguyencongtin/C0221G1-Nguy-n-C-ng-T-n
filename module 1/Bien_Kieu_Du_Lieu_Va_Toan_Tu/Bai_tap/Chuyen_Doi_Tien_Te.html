@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+</head>
+<body>
+<form>
+<label style="padding-left: 25px">Amount</label>
+    <label style="padding-left: 85px">From Currency</label>
+    <label>To Currency</label><br>
+<input id="name" value="" type="text">
+    <select id="chon1">
+        <option value="1">Việt Nam</option>
+        <option value="23000">Mỹ</option>
+    </select>
+    <select id="chon2">
+        <option value="1">Việt Nam</option>
+        <option value="23000">USD</option>
+    </select>
+    <input type="button" onclick="tinhTong()" value="Convert">
+    <p id="ketQua"></p>
+    <script>
+        function tinhTong() {
+            let name = parseInt(document.getElementById("name").value);
+            let from = parseInt(document.getElementById("chon1").value);
+            let to = parseInt(document.getElementById("chon2").value);
+            let result = name * from / to;
+        alert(result);
+        }
+    </script>
+</form>
+</body>
+</html>
