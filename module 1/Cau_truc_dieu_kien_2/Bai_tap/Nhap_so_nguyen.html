@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập số nguyên</title>
+</head>
+<body>
+<script>
+    let soNguyen= parseInt(prompt("Nhập số nguyên:"));
+    let message;
+    if (soNguyen < 0){
+        message= "Số nguyên này nhỏ hơn 0"
+    } else if (soNguyen ==0) {
+        message= "Số nguyên này bằng 0"
+    } else {
+        message= "Số nguyên này lớn hơn 0"
+    }
+        alert(message);
+</script>
+</body>
+</html>

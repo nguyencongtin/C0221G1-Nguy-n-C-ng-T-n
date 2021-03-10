@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên có giá trị lớn nhất trong 3 số nhập vào</title>
+</head>
+<body>
+<script>
+    let soThu1=parseInt(prompt("Nhập số thứ nhất: "));
+    let soThu2=parseInt(prompt("Nhập số thứ hai: "));
+    let soThu3=parseInt(prompt("Nhập số thứ ba: "));
+    let message;
+    if (soThu1 > soThu2) {
+        if (soThu1 > soThu3){
+            message= "Số lớn nhất là số thứ nhất"
+        } else {
+            message= "Số lớn nhất là số thứ ba"
+        }
+    } else {
+        if (soThu2 > soThu3){
+            message= "Số lớn nhất là số thứ hai"
+        } else{
+            message= "Số lớn nhất là số thứ ba"
+        }
+    }
+    alert(message);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng theo doanh số</title>
+</head>
+<body>
+<script>
+    let doanhSoBanHang= parseInt(prompt("Nhập doanh số bán hàng: "));
+    let message;
+    if (doanhSoBanHang <= 100000000 ) {
+        message = "Hoa hồng nhận được là 1%"
+    } if (100000000 < doanhSoBanHang && doanhSoBanHang <= 1000000000 ) {
+        message = "Hoa hồng nhận được là 3%"
+    } if (doanhSoBanHang > 1000000000) {
+        message = "Hoa hồng nhận được là 5%"
+    }
+    alert(message);
+</script>
+</body>
+</html>
