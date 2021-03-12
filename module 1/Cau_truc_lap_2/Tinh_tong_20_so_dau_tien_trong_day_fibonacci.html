@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 20 số đầu tiên trong dãy fibonacci</title>
+</head>
+<body>
+<script>
+    let a=0;
+    let b=1;
+    let ketQua= a + b;
+    for(let i=1;i<=18;i++){
+        let c=a+b;
+        ketQua += c;
+        a=b;
+        b=c;
+    }
+    document.write("Tổng của 20 số đầu tiên trong dãy fibonacci là :" + ketQua);
+</script>
+</body>
+</html>
