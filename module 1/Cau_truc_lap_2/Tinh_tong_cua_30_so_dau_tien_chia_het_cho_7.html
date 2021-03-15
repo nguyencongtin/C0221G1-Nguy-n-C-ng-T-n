@@ -6,13 +6,11 @@
 </head>
 <body>
 <script>
-    let sum=0;
-    for(let i=1;;i++){
-        if(sum%7==0)
-        ketQua +=sum;
-        sum++;
-    }
-    document.write(ketQua);
+    let s=0;
+    for(let i=0;i<30;i++)
+        s+=i;
+    s*=7;
+    document.write("Tổng của 30 số đầu tiên chia hết cho 7 là :"+s);
 </script>
 </body>
 </html>

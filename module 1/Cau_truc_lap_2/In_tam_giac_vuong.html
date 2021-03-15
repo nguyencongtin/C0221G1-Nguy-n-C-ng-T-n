@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+<script type="text/javascript">
+    let N = 5;
+    for(let j=0;j<N;j++) {
+        for(let i=0;i<=j;i++) {
+            document.writeln(" * ")
+        }
+        document.writeln("<br/>")
+    }
+    document.writeln("<br>")
+    for (let j=0;j<N;j++) {
+        for (let i=0;i<N-j; i++ ) {
+            document.writeln( " * ")
+        }
+        document.writeln("<br/>")
+    }
+    document.writeln("<br>")
+    for (let j=0;j<N;j++ ) {
+        for (let i = 0; i<=N; i++) {
+            if(i<N-j){
+                document.writeln("&nbsp;&nbsp;")
+            } else
+                document.writeln(" * ")
+        }
+        document.writeln("<br/>")
+    }
+    document.writeln("<br>")
+    for (let j=0;j<N;j++ ) {
+        for (let i = 0; i<=N; i++) {
+            if(i<=j){
+                document.writeln("&nbsp;&nbsp;")
+            } else
+            document.writeln(" * ")
+        }
+        document.writeln("<br/>")
+    }
+    document.writeln("<br>")
+</script>
+</body>
+</html>
