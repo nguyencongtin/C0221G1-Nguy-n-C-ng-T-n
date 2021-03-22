@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300px" height="400px" style="border:1px solid black;"></canvas>
+<script>
+    class Rectangle{
+        constructor(chieuDai,chieuRong,) {
+        this.chieuDai=chieuDai;
+        this.chieuRong=chieuRong;
+        }
+        setchieuDai(chieuDaiMoi){
+            this.chieuDai=chieuDaiMoi;
+        }
+        setchieuRong(chieuRongMoi){
+            this.chieuRong=chieuRongMoi;
+        }
+        getdienTich(){
+            return this.chieuDai*this.chieuRong;
+    }
+        getchuVi(){
+            return this.chieuDai*this.chieuRong*2;
+    }
+    }
+    let vD= new Rectangle(15,5);
+    let myCanvas = document.getElementById("myCanvas");
+    let ctx = myCanvas.getContext("2d");
+    ctx.fillStyle="#FF0000";
+    ctx.fillRect(100,100,15,5);
+    vD.setchieuDai(50)
+    vD.setchieuRong(15)
+    alert("Chu vi hình chữ nhật là: " + vD.getchuVi()+" Diện tích hình chữ nhật là: "+vD.getdienTich());
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(cilsius) {
+            this.cilsius=cilsius;
+        }
+        doiSangF() {
+            if (this.cilsius < -273) {
+                let kq="Nhiệt độ bạn nhập vào quá thấp nên không thể chuyển sang độ F";
+                return kq;
+            } else {
+                return this.cilsius * 1.8 + 32;
+            }
+        }
+        doiSangK() {
+            if (this.cilsius < -273) {
+                let kq1="Nhiệt độ bạn nhập vào quá thấp nên không thể chuyển sang độ K";
+                return kq1;
+            } else {
+                return this.cilsius + 273.15;
+            }
+        }
+        setcilsius(cilsiusMoi){
+            this.cilsius=cilsiusMoi;
+        }
+    }
+    let vD= new Temperature(25);
+    alert("Độ F tương ứng là: "+vD.doiSangF() +" " + "Độ K tương ứng là: "+vD.doiSangK());
+    vD.setcilsius(prompt("Nhập độ C cần chuyển đổi: "));
+    alert(vD.doiSangF() + " " + vD.doiSangK());
+</script>
+</body>
+</html>
