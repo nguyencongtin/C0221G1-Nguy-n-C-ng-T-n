@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let c="";
+    for(let i=0;i<4;i++){
+        for(let j=0;j<5;j++) {
+            if (i == 0 || i == 3) {
+                c+="*";
+            } else {
+                if (j == 0 || j == 4) {
+                    c+="*";
+                } else {
+                    c+=" ";
+                }
+            }
+        }
+        c+="<br>";
+    }
+    document.writeln("<pre>"+c+"</pre>")
+</script>
+</body>
+</html>

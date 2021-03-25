@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let A='aabcc';
+    let b='adcaa';
+    let count=0;
+    let c=[];
+    for(let i=0;i<b.length;i++) {
+        if (A.indexOf(b[i])>=0 && c.indexOf(b[i])==-1) {
+            c.push(b[i]);
+        }
+    }
+    let ketQua='';
+    function dem(arr,x){
+        let count=0;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]==x){
+                count++;
+            }
+        }
+        return count;
+    }
+    for(let i=0;i<c.length;i++){
+        if(dem(A,c[i])>dem(b,c[i])){
+            count=dem(b,c[i]);
+        } else {
+            count=dem(A,c[i]);
+        }
+        ketQua+=c[i]+' xuất hiện '+count+' lần'+'\n';
+    }
+    alert(ketQua);
+</script>
+</body>
+</html>

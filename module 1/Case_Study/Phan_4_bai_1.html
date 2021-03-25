@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= ('truOng tAn   hai').toLowerCase().split(" ");
+    let b= [];
+    for (let i=0;i<a.length;i++){
+        if(a[i].length>0){
+            b.push(a[i]=a[i][0].toUpperCase() + a[i].slice(1));
+        }
+    }
+    alert(b.join(" "));
+</script>
+</body>
+</html>

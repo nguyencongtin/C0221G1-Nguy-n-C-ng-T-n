@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1=[];
+    let a= parseInt(prompt("Nhập a: "));
+    let b= parseInt(prompt("Nhập b: "));
+    function soNguyenTo(x) {
+        if(x<2){
+            return false;
+        } else {
+            for (let c=2;c<x;c++){
+                if(x%c==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    let A=Array();
+    for (let i=0;i<a;i++){
+        arr1[i]=[];
+        for(let j=0;j<b;j++){
+            arr1[i][j]=prompt("Nhập các phần tử vào mảng: ");
+            if(soNguyenTo(arr1[i][j])){
+                A.push(arr1[i][j])
+            }
+        }
+    }
+    document.writeln("Các số nguyên tố là : "+ A + "<br>"+ "Số lượng số nguyên tố là : " + A.length);
+</script>
+</body>
+</html>
