@@ -6,15 +6,17 @@
 </head>
 <body>
 <script>
-    let a=[5,2,5];
-    let b=[6,3,4];
+    let a=[5,2,5,9,1];
+    let b=[6,3,4,9,2];
+    let index=0;
+    let max= a[0]/b[0];
     for (let i=0;i<a.length;i++){
-        let max= a[0]/b[0];
         if((a[i]/b[i])>max){
             max = a[i]/b[i];
-            alert("Chỉ số của phân số lớn nhất là : "+i);
+            index=i;
         }
     }
+    alert("Chỉ số của phân số lớn nhất là : "+index);
 </script>
 </body>
 </html>

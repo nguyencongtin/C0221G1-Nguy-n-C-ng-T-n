@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    let a=prompt("Nhập ký tự cần kiểm tra : ");
+    let b= 'QWERTYUIOPASDFGHJKLZXCVBNM';
+    let count=0;
+    let c='The Strings is not contain upper char';
+    b.split();
+    for(let i=0;i<a.length;i++) {
+        if (b.indexOf(a[i])>=0) {
+            count++;
+        }
+    }
+    if(count>0) {
+        alert("Số lượng ký tự in hoa là : " + count);
+    } else {
+        alert(c);
+    }
+</script>
+</body>
+</html>

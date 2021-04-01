@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 4</title>
+</head>
+<body>
+<script>
+    class DienThoai {
+        constructor(maDienThoai, ten, hangSanXuat, gia) {
+            this.maDienThoai = maDienThoai;
+            this.ten = ten;
+            this.hangSanXuat = hangSanXuat;
+            this.gia = gia;
+        }
+        getmaDienThoai() {
+            return this.maDienThoai;
+        }
+        getten() {
+            return this.ten;
+        }
+        gethangSanXuat() {
+            return this.hangSanXuat;
+        }
+        getgia() {
+            return this.gia;
+        }
+        setmaDienThoai(maDienThoai2){
+            this.maDienThoai=maDienThoai2;
+        }
+        setten(ten2) {
+            this.ten=ten2;
+        }
+        sethangSanXuat(thangSanXuat2) {
+            this.hangSanXuat=thangSanXuat2;
+        }
+        setgia(gia2) {
+            this.gia=gia2;
+        }
+    }
+    let vD= new DienThoai(1,samsung,samsung,10000000);
+    alert(vD.getmaDienThoai()+vD.getten()+vD.gethangSanXuat()+vD.gia());
+</script>
+</body>
+</html>
