@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06ee5e95-20a3-4462-a5bc-03205221d852" name="Default Changelist" comment="" />
+    <list default="true" id="06ee5e95-20a3-4462-a5bc-03205221d852" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai2/bai_tap/HienThi20SoNguyenToDauTien.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai2/bai_tap/HienThiCacLoaiHinh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai2/bai_tap/HienThiCacSoNguyenToNhoHon100.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai2/thuc_hanh/KiemTraSoNguyenTo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai2/thuc_hanh/ThietKeMenuChoUngDung.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai2/thuc_hanh/TimUocSoChungLonNhat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai2/thuc_hanh/UngDungTinhTienLai.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai3/thuc_hanh/ChuongTrinhChuyenDoiNhietDo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai3/thuc_hanh/DaoNguocCacPhanTuCuaMang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai3/thuc_hanh/TimGiaTriLonNhatTrongMang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/bai3/thuc_hanh/TimGiaTriTrongMang.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module2/com/bai1/bai_tap/DocSoThanhChu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module2/com/bai1/bai_tap/DocSoThanhChu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module 1/Git_HTML/Thuc_hanh/my-new-project/my-new-project" beforeDir="false" afterPath="$PROJECT_DIR$/../module 1/Git_HTML/Thuc_hanh/my-new-project/my-new-project" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,15 +31,22 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1qVUUCjhZWdFTodAOEqzGmGUXJz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../module 1/Cau_truc_lap_2/Hien_thi_cac_so_nguyen_to_dau_tien.html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -30,13 +54,13 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Application.DocSoThanhChu">
-    <configuration name="ChiSoCanNang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bai1.thuc_hanh.ChiSoCanNang" />
+  <component name="RunManager" selected="Application.ChuongTrinhChuyenDoiNhietDo">
+    <configuration name="ChuongTrinhChuyenDoiNhietDo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bai3.thuc_hanh.ChuongTrinhChuyenDoiNhietDo" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bai1.thuc_hanh.*" />
+          <option name="PATTERN" value="com.bai3.thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -44,12 +68,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChuyenDoiTienTe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bai1.bai_tap.ChuyenDoiTienTe" />
+    <configuration name="DaoNguocCacPhanTuCuaMang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bai3.thuc_hanh.DaoNguocCacPhanTuCuaMang" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bai1.bai_tap.*" />
+          <option name="PATTERN" value="com.bai3.thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -57,12 +81,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DocSoThanhChu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bai1.bai_tap.DocSoThanhChu" />
+    <configuration name="HienThiCacSoNguyenToNhoHon100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bai2.bai_tap.HienThiCacSoNguyenToNhoHon100" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bai1.bai_tap.*" />
+          <option name="PATTERN" value="com.bai2.bai_tap.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HienThiLoiChao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bai1.bai_tap.HienThiLoiChao" />
+    <configuration name="TimGiaTriLonNhatTrongMang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bai3.thuc_hanh.TimGiaTriLonNhatTrongMang" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bai1.bai_tap.*" />
+          <option name="PATTERN" value="com.bai3.thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KiemTraNamNhuan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bai1.thuc_hanh.KiemTraNamNhuan" />
+    <configuration name="TimGiaTriTrongMang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bai3.thuc_hanh.TimGiaTriTrongMang" />
       <module name="Module2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bai1.thuc_hanh.*" />
+          <option name="PATTERN" value="com.bai3.thuc_hanh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,19 +121,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.KiemTraNamNhuan" />
-      <item itemvalue="Application.ChiSoCanNang" />
-      <item itemvalue="Application.HienThiLoiChao" />
-      <item itemvalue="Application.ChuyenDoiTienTe" />
-      <item itemvalue="Application.DocSoThanhChu" />
+      <item itemvalue="Application.HienThiCacSoNguyenToNhoHon100" />
+      <item itemvalue="Application.DaoNguocCacPhanTuCuaMang" />
+      <item itemvalue="Application.TimGiaTriTrongMang" />
+      <item itemvalue="Application.TimGiaTriLonNhatTrongMang" />
+      <item itemvalue="Application.ChuongTrinhChuyenDoiNhietDo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DocSoThanhChu" />
-        <item itemvalue="Application.ChuyenDoiTienTe" />
-        <item itemvalue="Application.HienThiLoiChao" />
-        <item itemvalue="Application.ChiSoCanNang" />
-        <item itemvalue="Application.KiemTraNamNhuan" />
+        <item itemvalue="Application.ChuongTrinhChuyenDoiNhietDo" />
+        <item itemvalue="Application.TimGiaTriLonNhatTrongMang" />
+        <item itemvalue="Application.TimGiaTriTrongMang" />
+        <item itemvalue="Application.DaoNguocCacPhanTuCuaMang" />
+        <item itemvalue="Application.HienThiCacSoNguyenToNhoHon100" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +149,8 @@
       <updated>1617164264587</updated>
       <workItem from="1617164268110" duration="12515000" />
       <workItem from="1617239670628" duration="166000" />
+      <workItem from="1617240801725" duration="1560000" />
+      <workItem from="1617249013225" duration="15453000" />
     </task>
     <servers />
   </component>
@@ -132,26 +158,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1366" height="201" key="GridCell.Tab.0.bottom" timestamp="1617185731076">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1617266554139">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1366" height="201" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617185731076" />
-    <state width="1366" height="201" key="GridCell.Tab.0.center" timestamp="1617185731076">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617266554139" />
+    <state width="1366" height="201" key="GridCell.Tab.0.bottom" timestamp="1617272008815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1366" height="201" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617185731076" />
-    <state width="1366" height="201" key="GridCell.Tab.0.left" timestamp="1617185731075">
+    <state width="1366" height="201" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617272008815" />
+    <state width="1366" height="201" key="GridCell.Tab.0.center" timestamp="1617272008815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1366" height="201" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617185731075" />
-    <state width="1366" height="201" key="GridCell.Tab.0.right" timestamp="1617185731076">
+    <state width="1366" height="201" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617272008815" />
+    <state width="1366" height="201" key="GridCell.Tab.0.left" timestamp="1617272008815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1366" height="201" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617185731076" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1617239693382">
+    <state width="1366" height="201" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617272008815" />
+    <state width="1366" height="201" key="GridCell.Tab.0.right" timestamp="1617272008815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617239693382" />
+    <state width="1366" height="201" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617272008815" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1617249018260">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617249018260" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1617269891760">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1617269891760" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1617178832755">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
