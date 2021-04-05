@@ -1,7 +1,7 @@
 package com.bai3.bai_tap;
 import java.util.Arrays;
 import java.util.Scanner;
-public class TimPhanTuLonNhatTrongMang2Chieu {
+class TimPhanTuLonNhatTrongMang2Chieu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập mảng lớn");
