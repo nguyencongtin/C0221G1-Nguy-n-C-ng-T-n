@@ -1,6 +1,8 @@
 package com.bai6.thuc_hanh;
 
-public class Rectangle extends Shape {
+import com.bai7.bai_tap.TrienKhaiInterfaceResizeableChoCacLopHinhHoc.Resizeable;
+
+public class Rectangle extends Shape implements Resizeable {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -50,5 +52,11 @@ public class Rectangle extends Shape {
                 + getLength()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.length+=(percent/200);
+        this.width+=(percent/200);
     }
 }

@@ -1,6 +1,10 @@
 package com.bai6.thuc_hanh;
 
-public class Square extends Rectangle {
+import com.bai7.bai_tap.TrienKhaiInterfaceColorableChoCacLopHinhHoc.Colorable;
+import com.bai7.bai_tap.TrienKhaiInterfaceResizeableChoCacLopHinhHoc.Resizeable;
+
+public class Square extends Rectangle implements Resizeable, Colorable {
+    private int size;
     public Square() {
     }
 
@@ -38,4 +42,9 @@ public class Square extends Rectangle {
                 + ", which is a subclass of "
                 + super.toString();
     }
+
+    @Override
+    public void resize(double percent) {
+        this.size+=(percent/200);
+}
 }

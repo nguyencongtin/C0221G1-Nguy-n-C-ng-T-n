@@ -1,6 +1,8 @@
 package com.bai6.thuc_hanh;
 
-public class Circle extends Shape {
+import com.bai7.bai_tap.TrienKhaiInterfaceResizeableChoCacLopHinhHoc.Resizeable;
+
+public class Circle extends Shape implements Resizeable {
     private double radius = 1.0;
 
     public Circle() {
@@ -37,5 +39,10 @@ public class Circle extends Shape {
                 + getRadius()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.radius+=percent/100;
     }
 }

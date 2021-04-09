@@ -1,6 +1,9 @@
 package com.bai6.thuc_hanh;
 
-public class Shape {
+import com.bai7.bai_tap.TrienKhaiInterfaceColorableChoCacLopHinhHoc.Colorable;
+import com.bai7.bai_tap.TrienKhaiInterfaceResizeableChoCacLopHinhHoc.Resizeable;
+
+public class Shape implements Resizeable, Colorable {
     private String color = "green";
     private boolean filled = true;
 
@@ -34,5 +37,15 @@ public class Shape {
                 + getColor()
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
+    }
+
+
+    @Override
+    public void resize(double percent) {
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println(" Color all four sides.");
     }
 }
