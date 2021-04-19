@@ -1,4 +1,4 @@
-package com.bai12.luyenTapSuDungArrayListLinkedList;
+package com.bai12.bai_tap.luyenTapSuDungArrayListLinkedList;
 
 import java.util.Scanner;
 
