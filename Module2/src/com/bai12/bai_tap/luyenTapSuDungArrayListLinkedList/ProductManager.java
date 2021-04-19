@@ -33,7 +33,8 @@ public class ProductManager extends Product {
                 case 3:
                     System.out.println("Nhập id cần sửa: ");
                    int enter=scanner.nextInt();
-                   for(int i=0;i<productList.size();i++){
+                    scanner.skip("\\R");
+                    for(int i=0;i<productList.size();i++){
                         if(enter==productList.get(i).getId()){
                             int editPrice=Integer.parseInt(scanner.nextLine());
                             String editName= scanner.nextLine();
