@@ -25,7 +25,6 @@ public class ChuoiLienTiepLonNhat {
                 max.addAll(list);
             }
         }
-
         for (Character ch: max) {
             System.out.print(ch);
         }
