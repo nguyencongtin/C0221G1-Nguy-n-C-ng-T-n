@@ -45,58 +45,58 @@ foreign key (id_loai_khach_hang) references loai_khach_hang(id_loai_khach_hang)
 );
 
 create table kieu_thue(
-	id_kieu_thue int auto_increment primary key,
-    ten_kieu_thue varchar(45),
-    gia int
+id_kieu_thue int auto_increment primary key,
+ten_kieu_thue varchar(45),
+gia int
 );
 
 create table loai_dich_vu(
-	id_loai_dich_vu int auto_increment primary key,
-    ten_loai_dich_vu varchar(45)
+id_loai_dich_vu int auto_increment primary key,
+ten_loai_dich_vu varchar(45)
 );
 
 
 create table dich_vu(
-	id_dich_vu int auto_increment primary key,
-    ten_dich_vu varchar(45),
-    dien_tich int,
-    so_tang int,
-    so_nguoi_toi_da varchar(45),
-    chi_phi_thue double,
-    id_kieu_thue int not null,
-	id_loai_dich_vu int not null,
-    trang_thai varchar(45),
-     foreign key (id_kieu_thue) references kieu_thue(id_kieu_thue),
-     foreign key (id_loai_dich_vu) references loai_dich_vu(id_loai_dich_vu)
+id_dich_vu int auto_increment primary key,
+ten_dich_vu varchar(45),
+dien_tich int,
+so_tang int,
+so_nguoi_toi_da varchar(45),
+chi_phi_thue double,
+id_kieu_thue int not null,
+id_loai_dich_vu int not null,
+trang_thai varchar(45),
+foreign key (id_kieu_thue) references kieu_thue(id_kieu_thue),
+foreign key (id_loai_dich_vu) references loai_dich_vu(id_loai_dich_vu)
 );
 
  create table dich_vu_di_kem(
-		id_dich_vu_di_kem int auto_increment primary key,
-        ten_dich_vu_di_kem varchar(45),
-        gia int,
-        don_vi int,
-        trang_thai_kha_dung varchar(45)
-    );
+id_dich_vu_di_kem int auto_increment primary key,
+ten_dich_vu_di_kem varchar(45),
+gia int,
+don_vi int,
+trang_thai_kha_dung varchar(45)
+);
 
 create table hop_dong(
-	id_hop_dong int auto_increment primary key,
-    id_nhan_vien int not null,
-    id_khach_hang int not null,
-    id_dich_vu int not null,
-    ngay_lam_hop_dong date,
-    ngay_ket_thuc date,
-    tien_dat_coc int,
-    tong_tien int,
-    foreign key (id_nhan_vien) references nhan_vien(id_nhan_vien),
-    foreign key (id_khach_hang) references khach_hang(id_khach_hang),
-    foreign key (id_dich_vu) references dich_vu(id_dich_vu)
+id_hop_dong int auto_increment primary key,
+id_nhan_vien int not null,
+id_khach_hang int not null,
+id_dich_vu int not null,
+ngay_lam_hop_dong date,
+ngay_ket_thuc date,
+tien_dat_coc int,
+tong_tien int,
+foreign key (id_nhan_vien) references nhan_vien(id_nhan_vien),
+foreign key (id_khach_hang) references khach_hang(id_khach_hang),
+foreign key (id_dich_vu) references dich_vu(id_dich_vu)
 );
 
 create table hop_dong_chi_tiet(
-	id_hop_dong_chi_tiet int auto_increment primary key,
-    id_hop_dong int not null,
-    id_dich_vu_di_kem int not null,
-    so_luong int,
-    foreign key (id_hop_dong) references hop_dong(id_hop_dong),
-    foreign key (id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem)
-    );
+id_hop_dong_chi_tiet int auto_increment primary key,
+id_hop_dong int not null,
+id_dich_vu_di_kem int not null,
+so_luong int,
+foreign key (id_hop_dong) references hop_dong(id_hop_dong),
+foreign key (id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem)
+);
