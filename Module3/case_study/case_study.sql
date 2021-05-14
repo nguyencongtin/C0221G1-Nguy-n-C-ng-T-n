@@ -70,7 +70,11 @@ foreign key (id_kieu_thue) references kieu_thue(id_kieu_thue),
 foreign key (id_loai_dich_vu) references loai_dich_vu(id_loai_dich_vu)
 );
 
+<<<<<<< HEAD
  create table dich_vu_di_kem(
+=======
+create table dich_vu_di_kem(
+>>>>>>> 70f1c8aff38adfac59067a5d4a0ac8333fb3bb95
 id_dich_vu_di_kem int auto_increment primary key,
 ten_dich_vu_di_kem varchar(45),
 gia int,
@@ -99,4 +103,8 @@ id_dich_vu_di_kem int not null,
 so_luong int,
 foreign key (id_hop_dong) references hop_dong(id_hop_dong),
 foreign key (id_dich_vu_di_kem) references dich_vu_di_kem(id_dich_vu_di_kem)
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> 70f1c8aff38adfac59067a5d4a0ac8333fb3bb95
