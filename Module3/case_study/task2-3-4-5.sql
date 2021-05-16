@@ -17,6 +17,7 @@ join loai_khach_hang lkh on lkh.id_loai_khach_hang = kh.id_loai_khach_hang
 where lkh.ten_loai_khach_hang ="Diamond" 
 group by hd.id_khach_hang
 order by so_lan asc;
+
 -- Task 5 Hien thi cac thong tin cho tat ca khach hang da tung dat phong ( ke ca chua dat phong )
 select kh.id_khach_hang, kh.ho_ten, lkh.ten_loai_khach_hang, hd.id_hop_dong, dv.ten_dich_vu, hd.ngay_lam_hop_dong,  hd.ngay_ket_thuc,sum(dv.chi_phi_thue+hdct.so_luong* dvdk.gia) as tong_tien
 from khach_hang kh
