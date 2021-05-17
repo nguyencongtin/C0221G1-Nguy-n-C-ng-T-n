@@ -18,7 +18,7 @@ where credit between 3 and 5;
 SET SQL_SAFE_UPDATES = 0;
 update student
 set class_id = 2
-where student_name="Hung";
+where student_name like "Hung";
 
 -- Hien thi cac thong tin: student_name, sub_name, mark. Du lieu sap xep theo diem thi (mark) giam dan. neu trung sap theo ten tang dan.
 select s.student_name, sub.sub_name, m.*
