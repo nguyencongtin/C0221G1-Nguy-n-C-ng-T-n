@@ -19,11 +19,11 @@ group by hd.id_khach_hang
 order by so_lan asc;
 
 -- Task 5 Hien thi cac thong tin cho tat ca khach hang da tung dat phong ( ke ca chua dat phong )
-select kh.id_khach_hang, kh.ho_ten, lkh.ten_loai_khach_hang, hd.id_hop_dong, dv.ten_dich_vu, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc,sum(dv.chi_phi_thue+hdct.so_luong* dvdk.gia) as tong_tien
+select kh.id_khach_hang, kh.ho_ten, lkh.ten_loai_khach_hang, dv.ten_dich_vu, hd.ngay_lam_hop_dong, hd.ngay_ket_thuc, sum((dvdk.gia*hdct.so_luong)+dv.chi_phi_thue) as "tong_tien"
 from khach_hang kh
-left join hop_dong hd on kh.id_khach_hang = hd.id_khach_hang 
-left join loai_khach_hang lkh  on kh.id_loai_khach_hang = lkh.id_loai_khach_hang
+left join loai_khach_hang lkh on kh.id_loai_khach_hang = lkh.id_loai_khach_hang 
+left join hop_dong hd on  kh.id_khach_hang = hd.id_khach_hang
 left join dich_vu dv on hd.id_dich_vu = dv.id_dich_vu
-left join hop_dong_chi_tiet hdct on hd.id_hop_dong = hdct.id_hop_dong
+left join hop_dong_chi_tiet hdct on  hd.id_hop_dong = hdct.id_hop_dong
 left join dich_vu_di_kem dvdk on hdct.id_dich_vu_di_kem = dvdk.id_dich_vu_di_kem
-group by kh.id_khach_hang;
+group by kh.id_khach_hang, hd.id_hop_dong;
