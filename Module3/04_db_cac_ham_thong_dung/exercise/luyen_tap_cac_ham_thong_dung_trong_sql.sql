@@ -9,9 +9,9 @@ join mark m on s.sub_id = m.sub_id
 group by s.sub_name,m.mark
 having m.mark >= all (select mark from mark group by mark.sub_id);
 
-select s.student_id,s.student_name, avg(m.mark)
+select * , avg(m.mark)
 from student s 
-join mark m on s.student_id = m.student_id
-group by s.student_id,s.student_name
+left join mark m on s.student_id = m.student_id
+group by s.student_id
 order by m.mark desc;
-
+select * from mark;
