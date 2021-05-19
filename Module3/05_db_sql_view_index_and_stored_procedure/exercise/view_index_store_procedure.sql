@@ -63,15 +63,15 @@ call sp_insert_product("Car6","VinFast","9999","10","Silver","New");
 
 -- create store procedure to update product
 delimiter //
-create procedure sp_update_product_price(p_id int,p_price int)
+create procedure sp_update_product(p_id int,p_code varchar(50),p_name varchar(50) ,p_price int,p_amount int,p_description varchar(50),p_status varchar(50))
 BEGIN
 update products
-set product_price = p_price
+set product_code = p_code,product_name = p_name,product_price = p_price,product_amount = p_amount,product_description = p_description,product_status = p_status
 where id = p_id;
 END; //
 delimiter ;
 
-call sp_update_product_price (1,7777);
+call sp_update_product(1,"Car001","Mercedess","5005","10","Black","New");
 
 -- create store procedure to delete
 delimiter //
