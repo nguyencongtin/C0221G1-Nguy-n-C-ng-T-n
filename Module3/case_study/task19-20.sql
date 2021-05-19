@@ -5,13 +5,14 @@ SET SQL_SAFE_UPDATES = 0;
 SET FOREIGN_KEY_CHECKS= 0;
 update dich_vu_di_kem
 set gia = gia *2
-where dich_vu_di_kem.id_dich_vu_di_kem = all (select temp.id_dich_vu_di_kem from(
-select dvdk.id_dich_vu_di_kem from dich_vu_di_kem dvdk
-join hop_dong_chi_tiet hdct on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
-join hop_dong hd on hdct.id_hop_dong = hd.id_hop_dong
-where year(ngay_lam_hop_dong) = 2019
-group by dvdk.id_dich_vu_di_kem 
-having sum(so_luong) > 10)temp);
+where dich_vu_di_kem.id_dich_vu_di_kem = all (select temp.id_dich_vu_di_kem 
+                                              from(select dvdk.id_dich_vu_di_kem 
+											  from dich_vu_di_kem dvdk
+											  join hop_dong_chi_tiet hdct on dvdk.id_dich_vu_di_kem = hdct.id_dich_vu_di_kem
+											  join hop_dong hd on hdct.id_hop_dong = hd.id_hop_dong
+											  where year(ngay_lam_hop_dong) = 2019
+											  group by dvdk.id_dich_vu_di_kem 
+											  having sum(so_luong) > 10)temp);
 SET FOREIGN_KEY_CHECKS= 1;
 
 -- Task 20 Hien thi thong tin cua tat ca cac nhan vien va khach hang co trong he thong
