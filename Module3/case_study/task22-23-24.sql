@@ -28,3 +28,4 @@ create procedure sp_2()
 BEGIN
 
 END; //
+SET FOREIGN_KEY_CHECKS= 1;

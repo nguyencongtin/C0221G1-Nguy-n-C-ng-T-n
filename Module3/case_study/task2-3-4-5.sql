@@ -26,4 +26,4 @@ left join hop_dong hd on  kh.id_khach_hang = hd.id_khach_hang
 left join dich_vu dv on hd.id_dich_vu = dv.id_dich_vu
 left join hop_dong_chi_tiet hdct on  hd.id_hop_dong = hdct.id_hop_dong
 left join dich_vu_di_kem dvdk on hdct.id_dich_vu_di_kem = dvdk.id_dich_vu_di_kem
-group by kh.id_khach_hang, hd.id_hop_dong;
+group by kh.id_khach_hang;

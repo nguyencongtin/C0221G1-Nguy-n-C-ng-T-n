@@ -18,16 +18,18 @@ SET SQL_SAFE_UPDATES = 0;
 SET FOREIGN_KEY_CHECKS= 0;
 update khach_hang
 set id_loai_khach_hang = 1
-where (id_loai_khach_hang = 2) and id_khach_hang in (select temp.id_khach_hang 
-													 from ( select kh.id_khach_hang
-															from khach_hang kh
-															left join loai_khach_hang lkh on kh.id_loai_khach_hang = lkh.id_loai_khach_hang 
-															left join hop_dong hd on  kh.id_khach_hang = hd.id_khach_hang
-															left join dich_vu dv on hd.id_dich_vu = dv.id_dich_vu
-															left join hop_dong_chi_tiet hdct on  hd.id_hop_dong = hdct.id_hop_dong
-															left join dich_vu_di_kem dvdk on hdct.id_dich_vu_di_kem = dvdk.id_dich_vu_di_kem
-															group by kh.id_khach_hang
-															having sum((dvdk.gia*hdct.so_luong)+dv.chi_phi_thue) > 10000000 )temp);
+where (id_loai_khach_hang = 2) 
+and id_khach_hang in (select temp.id_khach_hang 
+						from ( select kh.id_khach_hang 
+								from khach_hang kh
+								join loai_khach_hang lkh on kh.id_loai_khach_hang = lkh.id_loai_khach_hang 
+								join hop_dong hd on  kh.id_khach_hang = hd.id_khach_hang
+								join dich_vu dv on hd.id_dich_vu = dv.id_dich_vu
+								join hop_dong_chi_tiet hdct on  hd.id_hop_dong = hdct.id_hop_dong
+								join dich_vu_di_kem dvdk on hdct.id_dich_vu_di_kem = dvdk.id_dich_vu_di_kem
+								where year(hd.ngay_lam_hop_dong)= 2019
+								group by kh.id_khach_hang
+								having sum((dvdk.gia*hdct.so_luong)+dv.chi_phi_thue) > 10000000 )temp);
 SET FOREIGN_KEY_CHECKS=1;
 -- Task 18 Xoa nhung khach hang co hop dong truoc nam 2016 
 SET SQL_SAFE_UPDATES = 0;
