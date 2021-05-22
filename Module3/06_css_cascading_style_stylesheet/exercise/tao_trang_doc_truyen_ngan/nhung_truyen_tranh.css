@@ -1,0 +1,42 @@
+body{
+    margin: 10px;
+    line-height: 25px;
+    background: pink;
+}
+#header{
+    height: 70px;
+    background: lightskyblue;
+    text-align: center;
+    border: solid;
+    color: purple;
+    padding-top: 10px;
+}
+#side h3{
+    width: 100px;
+    height: 50px;
+    background: chocolate;
+    list-style: none;
+    text-align: center;
+    margin: 15px;
+    padding: 5px;
+}
+#side li{
+    width: 100px;
+    height: 50px;
+    background: springgreen;
+    list-style: none;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+#side li a{
+    text-align: center;
+    background: springgreen;
+    color: black;
+}
+#footer{
+    background: lightskyblue;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
