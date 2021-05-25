@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background: white;
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+.nav {
+    background: pink;
+}
+.nav .sup-sub li {
+    padding: 5px 5px;
+}
+.nav a {
+    text-decoration: none;
+}
+.nav li :hover {
+    color: red;
+}
+.nav .sup-sub {
+    display: flex;
+    justify-content: center;
+}
+.main {
+    display: flex;
+}
+.main .left {
+
+    width: 30%;
+}
+.main .left .sub-left {
+    padding: 0px 10px;
+}
+.main .right {
+
+    width: 70%;
+}
+.main .right .sub-right {
+    padding: 0px 10px;
+}
+.footer {
+    width: 100%;
+    background: pink;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    clear: bottom;
+}
