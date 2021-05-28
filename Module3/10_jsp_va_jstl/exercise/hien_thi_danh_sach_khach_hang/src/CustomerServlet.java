@@ -1,4 +1,4 @@
-import Model.Customer;
+import model.Customer;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
