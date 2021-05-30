@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
             crossorigin="anonymous"></script>
-</head>
+</head>x`
 <body>
 <div class="container">
     <h1>Edit Product</h1>
@@ -23,12 +23,12 @@
             <p>${message}</p>
         </c:if>
         <form method="post">
-            <div class="form-group">
-                <label for="formGroupExampleInput">Id</label>
-                <input disabled type="text" value="${product.id}" name="id" class="form-control"
-                       id="formGroupExampleInput"
-                       placeholder="Example input placeholder">
-            </div>
+<%--            <div class="form-group">--%>
+<%--                <label for="formGroupExampleInput">Id</label>--%>
+<%--                <input hidden type="text" value="${product.id}" name="id" class="form-control"--%>
+<%--                       id="formGroupExampleInput"--%>
+<%--                       placeholder="Example input placeholder">--%>
+<%--            </div>--%>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Name</label>
                 <input type="text" value="${product.name}" name="name" class="form-control" id="formGroupExampleInput2"

@@ -23,12 +23,12 @@
             <p>${message}</p>
         </c:if>
         <form method="post">
-            <div class="form-group">
-                <label for="formGroupExampleInput">Id</label>
-                <input disabled type="text" value="${product.id}" name="id" class="form-control"
-                       id="formGroupExampleInput"
-                       placeholder="Example input placeholder">
-            </div>
+<%--            <div class="form-group">--%>
+<%--                <label for="formGroupExampleInput">Id</label>--%>
+<%--                <input hidden type="text" value="${product.id}" name="id" class="form-control"--%>
+<%--                       id="formGroupExampleInput"--%>
+<%--                       placeholder="Example input placeholder">--%>
+<%--            </div>--%>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Name</label>
                 <input type="text" value="${product.name}" name="name" class="form-control" id="formGroupExampleInput2"
