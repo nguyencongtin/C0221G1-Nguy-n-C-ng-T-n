@@ -42,10 +42,10 @@
         </c:forEach>
     </table>
     <form action="/user?action=sort" method="post">
-        <input  type="submit" name="sort">
+        <input  type="submit" name="sort" value="Sort by name">
     </form>
     <form  action="/user?action=search" method="post">
-        <input type="text" name="search">
+        <input type="text" name="search" placeholder="Search by name">
         <input type="submit">
     </form>
 </div>

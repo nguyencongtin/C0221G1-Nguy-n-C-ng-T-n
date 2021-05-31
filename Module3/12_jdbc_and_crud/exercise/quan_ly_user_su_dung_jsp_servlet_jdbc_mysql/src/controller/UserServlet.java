@@ -39,6 +39,27 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action==null){
+            action="";
+        }
+        switch (action){
+            case "create":
+                showNewForm(request,response);
+                break;
+            case "edit":
+                showFormEdit(request,response);
+                break;
+            case "delete":
+                remove(request,response);
+                break;
+            default:
+                showUserList(request,response);
+                break;
+        }
+    }
+
     private void remove(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         boolean check= iUserService.remove(id);
@@ -98,26 +119,6 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("action");
-        if (action==null){
-            action="";
-        }
-        switch (action){
-            case "create":
-                showNewForm(request,response);
-                break;
-            case "edit":
-                showFormEdit(request,response);
-                break;
-            case "delete":
-                remove(request,response);
-                break;
-            default:
-                showUserList(request,response);
-                break;
-        }
-    }
 
     private void sortByName(HttpServletRequest request, HttpServletResponse response) {
         UserRepository userRepository= new UserRepository();
@@ -135,7 +136,7 @@ public class UserServlet extends HttpServlet {
 
     private void searchByCountry(HttpServletRequest request, HttpServletResponse response) {
 
-        String country=request.getParameter("country");
+        String country=request.getParameter("search");
         List<User> list = iUserService.findByCountry(country);
         request.setAttribute("user", list);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");

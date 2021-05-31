@@ -32,6 +32,27 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action==null){
+            action="";
+        }
+        switch (action){
+            case "create":
+                showNewForm(request,response);
+                break;
+            case "edit":
+                showFormEdit(request,response);
+                break;
+            case "delete":
+                remove(request,response);
+                break;
+            default:
+                showUserList(request,response);
+                break;
+        }
+    }
+
     private void remove(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         boolean check= iUserService.remove(id);
@@ -90,28 +111,6 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("action");
-        if (action==null){
-            action="";
-        }
-        switch (action){
-            case "create":
-                showNewForm(request,response);
-                break;
-            case "edit":
-                showFormEdit(request,response);
-                break;
-            case "delete":
-                remove(request,response);
-                break;
-            default:
-                showUserList(request,response);
-                break;
-        }
-    }
-
 
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
