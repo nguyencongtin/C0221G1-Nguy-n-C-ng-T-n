@@ -41,10 +41,10 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/view/customer/create.jsp">Create</a>
-                    <a class="dropdown-item" href="/view/customer/list.jsp">Edit</a>
+                    <a class="dropdown-item" href="/view/customer/edit.jsp">Edit</a>
                     <a class="dropdown-item" href="/view/customer/delete.jsp">Delete</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/view/customer/list.jsp">Show List</a>
                 </div>
             </li>
             <li class="nav-item dropdown">

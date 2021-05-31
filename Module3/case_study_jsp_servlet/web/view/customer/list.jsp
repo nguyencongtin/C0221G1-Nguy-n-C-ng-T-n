@@ -14,7 +14,9 @@
                        height="60" width="60"/></div>
 </div>
 <h1 class="d-flex justify-content-center">Customer List</h1>
-
+<p>
+    <a href="/">Back to home</a>
+</p>
 <div class="col-4 d-flex">
     <form class="form-inline my-2 my-lg-0 d-flex">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
