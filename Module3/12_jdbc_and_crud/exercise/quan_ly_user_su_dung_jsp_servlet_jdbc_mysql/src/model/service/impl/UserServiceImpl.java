@@ -34,8 +34,8 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public List<User> findByCountry(String country1) {
-        return userRepository.findByCountry(country1);
+    public List<User> findByCountry(String country) {
+        return userRepository.findByCountry(country);
     }
 
     @Override

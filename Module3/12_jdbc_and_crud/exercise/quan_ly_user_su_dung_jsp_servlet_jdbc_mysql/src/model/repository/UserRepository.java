@@ -20,6 +20,8 @@ public class UserRepository {
     final String DELETE_USER= "delete from users\n"+
             "where id =?;";
     final String SELECT_BY_NAME="select * from users order by `name`;";
+    final String FIND_BY_COUNTRY="select* from users\n" +
+            "where country like ?;";
     public List<User> findByAll() {
         // kết nối databe=> lấy lại cái danh sách
         Connection connection =baseRepository.connectDataBase();
@@ -129,27 +131,34 @@ public class UserRepository {
         try {
             Connection connection = baseRepository.connectDataBase();
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_NAME);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                String name = rs.getString("name");
-                String email = rs.getString("email");
-                String country = rs.getString("country");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country = resultSet.getString("country");
                 users.add(new User(id, name, email, country));
             }
         } catch (SQLException e) { e.printStackTrace();}
         return users;
     }
 
-    public List<User> findByCountry(String country1) {
-        List<User> userList = findByAll();
-        List<User> list=new ArrayList<>();
-        for(User u : userList ) {
-            if (u.getCountry().contains(country1)) {
-                list.add(u);
+    public List<User> findByCountry(String country) {
+        Connection connection = baseRepository.connectDataBase();
+        List<User> users = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_COUNTRY);
+            preparedStatement.setString(1,"%"+country+"%");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country1 = resultSet.getString("country");
+                users.add(new User(id, name, email, country1));
             }
-        }
-        return list;
+        } catch (SQLException e) { e.printStackTrace();}
+        return users;
     }
     public static void main(String[] args) {
 //        UserRepository studentRepository = new UserRepository();

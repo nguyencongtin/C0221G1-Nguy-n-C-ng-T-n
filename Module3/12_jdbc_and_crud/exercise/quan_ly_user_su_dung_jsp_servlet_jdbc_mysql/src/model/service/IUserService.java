@@ -11,6 +11,6 @@ public interface IUserService {
     boolean update(int id, User user);
     boolean add(User user);
     boolean remove(int id);
-    List<User> findByCountry(String country1);
+    List<User> findByCountry(String country);
     List<User> sortByName();
 }

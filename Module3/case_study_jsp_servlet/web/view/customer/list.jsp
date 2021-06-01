@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Customer List</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <script src="../../css/bootstrap.min.js"></script>
     <script src="../../css/jquery-3.6.0.min.js"></script>
-
+    <script src="../../css/popper.min.js"></script>
+    <script src="../../css/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container-fluid align-items-center justify-content-between d-flex  ">
@@ -41,7 +41,7 @@
     </tr>
     <c:forEach items="${customer}" var ="customer">
         <tr>
-            <td><a href="customer?action=view&id=${customer.getId()}">${customer.getId()}</a></td>
+            <td><a href="/customer?action=view&id=${customer.getId()}">${customer.getId()}</a></td>
             <td>${customer.id}</td>
             <td>${customer.name}</td>
             <td>${customer.birthday}</td>
@@ -51,13 +51,42 @@
             <td>${customer.email}</td>
             <td>${customer.typeId}</td>
             <td>${customer.address}</td>
-            <td><a href="customer?action=view&id=${customer.getId()}">${customer.getId()}Show</a></td>
-            <td><a href="customer?action=edit&id=${customer.id}">Edit</a></td>
-            <td><a href="customer?action=delete&id=${customer.id}">Delete</a></td>
+            <td><a href="/customer?action=view&id=${customer.getId()}">${customer.getId()}Show</a></td>
+            <td><a href="/customer?action=edit&id=${customer.id}">Edit</a></td>
+            <td><button type="button" id="delete" value="delete" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Delete</button></td>
+
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-header flex-column">
+                            <div class="icon-box">
+                                <i class="material-icons"></i>
+                            </div>
+                            <h4 class="modal-title w-100">Are you sure?</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Do you really want to delete these records? This process cannot be undone.</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-danger"><a href="/customer?action=delete&id=${customer.id}">Delete</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </tr>
     </c:forEach>
 </table>
 </div>
+<%--<div class="text-center">--%>
+<%--    <tr>--%>
+<%--        <td>--%>
+<%--            --%>
+<%--        </td>--%>
+<%--    </tr>--%>
+<%--</div>--%>
 
 
 </body>
