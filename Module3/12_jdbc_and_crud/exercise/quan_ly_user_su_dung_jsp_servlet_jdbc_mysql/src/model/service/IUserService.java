@@ -12,4 +12,5 @@ public interface IUserService {
     boolean add(User user);
     boolean remove(int id);
     List<User> findByCountry(String country1);
+    List<User> sortByName();
 }

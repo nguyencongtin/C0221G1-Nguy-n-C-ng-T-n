@@ -119,10 +119,8 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-
     private void sortByName(HttpServletRequest request, HttpServletResponse response) {
-        UserRepository userRepository= new UserRepository();
-        List<User> listSort = userRepository.sortByName();
+        List<User> listSort = iUserService.sortByName();
         request.setAttribute("user", listSort);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
         try {

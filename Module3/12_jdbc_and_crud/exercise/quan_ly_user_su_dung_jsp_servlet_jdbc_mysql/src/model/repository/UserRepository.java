@@ -123,6 +123,7 @@ public class UserRepository {
         }
         return check;
     }
+
     public List<User> sortByName() {
         List<User> users = new ArrayList<>();
         try {
