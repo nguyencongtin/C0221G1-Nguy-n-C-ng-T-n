@@ -21,8 +21,8 @@
     <a href="/">Back to home</a>
 </p>
 <div class="col-4 d-flex">
-    <form class="form-inline my-2 my-lg-0 d-flex">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <form class="form-inline my-2 my-lg-0 d-flex" action="/customer?action=search" method="post">
+        <input class="form-control mr-sm-2" type="search" name="nameSearch" placeholder="Search" aria-label="Search">
         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
     </form>
 </div>
@@ -110,7 +110,6 @@
     });
     function myfunction(id) {
         document.getElementById("button-delete").value=id;
-        alert(id);
     }
 </script>
 

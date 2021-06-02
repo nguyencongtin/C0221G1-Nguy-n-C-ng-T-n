@@ -25,7 +25,12 @@
         <c:if test="${message!=null}">
             <p>${message}</p>
         </c:if>
-        <form method="post">
+        <form method="post" action="/customer?action=edit&id=${customer.idCustomer}">
+            <div class="form-group">
+                <label for="formGroupExampleInput1">IdTypeCustomer</label>
+                <input type="text" value="${customer.idTypeCustomer}" name="idTypeCustomer" class="form-control" id="formGroupExampleInput1"
+                       placeholder="Another input placeholder">
+            </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Name</label>
                 <input type="text" value="${customer.name}" name="name" class="form-control" id="formGroupExampleInput2"
@@ -33,13 +38,13 @@
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput3">Birthday</label>
-                <input type="text" class="form-control" name="birthday" value="${customer.birthday}"
+                <input type="text" class="form-control" name="dayOfBirth" value="${customer.dayOfBirth}"
                        id="formGroupExampleInput3"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput4">Gender</label>
-                <input type="text" class="form-control" name="gender" value="${customer.gender}"
+                <label for="formGroupExampleInput4">Sex</label>
+                <input type="text" class="form-control" name="sex" value="${customer.sex}"
                        id="formGroupExampleInput4"
                        placeholder="Another input placeholder">
             </div>
@@ -50,27 +55,21 @@
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">Phone</label>
-                <input type="text" class="form-control" name="phone" value="${customer.phone}"
+                <label for="formGroupExampleInput6">Phone</label>
+                <input type="text" class="form-control" name="phoneNumber" value="${customer.phoneNumber}"
                        id="formGroupExampleInput6"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">Email</label>
+                <label for="formGroupExampleInput7">Email</label>
                 <input type="text" class="form-control" name="email" value="${customer.email}"
                        id="formGroupExampleInput7"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">TypeId</label>
-                <input type="text" class="form-control" name="typeId" value="${customer.typeId}"
-                       id="formGroupExampleInput8"
-                       placeholder="Another input placeholder">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput5">Address</label>
+                <label for="formGroupExampleInput8">Address</label>
                 <input type="text" class="form-control" name="address" value="${customer.address}"
-                       id="formGroupExampleInput9"
+                       id="formGroupExampleInput8"
                        placeholder="Another input placeholder">
             </div>
             <div class="d-fex justify-content-center">

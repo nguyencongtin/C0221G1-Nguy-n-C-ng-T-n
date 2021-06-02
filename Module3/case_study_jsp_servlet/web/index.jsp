@@ -40,7 +40,6 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/view/customer/create.jsp">Create</a>
-                    <a class="dropdown-item" href="/view/customer/edit.jsp">Edit</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/customer">Show List</a>
                 </div>

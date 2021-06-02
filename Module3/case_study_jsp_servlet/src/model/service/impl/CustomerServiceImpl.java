@@ -22,4 +22,20 @@ public class CustomerServiceImpl implements ICustomerService {
     public boolean deleteCustomer(int id) {
         return customerRepository.deleteCustomer(id);
     }
+
+    @Override
+    public boolean updateCustomer(int id, Customer customer) {
+        return customerRepository.updateCustomer(id,customer);
+    }
+
+    @Override
+    public Customer getCustomerById(int id) {
+        return customerRepository.getCustomerById(id);
+    }
+
+    @Override
+    public List<Customer> findByName(String name) {
+        return customerRepository.findByName(name);
+    }
+
 }
