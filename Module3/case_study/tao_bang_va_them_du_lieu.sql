@@ -1,4 +1,5 @@
-create database case_study;
+drop database if exists case_study;
+create database if not exists case_study;
 use case_study;
 create table vi_tri(
 id_vi_tri int auto_increment primary key,
@@ -42,6 +43,7 @@ id_khach_hang int auto_increment primary key,
 id_loai_khach_hang int not null,
 ho_ten varchar(45),
 ngay_sinh date ,
+gioi_tinh varchar(45),
 so_cmtnd varchar(45),
 sdt varchar(45),
 email varchar(45),
@@ -137,16 +139,16 @@ values ("Diamond"),
 ("Silver"),
 ("Member");
 
-insert into khach_hang(id_loai_khach_hang,ho_ten,ngay_sinh,so_cmtnd,sdt,email,dia_chi)
-values (1,"Oanh","1990-05-05","123321456","0900123456","oanh@gmail.com","danang"),
-(2,"Chanh","1966-01-10","987412365","0999951159","chanh@gmail.com","quangtri"),
-(3,"Long","1966-01-10","987412365","0989898989","long@gmail.com","quangtri"),
-(3,"Nhan","1986-03-25","987412365","0903987369","nhan@gmail.com","quangtri"),
-(1,"Hoang","2000-05-15","563214789","0999999999","hoang@gmail.com","quangngai"),
-(4,"Quoc","2000-01-15","563214789","0999999999","quoc@gmail.com","hue"),
-(1,"Bach","2000-01-15","563214789","0999999999","bach@gmail.com","vinh"),
-(4,"Ly","2000-01-15","563214789","0999999999","ly@gmail.com","vinh"),
-(2,"Quy","2000-01-15","563214789","0999999999","quy@gmail.com","hue");
+insert into khach_hang(id_loai_khach_hang,ho_ten,ngay_sinh,gioi_tinh,so_cmtnd,sdt,email,dia_chi)
+values (1,"Oanh","1990-05-05","nu","123321456","0900123456","oanh@gmail.com","danang"),
+(2,"Chanh","1966-01-10","nu","987412365","0999951159","chanh@gmail.com","quangtri"),
+(3,"Long","1966-01-10","nu","987412365","0989898989","long@gmail.com","quangtri"),
+(3,"Nhan","1986-03-25","nu","987412365","0903987369","nhan@gmail.com","quangtri"),
+(1,"Hoang","2000-05-15","nu","563214789","0999999999","hoang@gmail.com","quangngai"),
+(4,"Quoc","2000-01-15","nam","563214789","0999999999","quoc@gmail.com","hue"),
+(1,"Bach","2000-01-15","nam","563214789","0999999999","bach@gmail.com","vinh"),
+(4,"Ly","2000-01-15","nam","563214789","0999999999","ly@gmail.com","vinh"),
+(2,"Quy","2000-01-15","nam","563214789","0999999999","quy@gmail.com","hue");
 
 insert into kieu_thue(ten_kieu_thue,gia)
 values ("nam",1505),
@@ -191,3 +193,35 @@ values (1,1,5),
 (5,3,3),
 (7,1,3)
 ;
+drop procedure if exists create_customer;
+delimiter //
+create procedure create_customer(
+p_id_loai_khach int,
+p_ho_ten varchar(45),
+p_ngay_sinh date,
+p_gioi_tinh varchar(45),
+p_so_cmnd varchar(45),
+p_so_dien_thoai varchar(45),
+p_email varchar(45),
+p_dia_chi varchar(45)
+)
+begin
+	if (p_id_loai_khach in (select id_loai_khach_hang from loai_khach_hang))
+		then 
+		insert into khach_hang(id_loai_khach_hang,ho_ten,ngay_sinh,gioi_tinh,so_cmtnd,sdt,email,dia_chi)
+		value(
+            p_id_loai_khach,
+            p_ho_ten,
+            p_ngay_sinh,
+            p_gioi_tinh,
+            p_so_cmnd,
+            p_so_dien_thoai,
+            p_email,
+            p_dia_chi);
+		else
+		SIGNAL SQLSTATE '02000' SET MESSAGE_TEXT = 'them that bai';
+	end if;
+end;
+// delimiter ;
+
+select* from khach_hang;

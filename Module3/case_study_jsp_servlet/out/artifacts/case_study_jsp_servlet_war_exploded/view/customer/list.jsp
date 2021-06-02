@@ -1,12 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Customer List</title>
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <script src="../../css/jquery-3.6.0.min.js"></script>
-    <script src="../../css/popper.min.js"></script>
-    <script src="../../css/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../css/dataTables.bootstrap.min.css">
+
 </head>
 <body>
 <div class="container-fluid align-items-center justify-content-between d-flex  ">
@@ -14,6 +14,9 @@
                        height="60" width="60"/></div>
 </div>
 <h1 class="d-flex justify-content-center">Customer List</h1>
+<c:if test="${message!=null}">
+    <p>${message} </p>
+</c:if>
 <p>
     <a href="/">Back to home</a>
 </p>
@@ -23,70 +26,93 @@
         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
     </form>
 </div>
-<table class="table table-striped">
+<table id="tableCustomer" class="table table-striped table-bordered" style="width: 100%">
+    <thead>
     <tr>
-        <th>STT</th>
         <th>ID</th>
+        <th>Id Type Customer</th>
         <th>Name</th>
         <th>Birthday</th>
-        <th>Gender</th>
-        <th>IdCard</th>
-        <th>Phone</th>
         <th>Email</th>
-        <th>Type Customer</th>
-        <th>Address</th>
         <th>Show</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
-    <c:forEach items="${customer}" var ="customer">
+    </thead>
+    <tbody>
+    <c:forEach items="${customer}" var="customer">
         <tr>
-            <td><a href="/customer?action=view&id=${customer.getId()}">${customer.getId()}</a></td>
-            <td>${customer.id}</td>
+            <td>${customer.idCustomer}</td>
+            <td>${customer.idTypeCustomer}</td>
             <td>${customer.name}</td>
-            <td>${customer.birthday}</td>
-            <td>${customer.gender}</td>
-            <td>${customer.idCard}</td>
-            <td>${customer.phone}</td>
+            <td>${customer.dateOfBirth}</td>
             <td>${customer.email}</td>
-            <td>${customer.typeId}</td>
-            <td>${customer.address}</td>
-            <td><a href="/customer?action=view&id=${customer.getId()}">${customer.getId()}Show</a></td>
-            <td><a href="/customer?action=edit&id=${customer.id}">Edit</a></td>
-            <td><button type="button" id="delete" value="delete" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Delete</button></td>
-
-            <div id="myModal" class="modal fade">
-                <div class="modal-dialog modal-confirm">
-                    <div class="modal-content">
-                        <div class="modal-header flex-column">
-                            <div class="icon-box">
-                                <i class="material-icons"></i>
+            <td>
+                <button type="button" class="btn btn-primary"><a style="color: white"
+                                                                 href="/customer?action=view&id=${customer.idCustomer}">Show</a>
+                </button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-success"><a style="color: white"
+                                                                 href="/customer?action=edit&id=${customer.idCustomer}">Edit</a>
+                </button>
+            </td>
+            <td>
+                <button onclick="myfunction(${customer.idCustomer})" type="button" id="delete" value="delete" class="btn btn-danger" data-toggle="modal"
+                        data-target="#myModal">Delete
+                </button>
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog modal-confirm">
+                        <form action="/customer?action=delete" method="post">
+                            <div class="modal-content">
+                                <div class="modal-header flex-column">
+                                    <div class="icon-box">
+                                        <i class="material-icons"></i>
+                                    </div>
+                                    <h4 class="modal-title w-100">Are you sure?</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Do you really want to delete these records? This process cannot be undone.</p>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-danger">
+                                          Delete
+                                    </button>
+                                    <input type="hidden" id="button-delete" name="idCustomer">
+                                </div>
                             </div>
-                            <h4 class="modal-title w-100">Are you sure?</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Do you really want to delete these records? This process cannot be undone.</p>
-                        </div>
-                        <div class="modal-footer justify-content-center">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-danger"><a href="/customer?action=delete&id=${customer.id}">Delete</a>
-                            </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
-            </div>
+            </td>
         </tr>
     </c:forEach>
+    </tbody>
 </table>
-</div>
-<%--<div class="text-center">--%>
-<%--    <tr>--%>
-<%--        <td>--%>
-<%--            --%>
-<%--        </td>--%>
-<%--    </tr>--%>
-<%--</div>--%>
+
+
+<script src="../../css/jquery-3.6.0.min.js"></script>
+<script src="../../css/jquery.dataTables.min.js"></script>
+<script src="../../css/dataTables.bootstrap4.min.js"></script>
+<script src="../../css/popper.min.js"></script>
+<script src="../../css/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#tableCustomer').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 5,
+        });
+    });
+    function myfunction(id) {
+        document.getElementById("button-delete").value=id;
+        alert(id);
+    }
+</script>
 
 
 </body>
