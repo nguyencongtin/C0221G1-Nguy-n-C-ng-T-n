@@ -25,7 +25,7 @@
         <c:if test="${message!=null}">
             <p>${message}</p>
         </c:if>
-        <form method="post" action="/customer?action=edit&id=${customer.idCustomer}">
+        <form method="post" action="/customer?action=update&id=${customer.idCustomer}">
             <div class="form-group">
                 <label for="formGroupExampleInput1">IdTypeCustomer</label>
                 <input type="text" value="${customer.idTypeCustomer}" name="idTypeCustomer" class="form-control" id="formGroupExampleInput1"

@@ -16,7 +16,7 @@ public class CustomerRepository {
             CallableStatement callableStatement = connection.prepareCall("{call create_customer(?,?,?,?,?,?,?,?)}");
             callableStatement.setInt("p_id_loai_khach", customer.getIdTypeCustomer());
             callableStatement.setString("p_ho_ten", customer.getName());
-            callableStatement.setString("p_ngay_sinh", customer.getDateOfBirth());
+            callableStatement.setString("p_ngay_sinh", customer.getDayOfBirth());
             callableStatement.setString("p_gioi_tinh", customer.getSex());
             callableStatement.setString("p_so_cmnd", customer.getIdCard());
             callableStatement.setString("p_so_dien_thoai", customer.getPhoneNumber());
@@ -41,13 +41,13 @@ public class CustomerRepository {
                 int idCustomer = resultSet.getInt("id_khach_hang");
                 int idTypeCustomer = resultSet.getInt("id_loai_khach_hang");
                 String name = resultSet.getString("ho_ten");
-                String dateOfBirth = resultSet.getString("ngay_sinh");
+                String dayOfBirth = resultSet.getString("ngay_sinh");
                 String sex = resultSet.getString("gioi_tinh");
                 String idCard = resultSet.getString("so_cmtnd");
                 String phoneNumber = resultSet.getString("sdt");
                 String email = resultSet.getString("email");
                 String address = resultSet.getString("dia_chi");
-                Customer customer = new Customer(idCustomer, idTypeCustomer, name, dateOfBirth, sex, idCard, phoneNumber, email, address);
+                Customer customer = new Customer(idCustomer, idTypeCustomer, name, dayOfBirth, sex, idCard, phoneNumber, email, address);
                 customerList.add(customer);
             }
         } catch (SQLException e) {
@@ -79,7 +79,7 @@ public class CustomerRepository {
                     "set id_loai_khach_hang=?,ho_ten=?,ngay_sinh=?,gioi_tinh=?,so_cmtnd=?,sdt=?,email=?,dia_chi=? where id_khach_hang=?");
             preparedStatement.setInt(1, customer.getIdTypeCustomer());
             preparedStatement.setString(2, customer.getName());
-            preparedStatement.setString(3, customer.getDateOfBirth());
+            preparedStatement.setString(3, customer.getDayOfBirth());
             preparedStatement.setString(4, customer.getSex());
             preparedStatement.setString(5, customer.getIdCard());
             preparedStatement.setString(6, customer.getPhoneNumber());
@@ -104,15 +104,15 @@ public class CustomerRepository {
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 int idCustomer = resultSet.getInt("id_khach_hang");
-                int idTypeCustomer = resultSet.getInt("id_loai_khach");
+                int idTypeCustomer = resultSet.getInt("id_loai_khach_hang");
                 String name = resultSet.getString("ho_ten");
-                String dateOfBirth = resultSet.getString("ngay_sinh");
-                String sex = resultSet.getNString("gioi_tinh");
-                String idCard = resultSet.getString("so_cmnd");
-                String phoneNumber = resultSet.getNString("so_dien_thoai");
-                String email = resultSet.getNString("email");
-                String address = resultSet.getNString("dia_chi");
-                customer = new Customer(idCustomer, idTypeCustomer, name, dateOfBirth, sex, idCard, phoneNumber, email, address);
+                String dayOfBirth = resultSet.getString("ngay_sinh");
+                String sex = resultSet.getString("gioi_tinh");
+                String idCard = resultSet.getString("so_cmtnd");
+                String phoneNumber = resultSet.getString("sdt");
+                String email = resultSet.getString("email");
+                String address = resultSet.getString("dia_chi");
+                customer = new Customer(idCustomer, idTypeCustomer, name, dayOfBirth, sex, idCard, phoneNumber, email, address);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -121,9 +121,10 @@ public class CustomerRepository {
     }
 
     public static void main(String[] args) {
-        CustomerRepository customerRepository = new CustomerRepository();
-        Customer customer = new Customer(1, "f", "2000-02-02", "a", "a", "a", "a", "a");
-        System.out.println(customerRepository.updateCustomer(1, customer));
+//        CustomerRepository customerRepository = new CustomerRepository();
+//        Customer customer = new Customer(1, "f","2005/05/16" , "a", "a", "a", "a", "a");
+//        System.out.println(customerRepository.deleteCustomer(1));
+//        System.out.println(customerRepository.updateCustomer(1, customer));
     }
 
 
@@ -138,13 +139,13 @@ public class CustomerRepository {
                 int idCustomer = resultSet.getInt("id_khach_hang");
                 int idTypeCustomer = resultSet.getInt("id_loai_khach_hang");
                 String name1 = resultSet.getString("ho_ten");
-                String dateOfBirth = resultSet.getString("ngay_sinh");
+                String dayOfBirth = resultSet.getString("ngay_sinh");
                 String sex = resultSet.getString("gioi_tinh");
                 String idCard = resultSet.getString("so_cmtnd");
                 String phoneNumber = resultSet.getString("sdt");
                 String email = resultSet.getString("email");
                 String address = resultSet.getString("dia_chi");
-                Customer customer = new Customer(idCustomer, idTypeCustomer, name1, dateOfBirth, sex, idCard, phoneNumber, email, address);
+                Customer customer = new Customer(idCustomer, idTypeCustomer, name1, dayOfBirth, sex, idCard, phoneNumber, email, address);
                 customerList.add(customer);
             }
             preparedStatement.close();

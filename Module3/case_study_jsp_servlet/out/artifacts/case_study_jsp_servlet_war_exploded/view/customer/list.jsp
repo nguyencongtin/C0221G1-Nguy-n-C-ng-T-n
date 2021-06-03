@@ -45,7 +45,7 @@
             <td>${customer.idCustomer}</td>
             <td>${customer.idTypeCustomer}</td>
             <td>${customer.name}</td>
-            <td>${customer.dateOfBirth}</td>
+            <td>${customer.dayOfBirth}</td>
             <td>${customer.email}</td>
             <td>
                 <button type="button" class="btn btn-primary"><a style="color: white"
@@ -53,6 +53,7 @@
                 </button>
             </td>
             <td>
+
                 <button type="button" class="btn btn-success"><a style="color: white"
                                                                  href="/customer?action=edit&id=${customer.idCustomer}">Edit</a>
                 </button>

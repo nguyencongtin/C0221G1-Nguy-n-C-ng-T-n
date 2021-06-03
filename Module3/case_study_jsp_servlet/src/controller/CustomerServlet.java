@@ -27,7 +27,7 @@ public class CustomerServlet extends HttpServlet {
             case "add":
                 add(request, response);
                 break;
-            case "edit":
+            case "update":
                 update(request, response);
                 break;
             case "search":
@@ -71,8 +71,17 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
+        int idCustomer = Integer.parseInt(request.getParameter("id"));
+        Customer customer= iCustomerService.getCustomerById(idCustomer);
+        RequestDispatcher requestDispatcher;
+        if(customer==null){
+            requestDispatcher=request.getRequestDispatcher("/view/error-404.jsp");
+        }else {
+            requestDispatcher=request.getRequestDispatcher("/view/customer/edit.jsp");
+            request.setAttribute("customer",customer);
+        }
         try {
-            request.getRequestDispatcher("/view/customer/edit.jsp").forward(request,response);
+            requestDispatcher.forward(request,response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -84,15 +93,14 @@ public class CustomerServlet extends HttpServlet {
         int idCustomer=Integer.parseInt(request.getParameter("id"));
         int idTypeCustomer= Integer.parseInt(request.getParameter("idTypeCustomer"));
         String name=request.getParameter("name");
-        String dateOfBirth=request.getParameter("dateOfBirth");
+        String dayOfBirth=request.getParameter("dayOfBirth");
         String sex=request.getParameter("sex");
         String idCard=request.getParameter("idCard");
         String phoneNumber=request.getParameter("phoneNumber");
         String email=request.getParameter("email");
         String address=request.getParameter("address");
-        Customer customer = new Customer(idTypeCustomer, name, dateOfBirth,sex,idCard,phoneNumber,email,address);
+        Customer customer = new Customer(idTypeCustomer, name, dayOfBirth,sex,idCard,phoneNumber,email,address);
         boolean check = iCustomerService.updateCustomer(idCustomer, customer);
-        customer = iCustomerService.getCustomerById(idCustomer);
         if (check) {
             request.setAttribute("message", "Edit is success");
 
@@ -101,7 +109,7 @@ public class CustomerServlet extends HttpServlet {
         }
         request.setAttribute("customer", customer);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/user/edit.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/edit.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -114,7 +122,7 @@ public class CustomerServlet extends HttpServlet {
     private void add(HttpServletRequest request, HttpServletResponse response) {
          int idTypeCustomer=Integer.parseInt(request.getParameter("id"));
          String name=request.getParameter("name");
-         String dateOfBirth=request.getParameter("birthday");
+         String dayOfBirth=request.getParameter("birthday");
          String sex=request.getParameter("sex");
          String idCard=request.getParameter("idCard");
          String phoneNumber=request.getParameter("phone");
@@ -123,7 +131,7 @@ public class CustomerServlet extends HttpServlet {
          String message;
          boolean check;
          RequestDispatcher requestDispatcher;
-         Customer customer=new Customer(idTypeCustomer,name,dateOfBirth,sex,idCard,phoneNumber,email,address);
+         Customer customer=new Customer(idTypeCustomer,name,dayOfBirth,sex,idCard,phoneNumber,email,address);
          check=iCustomerService.addNewCustomer(customer);
          if(check){
              message="Create is success";

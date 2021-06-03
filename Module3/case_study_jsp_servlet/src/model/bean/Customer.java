@@ -4,7 +4,7 @@ public class Customer {
     private int idCustomer;
     private int idTypeCustomer;
     private String name;
-    private String dateOfBirth;
+    private String dayOfBirth;
     private String sex;
     private String idCard;
     private String phoneNumber;
@@ -14,10 +14,10 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int idTypeCustomer, String name, String dateOfBirth, String sex, String idCard, String phoneNumber, String email, String address) {
+    public Customer(int idTypeCustomer, String name, String dayOfBirth, String sex, String idCard, String phoneNumber, String email, String address) {
         this.idTypeCustomer = idTypeCustomer;
         this.name = name;
-        this.dateOfBirth = dateOfBirth;
+        this.dayOfBirth = dayOfBirth;
         this.sex = sex;
         this.idCard = idCard;
         this.phoneNumber = phoneNumber;
@@ -25,11 +25,11 @@ public class Customer {
         this.address = address;
     }
 
-    public Customer(int idCustomer, int idTypeCustomer, String name, String dateOfBirth, String sex, String idCard, String phoneNumber, String email, String address) {
+    public Customer(int idCustomer, int idTypeCustomer, String name, String dayOfBirth, String sex, String idCard, String phoneNumber, String email, String address) {
         this.idCustomer = idCustomer;
         this.idTypeCustomer = idTypeCustomer;
         this.name = name;
-        this.dateOfBirth = dateOfBirth;
+        this.dayOfBirth = dayOfBirth;
         this.sex = sex;
         this.idCard = idCard;
         this.phoneNumber = phoneNumber;
@@ -61,12 +61,12 @@ public class Customer {
         this.name = name;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
+    public String getDayOfBirth() {
+        return dayOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setDayOfBirth(String dayOfBirth) {
+        this.dayOfBirth = dayOfBirth;
     }
 
     public String getSex() {
