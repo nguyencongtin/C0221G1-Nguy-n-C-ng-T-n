@@ -88,7 +88,7 @@ public class CustomerServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-    // Đang bị lỗi ở chỗ edit
+
     private void update(HttpServletRequest request, HttpServletResponse response) {
         int idCustomer=Integer.parseInt(request.getParameter("id"));
         int idTypeCustomer= Integer.parseInt(request.getParameter("idTypeCustomer"));
