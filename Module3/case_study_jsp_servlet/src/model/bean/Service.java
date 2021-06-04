@@ -30,6 +30,19 @@ public class Service {
         this.poolArea = poolArea;
     }
 
+    public Service(String serviceName, int serviceArea, int numberOfFloor, int serviceMaxPeople, double serviceCost, int rentTypeId, int serviceTypeId, String standardRoom, String descriptionOtherConverience, double poolArea) {
+        this.serviceName = serviceName;
+        this.serviceArea = serviceArea;
+        this.numberOfFloor = numberOfFloor;
+        this.serviceMaxPeople = serviceMaxPeople;
+        this.serviceCost = serviceCost;
+        this.rentTypeId = rentTypeId;
+        this.serviceTypeId = serviceTypeId;
+        this.standardRoom = standardRoom;
+        this.descriptionOtherConverience = descriptionOtherConverience;
+        this.poolArea = poolArea;
+    }
+
     public int getIdService() {
         return idService;
     }

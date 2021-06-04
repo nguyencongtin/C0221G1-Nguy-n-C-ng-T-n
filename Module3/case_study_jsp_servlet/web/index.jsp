@@ -26,10 +26,9 @@
                     Employee
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="#">Create</a>
-                    <a class="dropdown-item" href="#">Edit</a>
+                    <a class="dropdown-item" href="/view/employee/create.jsp">Create</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/employee">Show List</a>
                 </div>
             </li>
 
@@ -50,7 +49,7 @@
                     Service
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Create</a>
+                    <a class="dropdown-item" href="/view/service/create.jsp">Create</a>
                     <a class="dropdown-item" href="#">Edit</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>

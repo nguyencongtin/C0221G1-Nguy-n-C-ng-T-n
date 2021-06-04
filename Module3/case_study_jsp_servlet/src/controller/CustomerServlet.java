@@ -41,20 +41,6 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-    private void search(HttpServletRequest request, HttpServletResponse response) {
-        String name=request.getParameter("nameSearch");
-        List<Customer> customerList = iCustomerService.findByName(name);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
-        request.setAttribute("customer", customerList);
-        try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
@@ -67,6 +53,20 @@ public class CustomerServlet extends HttpServlet {
                 showCustomerList(request, response);
                 break;
 
+        }
+    }
+
+    private void search(HttpServletRequest request, HttpServletResponse response) {
+        String name=request.getParameter("nameSearch");
+        List<Customer> customerList = iCustomerService.findByName(name);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
+        request.setAttribute("customer", customerList);
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
