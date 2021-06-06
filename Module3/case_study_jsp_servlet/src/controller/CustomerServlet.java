@@ -1,6 +1,7 @@
 package controller;
 
 import model.bean.Customer;
+import model.bean.TypeCustomer;
 import model.service.ICustomerService;
 import model.service.impl.CustomerServiceImpl;
 
@@ -49,6 +50,10 @@ public class CustomerServlet extends HttpServlet {
         switch (action) {
             case "edit":
                 showFormEdit(request,response);
+                break;
+            case "add":
+                showFormCreate(request,response);
+                break;
             default:
                 showCustomerList(request, response);
                 break;
@@ -73,12 +78,14 @@ public class CustomerServlet extends HttpServlet {
     private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
         int idCustomer = Integer.parseInt(request.getParameter("id"));
         Customer customer= iCustomerService.getCustomerById(idCustomer);
+        List<TypeCustomer> typeCustomerList= iCustomerService.findByAllCustomerType();
         RequestDispatcher requestDispatcher;
         if(customer==null){
             requestDispatcher=request.getRequestDispatcher("/view/error-404.jsp");
         }else {
             requestDispatcher=request.getRequestDispatcher("/view/customer/edit.jsp");
             request.setAttribute("customer",customer);
+            request.setAttribute("typeCustomer",typeCustomerList);
         }
         try {
             requestDispatcher.forward(request,response);
@@ -127,7 +134,7 @@ public class CustomerServlet extends HttpServlet {
          String idCard=request.getParameter("idCard");
          String phoneNumber=request.getParameter("phone");
          String email=request.getParameter("email");
-         String address=request.getParameter("adress");
+         String address=request.getParameter("address");
          String message;
          boolean check;
          RequestDispatcher requestDispatcher;
@@ -149,17 +156,18 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-// Bị dư không cần thiết
-//    private void showNewForm(HttpServletRequest request, HttpServletResponse response) {
-//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
-//        try {
-//            requestDispatcher.forward(request, response);
-//        } catch (ServletException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    private void showFormCreate(HttpServletRequest request, HttpServletResponse response) {
+        List<TypeCustomer> typeCustomerList= iCustomerService.findByAllCustomerType();
+        request.setAttribute("typeCustomer",typeCustomerList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/create.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private void delete(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("idCustomer"));
@@ -175,8 +183,10 @@ public class CustomerServlet extends HttpServlet {
 
     private void showCustomerList(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customerList = iCustomerService.findByAll();
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
+        List<TypeCustomer> typeCustomerList = iCustomerService.findByAllCustomerType();
         request.setAttribute("customer", customerList);
+        request.setAttribute("typeCustomer",typeCustomerList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {

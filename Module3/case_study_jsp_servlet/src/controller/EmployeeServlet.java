@@ -1,6 +1,6 @@
 package controller;
 
-import model.bean.Employee;
+import model.bean.*;
 import model.service.IEmployeeService;
 import model.service.impl.EmployeeServiceImpl;
 
@@ -48,10 +48,31 @@ public class EmployeeServlet extends HttpServlet {
         switch (action) {
             case "edit":
                 showFormEdit(request,response);
+                break;
+            case "add":
+                showFormCreate(request,response);
+                break;
             default:
                 showEmployeeList(request, response);
                 break;
 
+        }
+    }
+
+    private void showFormCreate(HttpServletRequest request, HttpServletResponse response) {
+        List<Position> positionList = iEmployeeService.findByAllPosition();
+        List<EducationDegree> educationDegreeList = iEmployeeService.findByAllEducationDegree();
+        List<Division> divisionList = iEmployeeService.findByAllDivision();
+        request.setAttribute("position",positionList);
+        request.setAttribute("educationDegree",educationDegreeList);
+        request.setAttribute("division",divisionList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/employee/create.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -72,12 +93,18 @@ public class EmployeeServlet extends HttpServlet {
     private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
         int employeeId = Integer.parseInt(request.getParameter("id"));
         Employee employee= iEmployeeService.getEmployeeById(employeeId);
+        List<Position> positionList = iEmployeeService.findByAllPosition();
+        List<EducationDegree> educationDegreeList = iEmployeeService.findByAllEducationDegree();
+        List<Division> divisionList = iEmployeeService.findByAllDivision();
         RequestDispatcher requestDispatcher;
         if(employee==null){
             requestDispatcher=request.getRequestDispatcher("/view/error-404.jsp");
         }else {
-            requestDispatcher=request.getRequestDispatcher("/view/employee/edit.jsp");
             request.setAttribute("employee",employee);
+            request.setAttribute("position",positionList);
+            request.setAttribute("educationDegree",educationDegreeList);
+            request.setAttribute("division",divisionList);
+            requestDispatcher=request.getRequestDispatcher("/view/employee/edit.jsp");
         }
         try {
             requestDispatcher.forward(request,response);
@@ -97,11 +124,11 @@ public class EmployeeServlet extends HttpServlet {
         String employeePhone=request.getParameter("employeePhone");
         String employeeEmail=request.getParameter("employeeEmail");
         String employeeAddress=request.getParameter("employeeAddress");
-        int positionId=Integer.parseInt(request.getParameter("positionId"));
-        int educationDegreeId=Integer.parseInt(request.getParameter("educationDegreeId"));
-        int divisionId=Integer.parseInt(request.getParameter("divisionId"));
+        int idPosition=Integer.parseInt(request.getParameter("idPosition"));
+        int idEducationDegree=Integer.parseInt(request.getParameter("idEducationDegree"));
+        int idDivision=Integer.parseInt(request.getParameter("idDivision"));
         String userName=request.getParameter("userName");
-        Employee employee = new Employee(employeeName,employeeBirthday,employeeIdCard,employeeSalary,employeePhone,employeeEmail,employeeAddress,positionId,educationDegreeId,divisionId,userName);
+        Employee employee = new Employee(employeeName,employeeBirthday,employeeIdCard,employeeSalary,employeePhone,employeeEmail,employeeAddress,idPosition,idEducationDegree,idDivision,userName);
         boolean check = iEmployeeService.updateEmployee(employeeId, employee);
         if (check) {
             request.setAttribute("message", "Edit is success");
@@ -135,8 +162,14 @@ public class EmployeeServlet extends HttpServlet {
 
     private void showEmployeeList(HttpServletRequest request, HttpServletResponse response) {
         List<Employee> employeeList = iEmployeeService.findByAll();
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/employee/list.jsp");
+        List<Position> positionList = iEmployeeService.findByAllPosition();
+        List<EducationDegree> educationDegreeList = iEmployeeService.findByAllEducationDegree();
+        List<Division> divisionList = iEmployeeService.findByAllDivision();
         request.setAttribute("employee", employeeList);
+        request.setAttribute("position",positionList);
+        request.setAttribute("educationDegree",educationDegreeList);
+        request.setAttribute("division",divisionList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/employee/list.jsp");
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -154,14 +187,14 @@ public class EmployeeServlet extends HttpServlet {
         String employeePhone=request.getParameter("employeePhone");
         String employeeEmail=request.getParameter("employeeEmail");
         String employeeAddress=request.getParameter("employeeAddress");
-        int positionId=Integer.parseInt(request.getParameter("positionId"));
-        int educationDegreeId=Integer.parseInt(request.getParameter("educationDegreeId"));
-        int divisionId=Integer.parseInt(request.getParameter("divisionId"));
+        int idPosition= Integer.parseInt(request.getParameter("idPosition"));
+        int idEducationDegree=Integer.parseInt(request.getParameter("idEducationDegree"));
+        int idDivision=Integer.parseInt(request.getParameter("idDivision"));
         String userName=request.getParameter("userName");
         String message;
         boolean check;
         RequestDispatcher requestDispatcher;
-        Employee employee=new Employee(employeeName,employeeBirthday,employeeIdCard,employeeSalary,employeePhone,employeeEmail,employeeAddress,positionId,educationDegreeId,divisionId,userName);
+        Employee employee=new Employee(employeeName,employeeBirthday,employeeIdCard,employeeSalary,employeePhone,employeeEmail,employeeAddress,idPosition,idEducationDegree,idDivision,userName);
         check=iEmployeeService.addNewEmployee(employee);
         if(check){
             message="Create is success";

@@ -1,6 +1,7 @@
 package model.service.impl;
 
 import model.bean.Customer;
+import model.bean.TypeCustomer;
 import model.repository.CustomerRepository;
 import model.service.ICustomerService;
 
@@ -36,6 +37,11 @@ public class CustomerServiceImpl implements ICustomerService {
     @Override
     public List<Customer> findByName(String name) {
         return customerRepository.findByName(name);
+    }
+
+    @Override
+    public List<TypeCustomer> findByAllCustomerType() {
+        return customerRepository.findByAllCustomerType();
     }
 
 }

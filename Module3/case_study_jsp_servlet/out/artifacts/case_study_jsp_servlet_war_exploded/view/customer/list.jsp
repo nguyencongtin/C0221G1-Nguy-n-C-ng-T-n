@@ -43,7 +43,11 @@
     <c:forEach items="${customer}" var="customer">
         <tr>
             <td>${customer.idCustomer}</td>
-            <td>${customer.idTypeCustomer}</td>
+            <c:forEach var="type" items="${typeCustomer}">
+                <c:if test="${type.idTypeCustomer == customer.idTypeCustomer}">
+                    <td>${type.typeCustomerName}</td>
+                </c:if>
+            </c:forEach>
             <td>${customer.name}</td>
             <td>${customer.dayOfBirth}</td>
             <td>${customer.email}</td>

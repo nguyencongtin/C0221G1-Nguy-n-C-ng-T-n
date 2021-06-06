@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -30,51 +31,50 @@
         </c:if>
         <form action="/customer?action=add" method="post">
             <div class="form-group">
-                <label for="formGroupExampleInput">IdTypeCustomer</label>
-                <input type="text" value="${customer.idTypeCustomer}" name="id" class="form-control"
-                       id="formGroupExampleInput"
-                       placeholder="Example input placeholder">
+                <label> Customer Type : </label>
+                <select class="form-control" name="id">
+                    <c:forEach var="typeCustomer" items="${typeCustomer}">
+                        <option value="${typeCustomer.idTypeCustomer}">${typeCustomer.typeCustomerName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput2">Name</label>
-                <input type="text" value="${customer.name}" name="name" class="form-control" id="formGroupExampleInput2"
-                       placeholder="Another input placeholder">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control"
+                       placeholder="Input your name">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput3">Birthday</label>
-                <input type="text" class="form-control" name="birthday" value="${customer.dayOfBirth}"
-                       id="formGroupExampleInput3"
-                       placeholder="Another input placeholder">
+                <label>Birthday</label>
+                <input type="text" class="form-control" name="birthday"
+                       placeholder="Input your birthday">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput4">Sex</label>
-                <input type="text" class="form-control" name="sex" value="${customer.sex}"
-                       id="formGroupExampleInput4"
-                       placeholder="Another input placeholder">
+                <label>Sex</label>
+                <select class="form-control "  name="sex" aria-label="Default select example">
+                    <option selected>Choose gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">IdCard</label>
-                <input type="text" class="form-control" name="idCard" value="${customer.idCard}"
-                       id="formGroupExampleInput5"
-                       placeholder="Another input placeholder">
+                <label>IdCard</label>
+                <input type="text" class="form-control" name="idCard"
+                       placeholder="Input your Id card">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">Phone</label>
-                <input type="text" class="form-control" name="phone" value="${customer.phoneNumber}"
-                       id="formGroupExampleInput6"
-                       placeholder="Another input placeholder">
+                <label>Phone</label>
+                <input type="text" class="form-control" name="phone"
+                       placeholder="Input your phone">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">Email</label>
-                <input type="text" class="form-control" name="email" value="${customer.email}"
-                       id="formGroupExampleInput7"
-                       placeholder="Another input placeholder">
+                <label>Email</label>
+                <input type="text" class="form-control" name="email"
+                       placeholder="Input your email">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">Address</label>
-                <input type="text" class="form-control" name="address" value="${customer.address}"
-                       id="formGroupExampleInput8"
-                       placeholder="Another input placeholder">
+                <label>Address</label>
+                <input type="text" class="form-control" name="address"
+                       placeholder="Input your address">
             </div>
             <div class="d-fex justify-content-center">
                 <input class="btn" type="submit" value="create">

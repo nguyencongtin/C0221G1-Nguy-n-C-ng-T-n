@@ -1,6 +1,7 @@
 package model.repository;
 
 import model.bean.Customer;
+import model.bean.TypeCustomer;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -120,21 +121,13 @@ public class CustomerRepository {
         return customer;
     }
 
-    public static void main(String[] args) {
-//        CustomerRepository customerRepository = new CustomerRepository();
-//        Customer customer = new Customer(1, "f","2005/05/16" , "a", "a", "a", "a", "a");
-//        System.out.println(customerRepository.deleteCustomer(1));
-//        System.out.println(customerRepository.updateCustomer(1, customer));
-    }
-
-
     public List<Customer> findByName(String name) {
-        Connection connection= baseRepository.connectDataBase();
-        List<Customer> customerList= new ArrayList<>();
+        Connection connection = baseRepository.connectDataBase();
+        List<Customer> customerList = new ArrayList<>();
         try {
-            PreparedStatement preparedStatement=connection.prepareStatement("select* from khach_hang where ho_ten like ?");
-            preparedStatement.setString(1,"%"+name+"%");
-            ResultSet resultSet=preparedStatement.executeQuery();
+            PreparedStatement preparedStatement = connection.prepareStatement("select* from khach_hang where ho_ten like ?");
+            preparedStatement.setString(1, "%" + name + "%");
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int idCustomer = resultSet.getInt("id_khach_hang");
                 int idTypeCustomer = resultSet.getInt("id_loai_khach_hang");
@@ -153,7 +146,33 @@ public class CustomerRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    return customerList;
+        return customerList;
+    }
+
+    public List<TypeCustomer> findByAllCustomerType() {
+        Connection connection = baseRepository.connectDataBase();
+        List<TypeCustomer> typeCustomerList = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("select* from loai_khach_hang");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+            int id=resultSet.getInt("id_loai_khach_hang");
+            String name=resultSet.getString("ten_loai_khach_hang");
+            typeCustomerList.add(new TypeCustomer(id,name));
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return typeCustomerList;
+    }
+
+    public static void main(String[] args) {
+//        CustomerRepository customerRepository = new CustomerRepository();
+//        Customer customer = new Customer(1, "f","2005/05/16" , "a", "a", "a", "a", "a");
+//        System.out.println(customerRepository.deleteCustomer(1));
+//        System.out.println(customerRepository.updateCustomer(1, customer));
     }
 }
 

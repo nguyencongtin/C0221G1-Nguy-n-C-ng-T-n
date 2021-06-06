@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -31,61 +32,65 @@
         </c:if>
         <form action="/service?action=add" method="post">
             <div class="form-group">
-                <label for="formGroupExampleInput">serviceName</label>
+                <label for="formGroupExampleInput">Service Name</label>
                 <input type="text" value="${service.serviceName}" name="serviceName" class="form-control"
                        id="formGroupExampleInput"
                        placeholder="Example input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput2">serviceArea</label>
+                <label for="formGroupExampleInput2">Service Area</label>
                 <input type="text" value="${service.serviceArea}" name="serviceArea" class="form-control"
                        id="formGroupExampleInput2"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput3">numberOfFloor</label>
+                <label for="formGroupExampleInput3">Number Of Floor</label>
                 <input type="text" class="form-control" name="numberOfFloor" value="${service.numberOfFloor}"
                        id="formGroupExampleInput3"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput4">serviceMaxPeople</label>
+                <label for="formGroupExampleInput4">Service Max People</label>
                 <input type="text" class="form-control" name="serviceMaxPeople" value="${service.serviceMaxPeople}"
                        id="formGroupExampleInput4"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">serviceCost</label>
+                <label for="formGroupExampleInput5">Service Cost</label>
                 <input type="text" class="form-control" name="serviceCost" value="${service.serviceCost}"
                        id="formGroupExampleInput5"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput6">rentTypeId</label>
-                <input type="text" class="form-control" name="rentTypeId" value="${service.rentTypeId}"
-                       id="formGroupExampleInput6"
-                       placeholder="Another input placeholder">
+                <label>Type Rent</label>
+                <select class="form-control" name="rentTypeId">
+                    <c:forEach var="typeRent" items="${typeRent}">
+                        <option value="${typeRent.idTypeRent}">${typeRent.rentName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput7">serviceTypeId</label>
-                <input type="text" class="form-control" name="serviceTypeId" value="${service.serviceTypeId}"
-                       id="formGroupExampleInput7"
-                       placeholder="Another input placeholder">
+                <label>Type Service</label>
+                <select class="form-control" name="serviceTypeId">
+                    <c:forEach var="typeService" items="${typeService}">
+                        <option value="${typeService.idTypeService}">${typeService.typeServiceName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput8">standardRoom</label>
+                <label for="formGroupExampleInput8">Standard Room</label>
                 <input type="text" class="form-control" name="standardRoom" value="${service.standardRoom}"
                        id="formGroupExampleInput8"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput9">descriptionOtherConverience</label>
+                <label for="formGroupExampleInput9">Description Other Converience</label>
                 <input type="text" class="form-control" name="descriptionOtherConverience" value="${service.descriptionOtherConverience}"
                        id="formGroupExampleInput9"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput10">poolArea</label>
+                <label for="formGroupExampleInput10">Pool Area</label>
                 <input type="text" class="form-control" name="poolArea" value="${service.poolArea}"
                        id="formGroupExampleInput10"
                        placeholder="Another input placeholder">
@@ -98,3 +103,4 @@
 </div>
 </body>
 </html>
+

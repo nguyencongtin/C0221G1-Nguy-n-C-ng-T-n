@@ -1,7 +1,8 @@
 package controller;
 
-import model.bean.Employee;
 import model.bean.Service;
+import model.bean.TypeRent;
+import model.bean.TypeService;
 import model.service.IServiceService;
 import model.service.impl.ServiceServiceImpl;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "ServiceServlet", urlPatterns = "/service")
 public class ServiceServlet extends HttpServlet {
@@ -48,10 +50,28 @@ public class ServiceServlet extends HttpServlet {
         switch (action) {
             case "edit":
 //                showFormEdit(request,response);
+                break;
+            case "add":
+                showFormCreate(request,response);
             default:
 //                showEmployeeList(request, response);
                 break;
 
+        }
+    }
+
+    private void showFormCreate(HttpServletRequest request, HttpServletResponse response) {
+        List<TypeRent> typeRentList= iServiceService.findByAllTypeRent();
+        List<TypeService> typeServiceList= iServiceService.findByAllTypeService();
+        request.setAttribute("typeRent",typeRentList);
+        request.setAttribute("typeService",typeServiceList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/service/create.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

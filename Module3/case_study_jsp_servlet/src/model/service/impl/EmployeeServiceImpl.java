@@ -1,6 +1,9 @@
 package model.service.impl;
 
+import model.bean.Division;
+import model.bean.EducationDegree;
 import model.bean.Employee;
+import model.bean.Position;
 import model.repository.EmployeeRepository;
 import model.service.IEmployeeService;
 
@@ -37,5 +40,20 @@ public class EmployeeServiceImpl implements IEmployeeService {
     @Override
     public List<Employee> findByName(String name) {
         return employeeRepository.findByName(name);
+    }
+
+    @Override
+    public List<Position> findByAllPosition() {
+        return employeeRepository.findByAllPosition();
+    }
+
+    @Override
+    public List<EducationDegree> findByAllEducationDegree() {
+        return employeeRepository.findByAllEducationDegree();
+    }
+
+    @Override
+    public List<Division> findByAllDivision() {
+        return employeeRepository.findByAllDivision();
     }
 }

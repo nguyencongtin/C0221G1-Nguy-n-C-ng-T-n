@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -31,67 +32,73 @@
         </c:if>
         <form action="/employee?action=add" method="post">
             <div class="form-group">
-                <label for="formGroupExampleInput">EmployeeName</label>
+                <label for="formGroupExampleInput">Employee Name</label>
                 <input type="text" value="${employee.employeeName}" name="employeeName" class="form-control"
                        id="formGroupExampleInput"
                        placeholder="Example input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput2">EmployeeBirthday</label>
+                <label for="formGroupExampleInput2">Employee Birthday</label>
                 <input type="date" value="${employee.employeeBirthday}" name="employeeBirthday" class="form-control"
                        id="formGroupExampleInput2"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput3">EmployeeIdCard</label>
+                <label for="formGroupExampleInput3">Employee IdCard</label>
                 <input type="text" class="form-control" name="employeeIdCard" value="${employee.employeeIdCard}"
                        id="formGroupExampleInput3"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput4">EmployeeSalary</label>
+                <label for="formGroupExampleInput4">Employee Salary</label>
                 <input type="text" class="form-control" name="employeeSalary" value="${employee.employeeSalary}"
                        id="formGroupExampleInput4"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput5">EmployeePhone</label>
+                <label for="formGroupExampleInput5">Employee Phone</label>
                 <input type="text" class="form-control" name="employeePhone" value="${employee.employeePhone}"
                        id="formGroupExampleInput5"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput6">EmployeeEmail</label>
+                <label for="formGroupExampleInput6">Employee Email</label>
                 <input type="text" class="form-control" name="employeeEmail" value="${employee.employeeEmail}"
                        id="formGroupExampleInput6"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput7">employeeAddress</label>
+                <label for="formGroupExampleInput7">Employee Address</label>
                 <input type="text" class="form-control" name="employeeAddress" value="${employee.employeeAddress}"
                        id="formGroupExampleInput7"
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput8">PositionId</label>
-                <input type="text" class="form-control" name="positionId" value="${employee.positionId}"
-                       id="formGroupExampleInput8"
-                       placeholder="Another input placeholder">
+                <label>Position</label>
+                <select class="form-control" name="positionId">
+                    <c:forEach var="position" items="${position}">
+                        <option value="${position.idPosition}">${position.positionName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput9">educationDegreeId</label>
-                <input type="text" class="form-control" name="educationDegreeId" value="${employee.educationDegreeId}"
-                       id="formGroupExampleInput9"
-                       placeholder="Another input placeholder">
+            <label>Education Degree</label>
+            <select class="form-control" name="educationDegreeId">
+                <c:forEach var="educationDegree" items="${educationDegree}">
+                    <option value="${educationDegree.idEducationDegree}">${educationDegree.educationDegreeName}</option>
+                </c:forEach>
+            </select>
+        </div>
+            <div class="form-group">
+                <label>Division</label>
+                <select class="form-control" name="divisionId">
+                    <c:forEach var="division" items="${division}">
+                        <option value="${division.idDivision}">${division.divisionName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput10">divisionId</label>
-                <input type="text" class="form-control" name="divisionId" value="${employee.divisionId}"
-                       id="formGroupExampleInput10"
-                       placeholder="Another input placeholder">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput11">UserName</label>
+                <label for="formGroupExampleInput11">User Name</label>
                 <input type="text" class="form-control" name="userName" value="${employee.userName}"
                        id="formGroupExampleInput11"
                        placeholder="Another input placeholder">

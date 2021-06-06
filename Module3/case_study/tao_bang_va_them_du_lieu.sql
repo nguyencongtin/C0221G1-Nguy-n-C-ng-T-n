@@ -327,4 +327,50 @@ end;
 
 select * from dich_vu;
 
+drop procedure if exists create_contract;
+delimiter //
+create procedure create_contract(
+p_id_nhan_vien int,
+p_id_khach_hang int,
+p_id_dich_vu int,
+p_ngay_lam_hop_dong date,
+p_ngay_ket_thuc date,
+p_tien_dat_coc int,
+p_tong_tien int
+)
+begin
+		insert into hop_dong(id_nhan_vien,id_khach_hang,id_dich_vu,ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,tong_tien)
+		value(
+p_id_nhan_vien ,
+p_id_khach_hang ,
+p_id_dich_vu ,
+p_ngay_lam_hop_dong ,
+p_ngay_ket_thuc ,
+p_tien_dat_coc ,
+p_tong_tien);
+end;
+// delimiter ;
 
+drop procedure if exists create_contract_detail;
+delimiter //
+create procedure create_contract_detail(
+p_id_hop_dong int,
+p_id_dich_vu_di_kem int,
+p_so_luong int
+)
+begin
+		insert into hop_dong_chi_tiet(id_hop_dong,id_dich_vu_di_kem,so_luong)
+		value(
+p_id_hop_dong ,
+p_id_dich_vu_di_kem ,
+p_so_luong);
+end;
+// delimiter ;
+
+-- drop procedure if exists show_info_about_service_used_by_customer;
+-- delimiter //
+-- create procedure show_info_about_service_used_by_customer(
+-- p_id_hop_dong int)
+-- begin
+-- select 
+ select * from khach_hang;

@@ -69,22 +69,34 @@
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput8">PositionId</label>
-                <input type="text" class="form-control" name="positionId" value="${employee.positionId}"
-                       id="formGroupExampleInput8"
-                       placeholder="Another input placeholder">
+                <label>Position</label>
+                <select class="form-control" name="positionId">
+                    <c:forEach var="position" items="${position}">
+                        <option value="${position.idPosition}" ${position.idPosition==employee.idPosition?"selected":""}>${position.positionName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput9">EducationDegreeId</label>
-                <input type="text" class="form-control" name="educationDegreeId" value="${employee.educationDegreeId}"
-                       id="formGroupExampleInput9"
-                       placeholder="Another input placeholder">
+                <label>Position</label>
+                <select class="form-control" name="educationDegreeId">
+                    <c:forEach var="educationDegree" items="${educationDegree}">
+                        <option value="${educationDegree.idEducationDegree}" ${educationDegree.idEducationDegree==employee.idEducationDegree?"selected":""}>${educationDegree.educationDegreeName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput10">DivisionId</label>
                 <input type="text" class="form-control" name="divisionId" value="${employee.divisionId}"
                        id="formGroupExampleInput10"
                        placeholder="Another input placeholder">
+            </div>
+            <div class="form-group">
+                <label>Position</label>
+                <select class="form-control" name="divisionId">
+                    <c:forEach var="division" items="${division}">
+                        <option value="${division.idDivision}" ${division.idDivision==employee.idDivision?"selected":""}>${division.divisionName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput11">UserName</label>

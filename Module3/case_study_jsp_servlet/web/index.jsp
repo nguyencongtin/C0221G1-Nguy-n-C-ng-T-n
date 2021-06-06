@@ -26,7 +26,7 @@
                     Employee
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="/view/employee/create.jsp">Create</a>
+                    <a class="dropdown-item" href="/employee?action=add" methods="get">Create</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/employee">Show List</a>
                 </div>
@@ -38,7 +38,7 @@
                     Customer
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/view/customer/create.jsp">Create</a>
+                    <a class="dropdown-item" href="/customer?action=add" methods="get">Create</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="/customer">Show List</a>
                 </div>
@@ -49,15 +49,36 @@
                     Service
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/view/service/create.jsp">Create</a>
+                    <a class="dropdown-item" href="/service?action=add" methods="get">Create</a>
+                    <a class="dropdown-item" href="#">Edit</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Contract
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/view/contract/create.jsp">Create</a>
                     <a class="dropdown-item" href="#">Edit</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Contract<span class="sr-only">(current)</span></a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown6" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Contract Detail
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/view/contract_detail/create.jsp">Create</a>
+                    <a class="dropdown-item" href="#">Edit</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
             </li>
 
         </ul>

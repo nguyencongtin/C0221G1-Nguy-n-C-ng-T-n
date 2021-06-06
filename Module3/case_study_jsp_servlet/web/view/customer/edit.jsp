@@ -20,16 +20,20 @@
 </div>
 <div class="container">
     <h1>Edit Customer</h1>
-    <a href="/">Back to home</a>
+    <a href="/">Back to home</a> </br>
+    <a href="/customer">Back to list</a>
     <div class="container">
         <c:if test="${message!=null}">
             <p>${message}</p>
         </c:if>
         <form method="post" action="/customer?action=update&id=${customer.idCustomer}">
             <div class="form-group">
-                <label for="formGroupExampleInput1">IdTypeCustomer</label>
-                <input type="text" value="${customer.idTypeCustomer}" name="idTypeCustomer" class="form-control" id="formGroupExampleInput1"
-                       placeholder="Another input placeholder">
+                <label>Type Customer</label>
+                <select class="form-control" name="idTypeCustomer">
+                    <c:forEach var="typeCustomer" items="${typeCustomer}">
+                        <option value="${typeCustomer.idTypeCustomer}" ${typeCustomer.idTypeCustomer==customer.idTypeCustomer?"selected":""}>${typeCustomer.typeCustomerName}</option>
+                    </c:forEach>
+                </select>
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Name</label>
@@ -43,10 +47,12 @@
                        placeholder="Another input placeholder">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput4">Sex</label>
-                <input type="text" class="form-control" name="sex" value="${customer.sex}"
-                       id="formGroupExampleInput4"
-                       placeholder="Another input placeholder">
+                <label>Sex</label>
+                <select class="form-control " name="sex" aria-label="Default select example">
+                    <option selected>Choose gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput5">IdCard</label>

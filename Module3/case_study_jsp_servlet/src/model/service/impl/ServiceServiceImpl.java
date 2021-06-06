@@ -1,6 +1,8 @@
 package model.service.impl;
 
 import model.bean.Service;
+import model.bean.TypeRent;
+import model.bean.TypeService;
 import model.repository.ServiceRepository;
 import model.service.IServiceService;
 
@@ -15,7 +17,7 @@ public class ServiceServiceImpl implements IServiceService {
 
     @Override
     public List<Service> findByAll() {
-        return null;
+        return serviceRepository.findByAll();
     }
 
     @Override
@@ -36,5 +38,15 @@ public class ServiceServiceImpl implements IServiceService {
     @Override
     public List<Service> findByName(String name) {
         return null;
+    }
+
+    @Override
+    public List<TypeRent> findByAllTypeRent() {
+        return serviceRepository.findByAllTypeRent();
+    }
+
+    @Override
+    public List<TypeService> findByAllTypeService() {
+        return serviceRepository.findByAllTypeService();
     }
 }
