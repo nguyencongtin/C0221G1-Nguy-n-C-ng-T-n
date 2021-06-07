@@ -75,7 +75,7 @@
             </div>
             <div class="form-group">
                 <label>Position</label>
-                <select class="form-control" name="positionId">
+                <select class="form-control" name="idPosition">
                     <c:forEach var="position" items="${position}">
                         <option value="${position.idPosition}">${position.positionName}</option>
                     </c:forEach>
@@ -83,7 +83,7 @@
             </div>
             <div class="form-group">
             <label>Education Degree</label>
-            <select class="form-control" name="educationDegreeId">
+            <select class="form-control" name="idEducationDegree">
                 <c:forEach var="educationDegree" items="${educationDegree}">
                     <option value="${educationDegree.idEducationDegree}">${educationDegree.educationDegreeName}</option>
                 </c:forEach>
@@ -91,7 +91,7 @@
         </div>
             <div class="form-group">
                 <label>Division</label>
-                <select class="form-control" name="divisionId">
+                <select class="form-control" name="idDivision">
                     <c:forEach var="division" items="${division}">
                         <option value="${division.idDivision}">${division.divisionName}</option>
                     </c:forEach>

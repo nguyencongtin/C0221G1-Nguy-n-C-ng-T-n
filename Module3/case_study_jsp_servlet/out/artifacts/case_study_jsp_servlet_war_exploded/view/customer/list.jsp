@@ -20,10 +20,15 @@
 <p>
     <a href="/">Back to home</a>
 </p>
-<div class="col-4 d-flex">
+<div class="col d-flex">
     <form class="form-inline my-2 my-lg-0 d-flex" action="/customer?action=search" method="post">
         <input class="form-control mr-sm-2" type="search" name="nameSearch" placeholder="Search" aria-label="Search">
         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <form>
+    <button type="button" class="btn btn-primary">
+        <a style="color: white" href="/customerUsing">Show Customer Using Service</a>
+    </button>
     </form>
 </div>
 <table id="tableCustomer" class="table table-striped table-bordered" style="width: 100%">
@@ -34,7 +39,6 @@
         <th>Name</th>
         <th>Birthday</th>
         <th>Email</th>
-        <th>Show</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
@@ -52,52 +56,46 @@
             <td>${customer.dayOfBirth}</td>
             <td>${customer.email}</td>
             <td>
-                <button type="button" class="btn btn-primary"><a style="color: white"
-                                                                 href="/customer?action=view&id=${customer.idCustomer}">Show</a>
-                </button>
-            </td>
-            <td>
-
                 <button type="button" class="btn btn-success"><a style="color: white"
                                                                  href="/customer?action=edit&id=${customer.idCustomer}">Edit</a>
                 </button>
             </td>
             <td>
-                <button onclick="myfunction(${customer.idCustomer})" type="button" id="delete" value="delete" class="btn btn-danger" data-toggle="modal"
+                <button onclick="myfunction(${customer.idCustomer})" type="button" id="delete" value="delete"
+                        class="btn btn-danger" data-toggle="modal"
                         data-target="#myModal">Delete
                 </button>
-                <div id="myModal" class="modal fade">
-                    <div class="modal-dialog modal-confirm">
-                        <form action="/customer?action=delete" method="post">
-                            <div class="modal-content">
-                                <div class="modal-header flex-column">
-                                    <div class="icon-box">
-                                        <i class="material-icons"></i>
-                                    </div>
-                                    <h4 class="modal-title w-100">Are you sure?</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Do you really want to delete these records? This process cannot be undone.</p>
-                                </div>
-                                <div class="modal-footer justify-content-center">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <button type="submit" class="btn btn-danger">
-                                          Delete
-                                    </button>
-                                    <input type="hidden" id="button-delete" name="idCustomer">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
-
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <form action="/customer?action=delete" method="post">
+            <div class="modal-content">
+                <div class="modal-header flex-column">
+                    <div class="icon-box">
+                        <i class="material-icons"></i>
+                    </div>
+                    <h4 class="modal-title w-100">Are you sure?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Do you really want to delete these records? This process cannot be undone.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-danger">
+                        Delete
+                    </button>
+                    <input type="hidden" id="button-delete" name="idCustomer">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 <script src="../../css/jquery-3.6.0.min.js"></script>
 <script src="../../css/jquery.dataTables.min.js"></script>
@@ -113,8 +111,9 @@
             "pageLength": 5,
         });
     });
+
     function myfunction(id) {
-        document.getElementById("button-delete").value=id;
+        document.getElementById("button-delete").value = id;
     }
 </script>
 

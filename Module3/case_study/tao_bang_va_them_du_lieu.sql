@@ -367,10 +367,18 @@ p_so_luong);
 end;
 // delimiter ;
 
--- drop procedure if exists show_info_about_service_used_by_customer;
--- delimiter //
--- create procedure show_info_about_service_used_by_customer(
--- p_id_hop_dong int)
--- begin
--- select 
- select * from khach_hang;
+select * from hop_dong;
+select kh.id_khach_hang,ho_ten,ngay_sinh,sdt
+from khach_hang kh
+join hop_dong hd on hd.id_khach_hang= kh.id_khach_hang
+where date(now()) < ngay_ket_thuc
+group by hd.id_khach_hang;
+
+select * from hop_dong;
+select * from hop_dong_chi_tiet;
+select * from dich_vu_di_kem;
+select dvdk.id_dich_vu_di_kem,ten_dich_vu_di_kem,gia,don_vi,trang_thai_kha_dung,ngay_lam_hop_dong,ngay_ket_thuc,hd.id_hop_dong
+from dich_vu_di_kem dvdk
+join hop_dong_chi_tiet hdct on hdct.id_dich_vu_di_kem=dvdk.id_dich_vu_di_kem
+join hop_dong hd on hd.id_hop_dong= hdct.id_hop_dong 
+where date(now()) < ngay_ket_thuc and id_khach_hang=1;

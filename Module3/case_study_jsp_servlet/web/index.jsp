@@ -52,7 +52,7 @@
                     <a class="dropdown-item" href="/service?action=add" methods="get">Create</a>
                     <a class="dropdown-item" href="#">Edit</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="/service">Show List</a>
                 </div>
             </li>
             <li class="nav-item dropdown">

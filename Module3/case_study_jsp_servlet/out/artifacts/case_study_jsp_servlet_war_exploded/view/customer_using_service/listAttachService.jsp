@@ -13,58 +13,45 @@
     <div class=""><img src="https://cdn.nhanlucnganhluat.vn/uploads/images/051D288B/logo/2018-12/Logo-FURAMA-RESORT.jpg"
                        height="60" width="60"/></div>
 </div>
-<h1 class="d-flex justify-content-center">Customer List</h1>
+<h1 class="d-flex justify-content-center">Customer Using Service List</h1>
 <c:if test="${message!=null}">
     <p>${message} </p>
 </c:if>
 <p>
-    <a href="/">Back to home</a>
+    <a href="/customerUsing">Back to List Customer Using Service</a>
 </p>
-<div class="col d-flex">
-    <form class="form-inline my-2 my-lg-0 d-flex" action="/customer?action=search" method="post">
-        <input class="form-control mr-sm-2" type="search" name="nameSearch" placeholder="Search" aria-label="Search">
-        <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <form>
-    <button type="button" class="btn btn-primary">
-        <a style="color: white" href="/customerUsing">Show Customer Using Service</a>
-    </button>
-    </form>
-</div>
 <table id="tableCustomer" class="table table-striped table-bordered" style="width: 100%">
     <thead>
     <tr>
-        <th>ID</th>
-        <th>Id Type Customer</th>
-        <th>Name</th>
-        <th>Birthday</th>
-        <th>Email</th>
+        <th>Id Contract</th>
+        <th>Id Attach Service</th>
+        <th>Attach Service Name</th>
+        <th>Attach Service Status</th>
+        <th>Contract Start Date</th>
+        <th>Contract End Date</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${customer}" var="customer">
+    <c:forEach items="${attachService}" var="attachService">
         <tr>
-            <td>${customer.idCustomer}</td>
-            <c:forEach var="type" items="${typeCustomer}">
-                <c:if test="${type.idTypeCustomer == customer.idTypeCustomer}">
-                    <td>${type.typeCustomerName}</td>
-                </c:if>
-            </c:forEach>
-            <td>${customer.name}</td>
-            <td>${customer.dayOfBirth}</td>
-            <td>${customer.email}</td>
+            <td>${attachService.contractId}</td>
+            <td>${attachService.attachServiceId}</td>
+            <td>${attachService.attachServiceName}</td>
+            <td>${attachService.attachServiceStatus}</td>
+            <td>${attachService.contractStartDate}</td>
+            <td>${attachService.contractEndDate}</td>
             <td>
                 <button type="button" class="btn btn-success"><a style="color: white"
-                                                                 href="/customer?action=edit&id=${customer.idCustomer}">Edit</a>
+                                                                 href="/service?action=edit&id=${attachService.contractId}">Edit</a>
                 </button>
             </td>
             <td>
-                <button onclick="myfunction(${customer.idCustomer})" type="button" id="delete" value="delete"
-                        class="btn btn-danger" data-toggle="modal"
+                <button onclick="myfunction(${attachService.contractId})" type="button" id="delete" value="delete" class="btn btn-danger" data-toggle="modal"
                         data-target="#myModal">Delete
                 </button>
+                <input type="hidden" value="${idCustomer}" name="idCustomer">
             </td>
         </tr>
     </c:forEach>
@@ -72,7 +59,7 @@
 </table>
 <div id="myModal" class="modal fade">
     <div class="modal-dialog modal-confirm">
-        <form action="/customer?action=delete" method="post">
+        <form action="/customerUsing?action=deleteAttachService" method="post">
             <div class="modal-content">
                 <div class="modal-header flex-column">
                     <div class="icon-box">
@@ -90,7 +77,7 @@
                     <button type="submit" class="btn btn-danger">
                         Delete
                     </button>
-                    <input type="hidden" id="button-delete" name="idCustomer">
+                    <input type="hidden" id="button-delete" name="contractId">
                 </div>
             </div>
         </form>
@@ -111,9 +98,8 @@
             "pageLength": 5,
         });
     });
-
     function myfunction(id) {
-        document.getElementById("button-delete").value = id;
+        document.getElementById("button-delete").value=id;
     }
 </script>
 

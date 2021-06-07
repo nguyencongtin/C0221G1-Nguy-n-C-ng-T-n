@@ -6,8 +6,22 @@ public class AttachService {
     private double attachServiceCost;
     private int attachServiceUnit;
     private String attachServiceStatus;
+    private String contractStartDate;
+    private String contractEndDate;
+    private int contractId;
 
     public AttachService() {
+    }
+
+    public AttachService(int contractId,int attachServiceId, String attachServiceName, double attachServiceCost, int attachServiceUnit, String attachServiceStatus, String contractStartDate, String contractEndDate) {
+        this.contractId= contractId;
+        this.attachServiceId = attachServiceId;
+        this.attachServiceName = attachServiceName;
+        this.attachServiceCost = attachServiceCost;
+        this.attachServiceUnit = attachServiceUnit;
+        this.attachServiceStatus = attachServiceStatus;
+        this.contractStartDate = contractStartDate;
+        this.contractEndDate = contractEndDate;
     }
 
     public AttachService(int attachServiceId, String attachServiceName, double attachServiceCost, int attachServiceUnit, String attachServiceStatus) {
@@ -23,6 +37,30 @@ public class AttachService {
         this.attachServiceCost = attachServiceCost;
         this.attachServiceUnit = attachServiceUnit;
         this.attachServiceStatus = attachServiceStatus;
+    }
+
+    public int getContractId() {
+        return contractId;
+    }
+
+    public void setContractId(int contractId) {
+        this.contractId = contractId;
+    }
+
+    public String getContractStartDate() {
+        return contractStartDate;
+    }
+
+    public void setContractStartDate(String contractStartDate) {
+        this.contractStartDate = contractStartDate;
+    }
+
+    public String getContractEndDate() {
+        return contractEndDate;
+    }
+
+    public void setContractEndDate(String contractEndDate) {
+        this.contractEndDate = contractEndDate;
     }
 
     public int getAttachServiceId() {

@@ -22,22 +22,22 @@ public class ServiceServiceImpl implements IServiceService {
 
     @Override
     public boolean deleteService(int id) {
-        return false;
+        return serviceRepository.deleteService(id);
     }
 
     @Override
     public boolean updateService(int id, Service service) {
-        return false;
+        return serviceRepository.updateService(id,service);
     }
 
     @Override
     public Service getServiceById(int id) {
-        return null;
+        return serviceRepository.getServiceById(id);
     }
 
     @Override
     public List<Service> findByName(String name) {
-        return null;
+        return serviceRepository.findByName(name);
     }
 
     @Override

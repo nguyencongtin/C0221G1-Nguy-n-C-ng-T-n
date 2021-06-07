@@ -14,6 +14,13 @@ public class Customer {
     public Customer() {
     }
 
+    public Customer(int idCustomer, String name, String dayOfBirth, String phoneNumber) {
+        this.idCustomer = idCustomer;
+        this.name = name;
+        this.dayOfBirth = dayOfBirth;
+        this.phoneNumber = phoneNumber;
+    }
+
     public Customer(int idTypeCustomer, String name, String dayOfBirth, String sex, String idCard, String phoneNumber, String email, String address) {
         this.idTypeCustomer = idTypeCustomer;
         this.name = name;

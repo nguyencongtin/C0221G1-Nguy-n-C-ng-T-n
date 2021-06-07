@@ -1,8 +1,6 @@
 package controller;
 
-import model.bean.Service;
-import model.bean.TypeRent;
-import model.bean.TypeService;
+import model.bean.*;
 import model.service.IServiceService;
 import model.service.impl.ServiceServiceImpl;
 
@@ -29,13 +27,13 @@ public class ServiceServlet extends HttpServlet {
                 add(request, response);
                 break;
             case "update":
-//                update(request, response);
+                update(request, response);
                 break;
             case "search":
-//                search(request,response);
+                search(request,response);
                 break;
             case "delete":
-//                delete(request, response);
+                delete(request, response);
                 break;
             default:
                 break;
@@ -49,14 +47,114 @@ public class ServiceServlet extends HttpServlet {
         }
         switch (action) {
             case "edit":
-//                showFormEdit(request,response);
+                showFormEdit(request,response);
                 break;
             case "add":
                 showFormCreate(request,response);
+                break;
             default:
-//                showEmployeeList(request, response);
+                showServiceList(request, response);
                 break;
 
+        }
+    }
+
+    private void search(HttpServletRequest request, HttpServletResponse response) {
+        String name=request.getParameter("nameSearch");
+        List<Service> serviceList = iServiceService.findByName(name);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/service/list.jsp");
+        request.setAttribute("serviceList", serviceList);
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void delete(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("idService"));
+        boolean check;
+        check= iServiceService.deleteService(id);
+        if(check)
+            try {
+                response.sendRedirect("/service");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+    }
+
+    private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
+        int idService = Integer.parseInt(request.getParameter("id"));
+        Service service= iServiceService.getServiceById(idService);
+        List<TypeRent> typeRentList= iServiceService.findByAllTypeRent();
+        List<TypeService> typeServiceList=iServiceService.findByAllTypeService();
+        RequestDispatcher requestDispatcher;
+        if(service==null){
+            requestDispatcher=request.getRequestDispatcher("/view/error-404.jsp");
+        }else {
+            requestDispatcher=request.getRequestDispatcher("/view/service/edit.jsp");
+            request.setAttribute("service",service);
+            request.setAttribute("typeRentList",typeRentList);
+            request.setAttribute("typeServiceList",typeServiceList);
+        }
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void update(HttpServletRequest request, HttpServletResponse response) {
+        int idService=Integer.parseInt(request.getParameter("id"));
+        String serviceName = request.getParameter("serviceName");
+        int serviceArea = Integer.parseInt(request.getParameter("serviceArea"));
+        int numberOfFloor = Integer.parseInt(request.getParameter("numberOfFloor"));
+        int serviceMaxPeople = Integer.parseInt(request.getParameter("serviceMaxPeople"));
+        double serviceCost = Double.parseDouble(request.getParameter("serviceCost"));
+        int rentTypeId = Integer.parseInt(request.getParameter("rentTypeId"));
+        int serviceTypeId = Integer.parseInt(request.getParameter("serviceTypeId"));
+        String standardRoom = request.getParameter("standardRoom");
+        String descriptionOtherConverience = request.getParameter("descriptionOtherConverience");
+        double poolArea = Double.parseDouble(request.getParameter("poolArea"));
+        Service service=new Service(serviceName,serviceArea,numberOfFloor,serviceMaxPeople,serviceCost,rentTypeId,serviceTypeId,standardRoom,descriptionOtherConverience,poolArea);
+        boolean check = iServiceService.updateService(idService,service);
+        if (check) {
+            request.setAttribute("message", "Edit is success");
+
+        } else {
+            request.setAttribute("message", "Edit is fail, something is wrong!!!");
+        }
+        request.setAttribute("service", service);
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/service/edit.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void showServiceList(HttpServletRequest request, HttpServletResponse response) {
+        List<Service> serviceList = iServiceService.findByAll();
+        List<TypeService> typeServiceList=iServiceService.findByAllTypeService();
+        List<TypeRent> typeRentList=iServiceService.findByAllTypeRent();
+        request.setAttribute("serviceList", serviceList);
+        request.setAttribute("typeServiceList", typeServiceList);
+        request.setAttribute("typeRentList", typeRentList);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/service/list.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput3">Birthday</label>
-                <input type="text" class="form-control" name="dayOfBirth" value="${customer.dayOfBirth}"
+                <input type="date" class="form-control" name="dayOfBirth" value="${customer.dayOfBirth}"
                        id="formGroupExampleInput3"
                        placeholder="Another input placeholder">
             </div>

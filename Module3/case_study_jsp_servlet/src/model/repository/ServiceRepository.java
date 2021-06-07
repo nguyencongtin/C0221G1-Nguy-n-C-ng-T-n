@@ -100,4 +100,103 @@ public class ServiceRepository {
         }
         return typeServiceList;
     }
+
+    public boolean deleteService(int id) {
+        boolean check = false;
+        Connection connection = baseRepository.connectDataBase();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from dich_vu where id_dich_vu=?");
+            preparedStatement.setInt(1, id);
+            check = preparedStatement.executeUpdate() > 0;
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
+
+    public boolean updateService(int id, Service service) {
+        boolean check = false;
+        Connection connection = baseRepository.connectDataBase();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("update dich_vu \n" +
+                    "set ten_dich_vu=?,dien_tich=?,so_tang=?,so_nguoi_toi_da=?,chi_phi_thue=?,id_kieu_thue=?,id_loai_dich_vu=?,trang_thai=?,dien_tich_ho_boi=?,kieu_phong=? where id_dich_vu=?");
+            preparedStatement.setString(1, service.getServiceName());
+            preparedStatement.setInt(2, service.getServiceArea());
+            preparedStatement.setInt(3, service.getNumberOfFloor());
+            preparedStatement.setInt(4, service.getServiceMaxPeople());
+            preparedStatement.setDouble(5, service.getServiceCost());
+            preparedStatement.setInt(6, service.getRentTypeId());
+            preparedStatement.setInt(7, service.getServiceTypeId());
+            preparedStatement.setString(8, service.getStandardRoom());
+            preparedStatement.setString(8, service.getDescriptionOtherConverience());
+            preparedStatement.setDouble(9,service.getPoolArea());
+            preparedStatement.setString(10,service.getStandardRoom());
+            preparedStatement.setInt(11,id);
+            check = preparedStatement.executeUpdate() > 0;
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
+
+    public Service getServiceById(int id) {
+        Connection connection = baseRepository.connectDataBase();
+        Service service = null;
+        try {
+            PreparedStatement statement = connection.prepareStatement("select * from dich_vu where id_dich_vu=?");
+            statement.setInt(1, id);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int idService = resultSet.getInt("id_dich_vu");
+                String serviceName = resultSet.getString("ten_dich_vu");
+                int serviceArea = resultSet.getInt("dien_tich");
+                int numberOfFloor = resultSet.getInt("so_tang");
+                int serviceMaxPeople = resultSet.getInt("so_nguoi_toi_da");
+                double serviceCost = resultSet.getDouble("chi_phi_thue");
+                int rentTypeId = resultSet.getInt("id_kieu_thue");
+                int serviceTypeId = resultSet.getInt("id_loai_dich_vu");
+                String standardRoom = resultSet.getString("kieu_phong");
+                String descriptionOtherConverience = resultSet.getString("trang_thai");
+                double poolArea = resultSet.getDouble("dien_tich_ho_boi");
+                service= new Service(idService,serviceName,serviceArea,numberOfFloor,serviceMaxPeople,serviceCost,rentTypeId,serviceTypeId,standardRoom,descriptionOtherConverience,poolArea);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return service;
+    }
+
+    public List<Service> findByName(String name) {
+        Connection connection = baseRepository.connectDataBase();
+        List<Service> serviceList = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("select* from dich_vu where ten_dich_vu like ?");
+            preparedStatement.setString(1, "%" + name + "%");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int idService = resultSet.getInt("id_dich_vu");
+                String serviceName = resultSet.getString("ten_dich_vu");
+                int serviceArea = resultSet.getInt("dien_tich");
+                int numberOfFloor = resultSet.getInt("so_tang");
+                int serviceMaxPeople = resultSet.getInt("so_nguoi_toi_da");
+                double serviceCost = resultSet.getDouble("chi_phi_thue");
+                int rentTypeId = resultSet.getInt("id_kieu_thue");
+                int serviceTypeId = resultSet.getInt("id_loai_dich_vu");
+                String standardRoom = resultSet.getString("kieu_phong");
+                String descriptionOtherConverience = resultSet.getString("trang_thai");
+                double poolArea = resultSet.getDouble("dien_tich_ho_boi");
+                Service service = new Service(idService,serviceName,serviceArea,numberOfFloor,serviceMaxPeople,serviceCost,rentTypeId,serviceTypeId,standardRoom,descriptionOtherConverience,poolArea);
+                serviceList.add(service);
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return serviceList;
+    }
 }
