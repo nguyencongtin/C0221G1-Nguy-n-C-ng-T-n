@@ -39,6 +39,7 @@ public class AttachService {
         this.attachServiceStatus = attachServiceStatus;
     }
 
+
     public int getContractId() {
         return contractId;
     }

@@ -1,6 +1,7 @@
 package model.repository;
 
 import model.bean.AttachService;
+import model.bean.Contract;
 import model.bean.Customer;
 import model.bean.Service;
 
@@ -72,6 +73,29 @@ public class CustomerUsingServiceRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("delete from hop_dong where id_hop_dong=?");
             preparedStatement.setInt(1, id);
+            check = preparedStatement.executeUpdate() > 0;
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
+
+    public boolean updateContract(int id, Contract contract) {
+        boolean check = false;
+        Connection connection = baseRepository.connectDataBase();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("update hop_dong \n" +
+                    "set id_nhan_vien=?,id_khach_hang=?,id_dich_vu=?,ngay_lam_hop_dong=?,ngay_ket_thuc=?,tien_dat_coc=?,tong_tien=? where id_hop_dong=?");
+            preparedStatement.setInt(1, contract.getEmployeeId());
+            preparedStatement.setInt(2, contract.getCustomerId());
+            preparedStatement.setInt(3, contract.getServiceId());
+            preparedStatement.setString(4, contract.getContractStartDate());
+            preparedStatement.setString(5, contract.getContractEndDate());
+            preparedStatement.setDouble(6, contract.getContractDeposit());
+            preparedStatement.setDouble(7, contract.getContractTotalMoney());
+            preparedStatement.setInt(8, id);
             check = preparedStatement.executeUpdate() > 0;
             preparedStatement.close();
             connection.close();

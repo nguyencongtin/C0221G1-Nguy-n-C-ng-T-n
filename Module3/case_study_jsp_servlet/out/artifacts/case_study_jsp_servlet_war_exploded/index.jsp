@@ -104,10 +104,6 @@
         </div>
     </div>
 </div>
-
-
-
-
 <div class="container-fluid bg-light d-flex justify-content-center align-items-center" >
     <p>Footer</p>
 </div>

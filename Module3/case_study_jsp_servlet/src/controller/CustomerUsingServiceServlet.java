@@ -1,6 +1,7 @@
 package controller;
 
 import model.bean.AttachService;
+import model.bean.Contract;
 import model.bean.Customer;
 import model.service.ICustomerUsingServiceService;
 import model.service.impl.CustomerUsingServiceServiceImpl;
@@ -24,29 +25,65 @@ public class CustomerUsingServiceServlet extends HttpServlet {
             action = "";
         }
         switch (action) {
-            case "deleteAttachService":
-                deleteAttachService(request, response);
+            case "editAttachService":
+                editContract(request,response);
                 break;
-
+            case "deleteAttachService":
+                deleteContract(request, response);
+                break;
         }
     }
 
-    private void deleteAttachService(HttpServletRequest request, HttpServletResponse response) {
-        int idCustomer = Integer.parseInt(request.getParameter("idCustomer"));
-        List<AttachService> attachServiceList = iCustomerUsingServiceService.findByAllAttachService(idCustomer);
-        request.setAttribute("attachService", attachServiceList);
-        request.setAttribute("idCustomer", idCustomer);
-        int idContract = Integer.parseInt(request.getParameter("conTractId"));
-        boolean check = iCustomerUsingServiceService.deleteContract(idContract);
-        RequestDispatcher requestDispatcher;
-        String message;
+    private void editContract(HttpServletRequest request, HttpServletResponse response) {
+        int contractId=Integer.parseInt(request.getParameter("contractId"));
+        int employeeId=Integer.parseInt(request.getParameter("employeeId"));
+        int customerId=Integer.parseInt(request.getParameter("customerId"));
+        int serviceId=Integer.parseInt(request.getParameter("serviceId"));
+        String contractStartDate=request.getParameter("contractStartDate");
+        String contractEndDate=request.getParameter("contractEndDate");
+        double contractDeposit=Double.parseDouble("contractDeposit");
+        double contractTotalMoney=Double.parseDouble(request.getParameter("attachServiceUnit"));
+
+        Contract contract=new Contract(employeeId,customerId,serviceId,contractStartDate,contractEndDate,contractDeposit,contractTotalMoney);
+        boolean check = iCustomerUsingServiceService.updateContract(contractId,contract);
         if (check) {
-            message = "Delete is success";
+            request.setAttribute("message", "Edit is success");
+
         } else {
-            message = "Delete is fail,something wrong!!!";
+            request.setAttribute("message", "Edit is fail, something is wrong!!!");
         }
-        request.setAttribute("message", message);
-        showAttachService(request, response);
+        request.setAttribute("contract", contract);
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/customer_using_service/listAttachService.jsp");
+        try {
+            requestDispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void deleteContract(HttpServletRequest request, HttpServletResponse response) {
+        try{
+            int idContract = Integer.parseInt(request.getParameter("contractId"));
+//            int idCustomer = Integer.parseInt(request.getParameter("customerIdd"));
+//            List<AttachService> attachServiceList = iCustomerUsingServiceService.findByAllAttachService(idCustomer);
+//            request.setAttribute("attachService", attachServiceList);
+//            request.setAttribute("idCustomer", idCustomer);
+            boolean check = iCustomerUsingServiceService.deleteContract(idContract);
+            String message;
+            if (check) {
+                message = "Delete is success";
+            } else {
+                message = "Delete is fail,something wrong!!!";
+            }
+            request.setAttribute("message", message);
+            request.getRequestDispatcher("/view/customer_using_service/listAttachService.jsp").forward(request,response);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

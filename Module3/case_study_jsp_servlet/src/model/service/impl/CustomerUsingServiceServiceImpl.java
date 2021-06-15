@@ -1,6 +1,8 @@
 package model.service.impl;
 
 import model.bean.AttachService;
+
+import model.bean.Contract;
 import model.bean.Customer;
 import model.repository.CustomerUsingServiceRepository;
 import model.service.ICustomerUsingServiceService;
@@ -23,4 +25,11 @@ public class CustomerUsingServiceServiceImpl implements ICustomerUsingServiceSer
     public boolean deleteContract(int id) {
         return customerUsingServiceRepository.deleteContract(id);
     }
+
+    @Override
+    public boolean updateContract(int id, Contract contract) {
+        return false;
+    }
+
+
 }

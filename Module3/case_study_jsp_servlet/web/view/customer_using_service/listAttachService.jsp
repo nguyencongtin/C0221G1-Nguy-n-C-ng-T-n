@@ -44,14 +44,13 @@
             <td>${attachService.contractEndDate}</td>
             <td>
                 <button type="button" class="btn btn-success"><a style="color: white"
-                                                                 href="/service?action=edit&id=${attachService.contractId}">Edit</a>
+                                                                 href="/customerUsing?action=edit&id=${attachService.contractId}">Edit</a>
                 </button>
             </td>
             <td>
                 <button onclick="myfunction(${attachService.contractId})" type="button" id="delete" value="delete" class="btn btn-danger" data-toggle="modal"
                         data-target="#myModal">Delete
                 </button>
-                <input type="hidden" value="${idCustomer}" name="idCustomer">
             </td>
         </tr>
     </c:forEach>
@@ -77,7 +76,7 @@
                     <button type="submit" class="btn btn-danger">
                         Delete
                     </button>
-                    <input type="hidden" id="button-delete" name="contractId">
+                    <input type="hidden" id="contractId" name="contractId">
                 </div>
             </div>
         </form>
@@ -99,7 +98,7 @@
         });
     });
     function myfunction(id) {
-        document.getElementById("button-delete").value=id;
+        document.getElementById("contractId").value=id;
     }
 </script>
 

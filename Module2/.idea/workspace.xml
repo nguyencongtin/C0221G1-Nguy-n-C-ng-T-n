@@ -2,361 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06ee5e95-20a3-4462-a5bc-03205221d852" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bai19_StringRegex/thuc_hanh/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baiThi/commons/Exception.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baiThi/commons/GhiDocFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baiThi/controllers/DanhMuc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baiThi/controllers/QuanLyChucNang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baiThi/controllers/QuanLyNhapDuLieu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baiThi/models/Add.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baiThi/models/QuanLyDanhBa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baiThi/views/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/commons/FileUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/controllers/BookingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/controllers/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/controllers/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/controllers/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/controllers/ServicesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/exception/PersonException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/exception/ServicesException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/ExtraService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/Services.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/ShowInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/models/Villa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/services/CreatePerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/services/CreateServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/services/DisplayServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/validations/ValidateExtraService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/validations/ValidatePerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/validations/ValidateServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/views/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/caseStudy2/views/MoreServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/commons/CanBoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/commons/GhiDocFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/controllers/DanhMuc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/controllers/QuanLyChucNang.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/controllers/QuanLyNhapDuLieu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/data/nganhdaotao.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/models/CanBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/models/CongNhan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/models/KySu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/models/NhanVien.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/on_tap_OOP/views/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/bai_tap/ChuyenDoiTienTe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/bai_tap/DocSoThanhChu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/bai_tap/HienThiLoiChao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/thuc_hanh/ChiSoCanNang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/thuc_hanh/GiaiPhuongTrinhBac1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/thuc_hanh/KhaiBaoSuDungBien.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/thuc_hanh/KiemTraNamNhuan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/thuc_hanh/SuDungToanTu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/thuc_hanh/SystemTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai1/thuc_hanh/TinhSoNgayTrongThang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/bai_tap/trienKhaiPhuongThucCuaArrayList/MyArrayList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/bai_tap/trienKhaiPhuongThucCuaArrayList/TestMyArrayList$Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/bai_tap/trienKhaiPhuongThucCuaArrayList/TestMyArrayList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/bai_tap/trienKhaiPhuongThucCuaLinkedList/MyLinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/bai_tap/trienKhaiPhuongThucCuaLinkedList/MyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/bai_tap/trienKhaiPhuongThucCuaLinkedList/TestLinkedList$1Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/bai_tap/trienKhaiPhuongThucCuaLinkedList/TestLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/thuc_hanh/trienKhaiLopLinkedListDonGian/MyLinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/thuc_hanh/trienKhaiLopLinkedListDonGian/MyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/thuc_hanh/trienKhaiLopLinkedListDonGian/TestMyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/thuc_hanh/trienKhaiLopListDonGian/MyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai10/thuc_hanh/trienKhaiLopListDonGian/MyListTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai11/bai_tap/daoNguocPhanTuTrongMangSoNguyenSuDungStack/DaoNguocChuoi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai11/bai_tap/daoNguocPhanTuTrongMangSoNguyenSuDungStack/DaoNguocPhanTu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai11/bai_tap/kiemTraChuoiPalindromeSuDungQueue/Palindromes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai11/bai_tap/kiemTraDauNgoacTrongBieuThucSuDungStack/isParenthesisMatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai11/thuc_hanh/trienKhaiQueueSuDungDanhSachLienKet/MyLinkedListQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai11/thuc_hanh/trienKhaiQueueSuDungDanhSachLienKet/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai11/thuc_hanh/trienKhaiStackSuDungLopLinkedList/GenericStackClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai11/thuc_hanh/trienKhaiStackSuDungLopLinkedList/MyGenericStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/bai_tap/BinarySearchTree$TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/bai_tap/BinarySearchTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/bai_tap/DeleteBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/bai_tap/PreOrderBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/bai_tap/TestSearchBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/bai_tap/luyenTapSuDungArrayListLinkedList/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/bai_tap/luyenTapSuDungArrayListLinkedList/ProductManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/AbstractTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/BST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/TestBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/Tree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/hashMapLinkedHashMapTreeMap/TestMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/phanBietHashMapVaHashSet/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/phanBietHashMapVaHashSet/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/sapXepVoiComparableVaComparator/AgeComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/sapXepVoiComparableVaComparator/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai12/thuc_hanh/sapXepVoiComparableVaComparator/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai13/bai_tap/ChuoiLienTiepLonNhat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai13/bai_tap/ChuoiLonNhat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai13/bai_tap/caiDatThuatToanTimKiemNhiPhanSuDungDeQuy/BinarySearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai13/thuc_hanh/TinhDoPhucTapCuaThuatToan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai13/thuc_hanh/caiDatThuatToanTimKiemNhiPhanKhongSuDungDeQuy/BinarySearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai14/bai_tap/InsertionSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai14/thuc_hanh/CaiDatSapXepNoiBot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai14/thuc_hanh/SapXepChon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai14/thuc_hanh/SapXepNoiBot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai15/bai_tap/IsATriangle$IllegalTriangleException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai15/bai_tap/IsATriangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai15/thuc_hanh/ArrayIndexOutOfBoundsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai15/thuc_hanh/NumberFormatException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai16/bai_tap/bai1/CopyFile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai16/bai_tap/bai1/CopyFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai16/bai_tap/bai2/ReadFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai16/bai_tap/bai2/WriteFile.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai16/thuc_hanh/ReadFile.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai16/thuc_hanh/ReadFileExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai17/bai_tap/copyFileNhiPhan/CopyFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai17/bai_tap/quanLySanPham/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai17/bai_tap/quanLySanPham/ProductManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai17/bai_tap/quanLySanPham/source.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai17/thuc_hanh/CopyFileDungLuongLon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai17/thuc_hanh/test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai17/thuc_hanh/test2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai19/bai_tap/Craw.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai19/bai_tap/ValidateSoDienThoai.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai19/bai_tap/ValidateTenLop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai19/thuc_hanh/Craw/CrawlSongExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai19/thuc_hanh/ValidateAccount/AccountExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai19/thuc_hanh/ValidateAccount/AccountExampleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai19/thuc_hanh/ValidateEmail/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai19/thuc_hanh/ValidateEmail/ValidateEmail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai2/bai_tap/HienThi20SoNguyenToDauTien.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai2/bai_tap/HienThiCacLoaiHinh.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai2/bai_tap/HienThiCacSoNguyenToNhoHon100.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai2/thuc_hanh/KiemTraSoNguyenTo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai2/thuc_hanh/ThietKeMenuChoUngDung.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai2/thuc_hanh/TimUocSoChungLonNhat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai2/thuc_hanh/UngDungTinhTienLai.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/bai_tap/DemSoLanXuatHienTrongChuoi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/bai_tap/GopMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/bai_tap/ThemPhanTuCuaMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/bai_tap/TimGiaTriNhoNhatTrongMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/bai_tap/TimPhanTuLonNhatTrongMang2Chieu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/bai_tap/TongCacSoOMotCotXacDinh.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/bai_tap/TongDuongCheoMaTranHinhVuong.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/bai_tap/XoaPhanTuCuaMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/thuc_hanh/ChuongTrinhChuyenDoiNhietDo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/thuc_hanh/DaoNguocCacPhanTuCuaMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/thuc_hanh/TimGiaTriLonNhatTrongMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/thuc_hanh/TimGiaTriNhoNhat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai3/thuc_hanh/TimGiaTriTrongMang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai4/bai_tap/XayDungLopFan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai4/bai_tap/XayDungLopQuadraticEquation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai4/bai_tap/XayDungLopStopWatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/bai_tap/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/bai_tap/TestCircle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Default/myPack/B.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Default/pack/A.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Private/A.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Private/Simple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Private/Test$A.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Private/Test$Simple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Private/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Protected/myPack/B.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Protected/pack/A.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Public/myPack/B.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/AccessModifier/Public/pack/A.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/StaticMethod/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/StaticMethod/TestStaticMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/StaticProperty/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai5/thuc_hanh/StaticProperty/TestStaticProperty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/bai_tap/Bai1/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/bai_tap/Bai1/CircleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/bai_tap/Bai1/Cylinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/bai_tap/Bai2/Point2D.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/bai_tap/Bai2/Point3D.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/bai_tap/Bai3/MoveablePoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/bai_tap/Bai3/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/thuc_hanh/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/thuc_hanh/CircleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/thuc_hanh/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/thuc_hanh/RectangleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/thuc_hanh/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/thuc_hanh/ShapeTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/thuc_hanh/Square.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai6/thuc_hanh/SquareTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/bai_tap/TrienKhaiInterfaceColorableChoCacLopHinhHoc/Colorable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/bai_tap/TrienKhaiInterfaceColorableChoCacLopHinhHoc/MainColorable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/bai_tap/TrienKhaiInterfaceResizeableChoCacLopHinhHoc/MainResize.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/bai_tap/TrienKhaiInterfaceResizeableChoCacLopHinhHoc/Resizeable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/AbstractAndInterfaceTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Chicken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Tiger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/edible/Edible.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Apple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Fruit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Orange.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/TrienKhaiInterfaceComparableChoCacLopHinhHoc/ComparableCircle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/TrienKhaiInterfaceComparableChoCacLopHinhHoc/ComparableCircleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/TrienKhaiInterfaceComparatorDeSoSanhCacLopHinhHoc/CircleComparator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai7/thuc_hanh/TrienKhaiInterfaceComparatorDeSoSanhCacLopHinhHoc/CircleComparatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai8/bai_tap/TennisGame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai8/thuc_hanh/doiTenBienVaTachHang/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai8/thuc_hanh/tachBien/FizzBuzz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module2/bai8/thuc_hanh/tachPhuongThuc/Cylinder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/bai_tap/ChuyenDoiTienTe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/bai_tap/ChuyenDoiTienTe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/bai_tap/DocSoThanhChu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/bai_tap/DocSoThanhChu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/bai_tap/HienThiLoiChao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/bai_tap/HienThiLoiChao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/thuc_hanh/ChiSoCanNang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/thuc_hanh/ChiSoCanNang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/thuc_hanh/GiaiPhuongTrinhBac1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/thuc_hanh/GiaiPhuongTrinhBac1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/thuc_hanh/KhaiBaoSuDungBien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/thuc_hanh/KhaiBaoSuDungBien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/thuc_hanh/KiemTraNamNhuan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/thuc_hanh/KiemTraNamNhuan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/thuc_hanh/SuDungToanTu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/thuc_hanh/SuDungToanTu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/thuc_hanh/SystemTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/thuc_hanh/SystemTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai1/thuc_hanh/TinhSoNgayTrongThang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai1_IntroductionToJava/thuc_hanh/TinhSoNgayTrongThang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai10/bai_tap/trienKhaiPhuongThucCuaArrayList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai10_DSADanhSach/bai_tap/trienKhaiPhuongThucCuaArrayList/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai10/bai_tap/trienKhaiPhuongThucCuaArrayList/TestMyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai10_DSADanhSach/bai_tap/trienKhaiPhuongThucCuaArrayList/TestMyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai10/bai_tap/trienKhaiPhuongThucCuaLinkedList/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai10_DSADanhSach/bai_tap/trienKhaiPhuongThucCuaLinkedList/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai10/bai_tap/trienKhaiPhuongThucCuaLinkedList/TestLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai10_DSADanhSach/bai_tap/trienKhaiPhuongThucCuaLinkedList/TestLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai10/thuc_hanh/trienKhaiLopLinkedListDonGian/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai10_DSADanhSach/thuc_hanh/trienKhaiLopLinkedListDonGian/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai10/thuc_hanh/trienKhaiLopLinkedListDonGian/TestMyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai10_DSADanhSach/thuc_hanh/trienKhaiLopLinkedListDonGian/TestMyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai10/thuc_hanh/trienKhaiLopListDonGian/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai10_DSADanhSach/thuc_hanh/trienKhaiLopListDonGian/MyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai10/thuc_hanh/trienKhaiLopListDonGian/MyListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai10_DSADanhSach/thuc_hanh/trienKhaiLopListDonGian/MyListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai11/bai_tap/daoNguocPhanTuTrongMangSoNguyenSuDungStack/DaoNguocChuoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai11_StackQueue/bai_tap/daoNguocPhanTuTrongMangSoNguyenSuDungStack/DaoNguocChuoi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai11/bai_tap/daoNguocPhanTuTrongMangSoNguyenSuDungStack/DaoNguocPhanTu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai11_StackQueue/bai_tap/daoNguocPhanTuTrongMangSoNguyenSuDungStack/DaoNguocPhanTu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai11/bai_tap/kiemTraChuoiPalindromeSuDungQueue/Palindromes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai11_StackQueue/bai_tap/kiemTraChuoiPalindromeSuDungQueue/Palindromes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai11/bai_tap/kiemTraDauNgoacTrongBieuThucSuDungStack/isParenthesisMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai11_StackQueue/bai_tap/kiemTraDauNgoacTrongBieuThucSuDungStack/isParenthesisMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai11/thuc_hanh/trienKhaiQueueSuDungDanhSachLienKet/MyLinkedListQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai11_StackQueue/thuc_hanh/trienKhaiQueueSuDungDanhSachLienKet/MyLinkedListQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai11/thuc_hanh/trienKhaiQueueSuDungDanhSachLienKet/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai11_StackQueue/thuc_hanh/trienKhaiQueueSuDungDanhSachLienKet/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai11/thuc_hanh/trienKhaiStackSuDungLopLinkedList/GenericStackClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai11_StackQueue/thuc_hanh/trienKhaiStackSuDungLopLinkedList/GenericStackClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai11/thuc_hanh/trienKhaiStackSuDungLopLinkedList/MyGenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai11_StackQueue/thuc_hanh/trienKhaiStackSuDungLopLinkedList/MyGenericStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/bai_tap/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/bai_tap/BinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/bai_tap/DeleteBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/bai_tap/DeleteBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/bai_tap/PreOrderBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/bai_tap/PreOrderBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/bai_tap/TestSearchBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/bai_tap/TestSearchBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/bai_tap/luyenTapSuDungArrayListLinkedList/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/bai_tap/luyenTapSuDungArrayListLinkedList/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/bai_tap/luyenTapSuDungArrayListLinkedList/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/bai_tap/luyenTapSuDungArrayListLinkedList/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/AbstractTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/caiDatCayTimKiemNhiPhan/AbstractTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/caiDatCayTimKiemNhiPhan/BST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/TestBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/caiDatCayTimKiemNhiPhan/TestBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/caiDatCayTimKiemNhiPhan/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/caiDatCayTimKiemNhiPhan/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/caiDatCayTimKiemNhiPhan/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/hashMapLinkedHashMapTreeMap/TestMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/hashMapLinkedHashMapTreeMap/TestMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/phanBietHashMapVaHashSet/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/phanBietHashMapVaHashSet/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/phanBietHashMapVaHashSet/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/phanBietHashMapVaHashSet/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/sapXepVoiComparableVaComparator/AgeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/sapXepVoiComparableVaComparator/AgeComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/sapXepVoiComparableVaComparator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/sapXepVoiComparableVaComparator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai12/thuc_hanh/sapXepVoiComparableVaComparator/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai12_CollectionFramework/thuc_hanh/sapXepVoiComparableVaComparator/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai13/bai_tap/ChuoiLienTiepLonNhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai13_ThuatToanTimKiem/bai_tap/ChuoiLienTiepLonNhat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai13/bai_tap/ChuoiLonNhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai13_ThuatToanTimKiem/bai_tap/ChuoiLonNhat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai13/bai_tap/caiDatThuatToanTimKiemNhiPhanSuDungDeQuy/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai13_ThuatToanTimKiem/bai_tap/caiDatThuatToanTimKiemNhiPhanSuDungDeQuy/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai13/thuc_hanh/TinhDoPhucTapCuaThuatToan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai13_ThuatToanTimKiem/thuc_hanh/TinhDoPhucTapCuaThuatToan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai13/thuc_hanh/caiDatThuatToanTimKiemNhiPhanKhongSuDungDeQuy/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai13_ThuatToanTimKiem/thuc_hanh/caiDatThuatToanTimKiemNhiPhanKhongSuDungDeQuy/BinarySearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai14/bai_tap/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai14_ThuatToanSapXep/bai_tap/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai14/thuc_hanh/CaiDatSapXepNoiBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai14_ThuatToanSapXep/thuc_hanh/CaiDatSapXepNoiBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai14/thuc_hanh/SapXepChon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai14_ThuatToanSapXep/thuc_hanh/SapXepChon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai14/thuc_hanh/SapXepNoiBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai14_ThuatToanSapXep/thuc_hanh/SapXepNoiBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai15/bai_tap/IsATriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai15_ExceptionDebug/bai_tap/IsATriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai15/thuc_hanh/ArrayIndexOutOfBoundsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai15_ExceptionDebug/thuc_hanh/ArrayIndexOutOfBoundsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai15/thuc_hanh/NumberFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai15_ExceptionDebug/thuc_hanh/NumberFormatException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai16/bai_tap/bai1/CopyFile" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai16_IOTextFile/bai_tap/bai1/CopyFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai16/bai_tap/bai1/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai16_IOTextFile/bai_tap/bai1/CopyFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai16/bai_tap/bai2/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai16_IOTextFile/bai_tap/bai2/ReadFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai16/bai_tap/bai2/WriteFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai16_IOTextFile/bai_tap/bai2/WriteFile.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai16/thuc_hanh/ReadFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai16_IOTextFile/thuc_hanh/ReadFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai16/thuc_hanh/ReadFileExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai16_IOTextFile/thuc_hanh/ReadFileExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai17/bai_tap/copyFileNhiPhan/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai17_IOBinaryFileSerialization/bai_tap/copyFileNhiPhan/CopyFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai17/bai_tap/quanLySanPham/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai17_IOBinaryFileSerialization/bai_tap/quanLySanPham/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai17/bai_tap/quanLySanPham/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai17_IOBinaryFileSerialization/bai_tap/quanLySanPham/ProductManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai17/bai_tap/quanLySanPham/source.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai17_IOBinaryFileSerialization/bai_tap/quanLySanPham/source.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai17/thuc_hanh/CopyFileDungLuongLon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai17_IOBinaryFileSerialization/thuc_hanh/CopyFileDungLuongLon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai17/thuc_hanh/test" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai17_IOBinaryFileSerialization/thuc_hanh/test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai17/thuc_hanh/test2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai17_IOBinaryFileSerialization/thuc_hanh/test2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai19/bai_tap/Craw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai19_StringRegex/bai_tap/Craw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai19/bai_tap/ValidateSoDienThoai.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai19_StringRegex/bai_tap/ValidateSoDienThoai.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai19/bai_tap/ValidateTenLop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai19_StringRegex/bai_tap/ValidateTenLop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai19/thuc_hanh/Craw/CrawlSongExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai19_StringRegex/thuc_hanh/Craw/CrawlSongExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai19/thuc_hanh/ValidateAccount/AccountExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai19_StringRegex/thuc_hanh/ValidateAccount/AccountExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai19/thuc_hanh/ValidateAccount/AccountExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai19_StringRegex/thuc_hanh/ValidateAccount/AccountExampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai19/thuc_hanh/ValidateEmail/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai19_StringRegex/thuc_hanh/ValidateEmail/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai19/thuc_hanh/ValidateEmail/ValidateEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai19_StringRegex/thuc_hanh/ValidateEmail/ValidateEmail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai2/bai_tap/HienThi20SoNguyenToDauTien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2_LoopInJava/bai_tap/HienThi20SoNguyenToDauTien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai2/bai_tap/HienThiCacLoaiHinh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2_LoopInJava/bai_tap/HienThiCacLoaiHinh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai2/bai_tap/HienThiCacSoNguyenToNhoHon100.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2_LoopInJava/bai_tap/HienThiCacSoNguyenToNhoHon100.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai2/thuc_hanh/KiemTraSoNguyenTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2_LoopInJava/thuc_hanh/KiemTraSoNguyenTo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai2/thuc_hanh/ThietKeMenuChoUngDung.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2_LoopInJava/thuc_hanh/ThietKeMenuChoUngDung.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai2/thuc_hanh/TimUocSoChungLonNhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2_LoopInJava/thuc_hanh/TimUocSoChungLonNhat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai2/thuc_hanh/UngDungTinhTienLai.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai2_LoopInJava/thuc_hanh/UngDungTinhTienLai.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/bai_tap/DemSoLanXuatHienTrongChuoi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/bai_tap/DemSoLanXuatHienTrongChuoi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/bai_tap/GopMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/bai_tap/GopMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/bai_tap/ThemPhanTuCuaMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/bai_tap/ThemPhanTuCuaMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/bai_tap/TimGiaTriNhoNhatTrongMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/bai_tap/TimGiaTriNhoNhatTrongMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/bai_tap/TimPhanTuLonNhatMang2Chieu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/bai_tap/TimPhanTuLonNhatMang2Chieu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/bai_tap/TongCacSoOMotCotXacDinh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/bai_tap/TongCacSoOMotCotXacDinh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/bai_tap/TongDuongCheoMaTranHinhVuong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/bai_tap/TongDuongCheoMaTranHinhVuong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/bai_tap/XoaPhanTuCuaMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/bai_tap/XoaPhanTuCuaMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/thuc_hanh/ChuongTrinhChuyenDoiNhietDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/thuc_hanh/ChuongTrinhChuyenDoiNhietDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/thuc_hanh/DaoNguocCacPhanTuCuaMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/thuc_hanh/DaoNguocCacPhanTuCuaMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/thuc_hanh/TimGiaTriLonNhatTrongMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/thuc_hanh/TimGiaTriLonNhatTrongMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/thuc_hanh/TimGiaTriNhoNhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/thuc_hanh/TimGiaTriNhoNhat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai3/thuc_hanh/TimGiaTriTrongMang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai3_ArrayMethodInJava/thuc_hanh/TimGiaTriTrongMang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai4/bai_tap/XayDungLopFan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai4_ClassOOP/bai_tap/XayDungLopFan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai4/bai_tap/XayDungLopQuadraticEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai4_ClassOOP/bai_tap/XayDungLopQuadraticEquation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai4/bai_tap/XayDungLopStopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai4_ClassOOP/bai_tap/XayDungLopStopWatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/bai_tap/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/bai_tap/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/bai_tap/TestCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/bai_tap/TestCircle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Default/myPack/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Default/myPack/B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Default/pack/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Default/pack/A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Private/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Private/A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Private/Simple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Private/Simple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Private/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Private/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Protected/myPack/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Protected/myPack/B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Protected/pack/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Protected/pack/A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Public/myPack/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Public/myPack/B.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/AccessModifier/Public/pack/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/AccessModifier/Public/pack/A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/StaticMethod/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/StaticMethod/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/StaticMethod/TestStaticMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/StaticMethod/TestStaticMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/StaticProperty/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/StaticProperty/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai5/thuc_hanh/StaticProperty/TestStaticProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai5_AccessModifierStaticMethodStaticProperty/thuc_hanh/StaticProperty/TestStaticProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/bai_tap/Bai1/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/bai_tap/Bai1/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/bai_tap/Bai1/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/bai_tap/Bai1/CircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/bai_tap/Bai1/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/bai_tap/Bai1/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/bai_tap/Bai2/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/bai_tap/Bai2/Point2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/bai_tap/Bai2/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/bai_tap/Bai2/Point3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/bai_tap/Bai3/MoveablePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/bai_tap/Bai3/MoveablePoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/bai_tap/Bai3/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/bai_tap/Bai3/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/thuc_hanh/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/thuc_hanh/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/thuc_hanh/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/thuc_hanh/CircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/thuc_hanh/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/thuc_hanh/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/thuc_hanh/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/thuc_hanh/RectangleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/thuc_hanh/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/thuc_hanh/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/thuc_hanh/ShapeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/thuc_hanh/ShapeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/thuc_hanh/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/thuc_hanh/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai6/thuc_hanh/SquareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai6_Inheritance/thuc_hanh/SquareTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/bai_tap/TrienKhaiInterfaceColorableChoCacLopHinhHoc/Colorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/bai_tap/TrienKhaiInterfaceColorableChoCacLopHinhHoc/Colorable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/bai_tap/TrienKhaiInterfaceColorableChoCacLopHinhHoc/MainColorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/bai_tap/TrienKhaiInterfaceColorableChoCacLopHinhHoc/MainColorable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/bai_tap/TrienKhaiInterfaceResizeableChoCacLopHinhHoc/MainResize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/bai_tap/TrienKhaiInterfaceResizeableChoCacLopHinhHoc/MainResize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/bai_tap/TrienKhaiInterfaceResizeableChoCacLopHinhHoc/Resizeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/bai_tap/TrienKhaiInterfaceResizeableChoCacLopHinhHoc/Resizeable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/AbstractAndInterfaceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/AbstractAndInterfaceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Chicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Chicken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Tiger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/LopAnimalVaInterfaceEdible/Animal/Tiger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/edible/Edible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/LopAnimalVaInterfaceEdible/edible/Edible.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Apple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Fruit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Fruit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Orange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/LopAnimalVaInterfaceEdible/fruit/Orange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/TrienKhaiInterfaceComparableChoCacLopHinhHoc/ComparableCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/TrienKhaiInterfaceComparableChoCacLopHinhHoc/ComparableCircle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/TrienKhaiInterfaceComparableChoCacLopHinhHoc/ComparableCircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/TrienKhaiInterfaceComparableChoCacLopHinhHoc/ComparableCircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/TrienKhaiInterfaceComparatorDeSoSanhCacLopHinhHoc/CircleComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/TrienKhaiInterfaceComparatorDeSoSanhCacLopHinhHoc/CircleComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai7/thuc_hanh/TrienKhaiInterfaceComparatorDeSoSanhCacLopHinhHoc/CircleComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai7_AbstractClassInterface/thuc_hanh/TrienKhaiInterfaceComparatorDeSoSanhCacLopHinhHoc/CircleComparatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai8/bai_tap/TennisGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai8_CleanCodeRefactoring/bai_tap/TennisGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai8/thuc_hanh/doiTenBienVaTachHang/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai8_CleanCodeRefactoring/thuc_hanh/doiTenBienVaTachHang/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai8/thuc_hanh/tachBien/FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai8_CleanCodeRefactoring/thuc_hanh/tachBien/FizzBuzz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bai8/thuc_hanh/tachPhuongThuc/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bai8_CleanCodeRefactoring/thuc_hanh/tachPhuongThuc/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module 1/Git_HTML/Thuc_hanh/my-new-project/my-new-project" beforeDir="false" afterPath="$PROJECT_DIR$/../module 1/Git_HTML/Thuc_hanh/my-new-project/my-new-project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module3/08_css_bootstrap_co_ban/exercise/xay_dung_landing_page/xay_dung_landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module3/08_css_bootstrap_co_ban/exercise/xay_dung_landing_page/xay_dung_landing_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module 1/Git_HTML/Thuc_hanh/my-new-project/my-new-project" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -526,6 +173,7 @@
       <workItem from="1620353624796" duration="54000" />
       <workItem from="1620354155291" duration="6844000" />
       <workItem from="1620606445271" duration="15567000" />
+      <workItem from="1622002913489" duration="1043000" />
     </task>
     <servers />
   </component>
@@ -533,6 +181,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="274" y="21" key="#Tomcat_Server" timestamp="1622003233515">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="274" y="21" key="#Tomcat_Server/0.0.1366.728@0.0.1366.728" timestamp="1622003233515" />
     <state x="458" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619495322484">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -549,10 +201,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1618796119507" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1620353692995">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1622003788730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1620353692995" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1622003788730" />
     <state width="1366" height="199" key="GridCell.Tab.0.bottom" timestamp="1620627282993">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -585,18 +237,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1366" height="226" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1618370938270" />
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1620606751373">
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1622003013757">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1620606751373" />
+    <state x="378" y="186" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1622003013757" />
     <state x="725" y="177" key="extract.method.dialog" timestamp="1618302191067">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="725" y="177" key="extract.method.dialog/0.0.1366.728@0.0.1366.728" timestamp="1618302191067" />
-    <state x="65" y="0" key="new project wizard" timestamp="1619682218196">
+    <state x="65" y="0" key="new project wizard" timestamp="1622003906948">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1619682218196" />
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1622003906948" />
     <state x="389" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1620623367319">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
