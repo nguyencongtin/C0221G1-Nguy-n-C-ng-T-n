@@ -12,11 +12,11 @@ import service.IConvertService;
 public class ConvertController {
     @Autowired
     IConvertService iConvertService;
-    @GetMapping
+    @GetMapping(value="")
     public String home (){
         return "home";
     }
-    @PostMapping("/convert")
+    @PostMapping(value="/convert")
     public String convert(@RequestParam double number, double typeViet, double typeMy, Model model){
         model.addAttribute("money",iConvertService.convert(number,typeViet,typeMy));
         return "home";

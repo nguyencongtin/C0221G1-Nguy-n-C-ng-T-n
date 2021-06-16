@@ -13,11 +13,11 @@ public class TranslateController {
     @Autowired
     ITranslateService iTranslateService;
 
-    @GetMapping
+    @GetMapping(value="")
     public String index() {
         return "index";
     }
-    @PostMapping("/translate")
+    @PostMapping(value="/translate")
     public String translate(@RequestParam String word, Model model){
         model.addAttribute("word",iTranslateService.translate(word));
         return index();
