@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="ung_dung_quan_ly_khach_hang">
+    <output-path>$PROJECT_DIR$/out/artifacts/ung_dung_quan_ly_khach_hang</output-path>
+    <root id="root">
+      <element id="archive" name="ung_dung_quan_ly_khach_hang.jar">
+        <element id="module-output" name="ung_dung_quan_ly_khach_hang" />
+      </element>
+      <element id="artifact" artifact-name="Gradle : org.example : ung_dung_quan_ly_khach_hang-1.0-SNAPSHOT.war" />
+    </root>
+  </artifact>
+</component>
