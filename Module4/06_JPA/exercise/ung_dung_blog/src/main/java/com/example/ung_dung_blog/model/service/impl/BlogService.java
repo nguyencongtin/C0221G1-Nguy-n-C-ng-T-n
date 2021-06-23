@@ -32,9 +32,9 @@ public class BlogService implements IBlogService {
         iBlogRepository.deleteById(id);
     }
 
-    @Override
-    public void createBlog(String auther, String content) {
-        iBlogRepository.createBlog(auther, content);
-    }
+//    @Override
+//    public void createBlog(String auther, String content) {
+//        iBlogRepository.createBlog(auther, content);
+//    }
 
 }

@@ -15,22 +15,17 @@ public class Blog {
     public Blog() {
     }
 
-    public Blog(long id, String content, String auther) {
+    public Blog(Long id, String content, String auther) {
         this.id = id;
         this.content = content;
         this.auther = auther;
     }
 
-    public Blog(String content, String auther) {
-        this.content = content;
-        this.auther = auther;
-    }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

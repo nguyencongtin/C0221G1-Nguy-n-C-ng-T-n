@@ -13,5 +13,5 @@ public interface IBlogService {
 
     void remove(Long id);
 
-    void createBlog(String auther, String content);
+//    void createBlog(String auther, String content);
 }

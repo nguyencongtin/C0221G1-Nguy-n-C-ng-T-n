@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IBlogRepository extends JpaRepository<Blog, Long> {
-    @Query (value="insert into blog (auther,content)\n" +
-            "values (?1,?2);",nativeQuery=true)
-    void createBlog(String auther, String content);
+//    @Query (value="insert into blog (auther,content)\n" +
+//            "values (?1,?2);",nativeQuery=true)
+//    void createBlog(String auther, String content);
 }
