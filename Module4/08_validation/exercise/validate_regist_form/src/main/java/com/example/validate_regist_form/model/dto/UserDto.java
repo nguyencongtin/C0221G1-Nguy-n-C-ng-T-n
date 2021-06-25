@@ -25,7 +25,7 @@ public class UserDto implements Validator {
     @NotBlank(message = "Please input last name invalid")
     private String lastName;
 
-    @Pattern(regexp ="^(84|0[3|5|7|8|9])+([0-9]{8})$",message = "Please input phone number invalid")
+    @Pattern(regexp ="^(84|0[3|5|7|8|9])([0-9]{8})$",message = "Please input phone number invalid")
     private String phoneNumber;
 
     @Min(value = 18,message = "Please input age more than 18")
@@ -62,7 +62,7 @@ public class UserDto implements Validator {
         if (userDto.age > 150) {
             errors.rejectValue("age", "age.valid", "Please input age less than 150");
         }
-        if (userDto.phoneNumber.matches("^(84|0[3|5|7|8|9])+([0-9]{8})$")) {
+        if (!userDto.phoneNumber.matches("^(84|0[3|5|7|8|9])([0-9]{8})$")) {
             errors.rejectValue("phoneNumber", "phoneNumber.valid", "Please input phone number invalid");
         }
     }
