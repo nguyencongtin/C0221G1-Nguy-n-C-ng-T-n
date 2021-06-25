@@ -14,6 +14,7 @@ public interface IBlogRepository extends JpaRepository<Blog, Long> {
     Page<Blog> searchByName(Pageable pageable, String nameSearch);
 //    Cách 2: dùng interface
 //    Page<Blog> findAllByAutherContaining(Pageable pageable,String nameSearch);
+    @Query(value="select * from blog order by `date` desc",nativeQuery=true)
     Page<Blog> findAllByOrderByDate(Pageable pageable);
 
 //    @Query (value="insert into blog (auther,content)\n" +

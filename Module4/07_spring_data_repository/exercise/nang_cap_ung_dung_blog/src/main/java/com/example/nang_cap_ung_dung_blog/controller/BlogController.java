@@ -26,7 +26,7 @@ public class BlogController {
     private ICategoryService iCategoryService;
 
     @GetMapping(value="")
-    public String goHome(Model model, @RequestParam Optional<String> nameSearch, @RequestParam Optional<Integer> page){
+    public String goHome(Model model, @RequestParam Optional<String> nameSearch, @RequestParam Optional<Integer> page ){
         Page<Blog> blog;
         Pageable pageable= PageRequest.of(page.orElse(0),5, Sort.by("date").descending());
         if (nameSearch.isPresent()) {
