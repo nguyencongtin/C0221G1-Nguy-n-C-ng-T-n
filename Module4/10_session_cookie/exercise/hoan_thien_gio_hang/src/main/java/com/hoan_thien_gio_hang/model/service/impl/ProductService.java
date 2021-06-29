@@ -1,8 +1,8 @@
-package com.them_san_pham_vao_gio_hang.model.service.impl;
+package com.hoan_thien_gio_hang.model.service.impl;
 
-import com.them_san_pham_vao_gio_hang.model.entity.Product;
-import com.them_san_pham_vao_gio_hang.model.repository.IProductRepository;
-import com.them_san_pham_vao_gio_hang.model.service.IProductService;
+import com.hoan_thien_gio_hang.model.entity.Product;
+import com.hoan_thien_gio_hang.model.repository.IProductRepository;
+import com.hoan_thien_gio_hang.model.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

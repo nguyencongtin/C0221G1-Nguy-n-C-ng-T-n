@@ -1,9 +1,11 @@
-package com.them_san_pham_vao_gio_hang.model.entity;
+package com.hoan_thien_gio_hang.model.entity;
+
+import lombok.Data;
 
 import javax.persistence.*;
 
+@Data
 @Entity
-@Table(name = "product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,15 +13,6 @@ public class Product {
     private String name;
     private double price;
     private String description;
-
-    public Product() {
-    }
-
-    public Product(String name, double price, String description) {
-        this.name = name;
-        this.price = price;
-        this.description = description;
-    }
 
     public Long getId() {
         return id;

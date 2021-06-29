@@ -1,6 +1,6 @@
-package com.them_san_pham_vao_gio_hang.controller;
+package com.hoan_thien_gio_hang.controller;
 
-import com.them_san_pham_vao_gio_hang.model.Cart;
+import com.hoan_thien_gio_hang.model.Cart;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
