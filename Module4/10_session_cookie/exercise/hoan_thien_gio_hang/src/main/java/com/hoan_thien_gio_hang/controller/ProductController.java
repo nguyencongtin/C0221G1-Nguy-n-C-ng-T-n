@@ -30,9 +30,9 @@ public class ProductController {
         return modelAndView;
     }
     @GetMapping("/detail/{id}")
-    public String showDetail(Model model) {
-        model.addAttribute("products", productService.findAll());
-        return "redirect:/showDetail";
+    public String showDetail(@PathVariable Long id, Model model) {
+        model.addAttribute("product", productService.findById2(id));
+        return "/showDetail";
     }
 
     @GetMapping("/add/{id}")

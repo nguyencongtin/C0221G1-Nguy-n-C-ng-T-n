@@ -8,32 +8,12 @@
 <p>
     <a href="/shop">Shop</a>
 </p>
-<form th:action="@{/shop}" th:object="${cart}" method="post">
-    <table border="1">
-        <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Description</th>
-        </tr>
-        <tr th:each="product: ${products}">
-            <td th:text="${product.getKey().name}"></td>
-            <td>
-                <a  th:href="@{/add/__${product.getKey().id}__(action='-')}"
-                    th:text="${'-'}"></a>
-                <span th:text="${product.getValue()}"></span>
-                <a  th:href="@{/add/__${product.getKey().id}__(action='+')}"
-                    th:text="${'+'}" ></a>
-            </td>
-            <td th:text="${product.getKey().price}" ></td>
-            <td th:text="${product.getKey().description}" ></td>
-        </tr>
-        <tr>
-            <td>Total</td>
-            <td></td>
-            <td th:text="${cart.countTotalPayment()}"></td>
-        </tr>
-    </table>
-</form>
+<td th:text="'name: '+${product.name}"></td>
+<br>
+<td th:text="'price: '+${product.price}"></td>
+<br>
+<td th:text="'description: '+${product.description}"></td>
+<br>
+<td><a th:href="@{/add/__${product.id}__(action='list')}">Add To Cart</a></td>
 </body>
 </html>
