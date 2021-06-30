@@ -12,6 +12,8 @@
 <br>
 <td th:text="'price: '+${product.price}"></td>
 <br>
+<td><img th:src="@{${product.image}}" height="200" width="252"/></td>
+<br>
 <td th:text="'description: '+${product.description}"></td>
 <br>
 <td><a th:href="@{/add/__${product.id}__(action='list')}">Add To Cart</a></td>
