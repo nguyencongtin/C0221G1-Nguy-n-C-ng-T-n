@@ -71,7 +71,7 @@
                     <p th:errors="*{maxPeople}"></p>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="standardRoom" >
                 <label class="col-md-4 control-label ">Standard Room </label>
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
@@ -81,7 +81,7 @@
                     <p th:errors="*{standardRoom}"></p>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="description">
                 <label class="col-md-4 control-label ">Description  </label>
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
@@ -91,7 +91,7 @@
                     <p th:errors="*{description}"></p>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="poolArea">
                 <label class="col-md-4 control-label ">PoolArea  </label>
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
@@ -101,7 +101,7 @@
                     <p th:errors="*{poolArea}"></p>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="floors">
                 <label class="col-md-4 control-label ">Number Of Floor  </label>
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
@@ -117,7 +117,7 @@
                 <div class="col-md-4 selectContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                        <select th:field="*{serviceType}" class="form-control selectpicker">
+                        <select th:field="*{serviceType}" class="form-control selectpicker" id="serviceType" onchange="display()">
                             <option th:each="c : ${serviceTypes}"
                                     th:value="${c.id}"
                                     th:text="${c.name}">
@@ -153,5 +153,26 @@
     </form>
 </div>
 </div>
+<script>
+    function display(){
+        let id=document.getElementById('serviceType').value;
+        if (id==1){
+            document.getElementById("standardRoom").style.display='block';
+            document.getElementById("description").style.display='block';
+            document.getElementById("poolArea").style.display='block';
+            document.getElementById("floors").style.display='block';
+        }else if (id==2){
+            document.getElementById("standardRoom").style.display='block';
+            document.getElementById("description").style.display='block';
+            document.getElementById("poolArea").style.display='none';
+            document.getElementById("floors").style.display='block';
+        }else {
+            document.getElementById("standardRoom").style.display='none';
+            document.getElementById("description").style.display='none';
+            document.getElementById("poolArea").style.display='none';
+            document.getElementById("floors").style.display='none';
+        }
+    }
+</script>
 </body>
 </html>

@@ -28,22 +28,13 @@ public class ServiceDto implements Validator {
     @NotNull
     private Integer maxPeople;
 
-    @NotBlank
     private String standardRoom;
-    @NotBlank
     private String description;
-    @NotNull
     private Double poolArea;
-    @NotNull
     private Integer floors;
-
-
     private boolean flag;
-
     private RentType rentType;
     private ServiceType serviceType;
-
-
 
     @Override
     public boolean supports(Class<?> clazz) {

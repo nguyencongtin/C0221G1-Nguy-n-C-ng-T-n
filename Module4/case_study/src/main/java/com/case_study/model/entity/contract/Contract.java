@@ -32,7 +32,7 @@ public class Contract {
     @JoinColumn(nullable = false)
     private Service service;
     private boolean flag;
-    @OneToMany(mappedBy = "id")
+    @OneToMany(mappedBy = "contract")
     private List<ContractDetail> contractDetailList;
 
     public Contract() {

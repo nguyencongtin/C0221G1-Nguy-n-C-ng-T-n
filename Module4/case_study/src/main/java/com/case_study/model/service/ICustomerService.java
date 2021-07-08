@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface ICustomerService extends IGeneralService<Customer> {
     List<CustomerType> findAllCustomerType();
+    List<Customer> findAll();
+
 }

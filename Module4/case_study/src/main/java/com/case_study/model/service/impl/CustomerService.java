@@ -45,4 +45,10 @@ public class CustomerService implements ICustomerService {
     public List<CustomerType> findAllCustomerType() {
         return (List<CustomerType>) customerTypeRepository.findAll();
     }
+
+    @Override
+    public List<Customer> findAll() {
+        return (List<Customer>) customerRepository.findAll();
+    }
+
 }

@@ -50,11 +50,6 @@ public class EmployeeDto implements Validator {
             errors.rejectValue("birthday", "birthday.valid", "FU");
         }
 
-
-
-
-
-
         if (employeeDto.idCard.matches("")) {
             errors.rejectValue("idCard", "idCard.valid", "Please input idCard");
         }else if (!employeeDto.idCard.matches("^\\d{9}$")){
