@@ -20,7 +20,7 @@ public class Contract {
     private String endDate;
     @Column(nullable = false)
     private Double deposit;
-    @Column(nullable = false)
+
     private Double totalMoney;
     @ManyToOne
     @JoinColumn(nullable = false)

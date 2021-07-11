@@ -27,6 +27,7 @@
     <thead>
     <tr>
         <th scope="col">Id</th>
+        <th scope="col">Code</th>
         <th scope="col">Type</th>
         <th scope="col">Name</th>
         <th scope="col">Birthday</th>
@@ -40,6 +41,7 @@
     <tr th:each="c,status : ${customers}">
         <!--        <td th:text="${status.count}"></td>-->
         <td th:text="${c.id}"></td>
+        <td th:text="${c.code}"></td>
         <td th:text="${c.customerType.name}">customerType</td>
         <td th:text="${c.name}">name</td>
         <td th:text="${c.birthday}">birthday</td>

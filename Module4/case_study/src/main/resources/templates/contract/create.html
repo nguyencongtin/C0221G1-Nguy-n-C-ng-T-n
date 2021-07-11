@@ -14,7 +14,7 @@
 
 <div class="container">
     <form  th:object="${contractDto}" class="well form-horizontal" action="/contract/create-contract" method="post">
-        <a href="/home"><button type="button" class="btn btn-warning" ><span class="glyphicon glyphicon-chevron-left"></span> Back to home</button></a>
+        <a href="/index"><button type="button" class="btn btn-warning" ><span class="glyphicon glyphicon-chevron-left"></span> Back to home</button></a>
         <fieldset>
             <!-- Form Name -->
             <legend><center><h2><b>Create Form <br> <span th:text="${msg}"></span> </b></h2></center></legend><br>
@@ -49,18 +49,6 @@
                     <p th:errors="*{deposit}"></p>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-md-4 control-label ">Total Money</label>
-                <div class="col-md-4 inputGroupContainer">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
-                        <input  th:field="*{totalMoney}" placeholder="Total Money" class="form-control"  type="number">
-                    </div>
-                    <p th:errors="*{totalMoney}"></p>
-                </div>
-            </div>
-
-
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Employee Name</label>

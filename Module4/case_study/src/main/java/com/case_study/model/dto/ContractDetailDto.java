@@ -12,7 +12,6 @@ public class ContractDetailDto {
     @NotNull
     private Integer quantity;
 
-
     public Long getId() {
         return id;
     }

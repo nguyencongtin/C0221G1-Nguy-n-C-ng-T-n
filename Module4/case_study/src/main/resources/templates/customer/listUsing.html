@@ -38,7 +38,7 @@
     <tbody>
     <tr th:each="c,status : ${contracts}">
         <!--        <td th:text="${status.count}"></td>-->
-        <td th:text="${c.customer.id}"></td>
+        <td th:text="${c.customer.code}"></td>
         <td th:text="${c.customer.name}"></td>
         <td th:text="${c.startDate}"></td>
         <td th:text="${c.endDate}"></td>

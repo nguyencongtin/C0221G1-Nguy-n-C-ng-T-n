@@ -9,23 +9,26 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Data
 public class ServiceDto implements Validator {
-
     private Long id;
-    @NotBlank
+    @NotBlank(message = "Please Input")
     private String code;
-    @NotBlank
+    @NotBlank(message = "Please Input")
     private String name;
-    @NotNull
+    @NotNull(message = "Please Input")
+    @Min(value = 0, message = "Please input positive integer")
     private Integer area;
-    @NotNull
+    @NotNull(message = "Please Input")
+    @Min(value = 0, message = "Please input positive integer")
     private Double cost;
-    @NotNull
+    @NotNull(message = "Please Input")
+    @Min(value = 0, message = "Please input positive integer")
     private Integer maxPeople;
 
     private String standardRoom;
@@ -43,11 +46,9 @@ public class ServiceDto implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-        Regex regex=new Regex();
         ServiceDto serviceDto = (ServiceDto) target;
-        if (serviceDto.code.matches("")){
-
+        if (!serviceDto.code.matches("^DV-\\d{4}$")) {
+            errors.rejectValue("code", "code.valid", "Please input invalid DV-XXXX");
         }
-
     }
 }

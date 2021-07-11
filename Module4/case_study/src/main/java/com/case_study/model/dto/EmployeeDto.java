@@ -1,17 +1,14 @@
 package com.case_study.model.dto;
 
 import com.case_study.model.common.Regex;
-import com.case_study.model.entity.contract.Contract;
 import com.case_study.model.entity.employee.Division;
 import com.case_study.model.entity.employee.EducationDegree;
 import com.case_study.model.entity.employee.Position;
-import com.case_study.model.entity.employee.User;
 import lombok.Data;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.validation.constraints.NotNull;
 
 @Data
 public class EmployeeDto implements Validator {
@@ -19,6 +16,7 @@ public class EmployeeDto implements Validator {
     private String name;
     private String birthday;
     private String idCard;
+    @NotNull
     private Double salary;
     private String phone;
     private String email;
@@ -47,7 +45,7 @@ public class EmployeeDto implements Validator {
         if (employeeDto.birthday.matches("")) {
             errors.rejectValue("birthday", "birthday.valid", "Please input birthday");
         }else if (!employeeDto.birthday.matches(regex.DATE)){
-            errors.rejectValue("birthday", "birthday.valid", "FU");
+            errors.rejectValue("birthday", "birthday.valid", "Please input in valid");
         }
 
         if (employeeDto.idCard.matches("")) {
@@ -56,16 +54,16 @@ public class EmployeeDto implements Validator {
             errors.rejectValue("idCard", "idCard.valid", "Please input in valid");
 
         }
-
-
-
         if (employeeDto.phone.matches("")) {
             errors.rejectValue("phone", "phone.valid", "Please input phone");
         }else if (!employeeDto.phone.matches(regex.PHONENUMBER)){
-            errors.rejectValue("phone", "phone.valid", "Please input phone");
+            errors.rejectValue("phone", "phone.valid", "Please input in valid");
 
         }
 
+        if (employeeDto.salary <= 0) {
+            errors.rejectValue("salary", "salary.valid", "Please input positive integer");
+        }
 
 
         if (employeeDto.email.matches("")) {
