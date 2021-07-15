@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -21,9 +22,13 @@ public class CustomerController {
     @Autowired
     ICustomerService customerService;
     @GetMapping({"","/search"})
-    public ModelAndView showList(@RequestParam("search") Optional<String> search, @PageableDefault(value = 2) Pageable pageable){
-        return new ModelAndView("customer/list","customers",customerService.findAll(search.orElse(""),pageable)).
-                addObject("search",search.orElse(""));
+    public ModelAndView showList(@RequestParam("search") Optional<String> search,@RequestParam("birthday") Optional<String> birthday,
+                                 @RequestParam("idCard") Optional<String> idCard,
+                                 @PageableDefault(value = 2) Pageable pageable){
+        return new ModelAndView("customer/list","customers",customerService.findAll(search.orElse(""),birthday.orElse(""),idCard.orElse(""),pageable)).
+                addObject("search",search.orElse(""))
+                .addObject("birthday",search.orElse(""))
+                .addObject("idCard",search.orElse(""));
     }
 
     
@@ -73,13 +78,18 @@ public class CustomerController {
     }
 
     @PostMapping("/delete")
-    public ModelAndView delete(@RequestParam Long id){
-        Customer customer= customerService.findById(id);
-        if (customer==null){
-            return new ModelAndView("error-404");
+    public ModelAndView delete(@RequestParam Optional<List<Long>> id ){
+        if (id.isPresent()){
+            for (Long i : id.get()){
+                Customer customer= customerService.findById(i);
+                if (customer==null){
+                    return new ModelAndView("error-404");
+                }
+                customer.setFlag(true);
+                customerService.save(customer);
+                return new ModelAndView("redirect:/customer");
+            }
         }
-        customer.setFlag(true);
-        customerService.save(customer);
         return new ModelAndView("redirect:/customer");
         }
 }
