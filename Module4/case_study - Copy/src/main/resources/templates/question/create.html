@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+     <form  th:object="${productDto}" class="well form-horizontal" action="/product/create" method="post">
+         <a href="/product"><button type="button" class="btn btn-warning" ><span class="glyphicon glyphicon-chevron-left"></span> Back to list</button></a>
+
+         <fieldset>
+            <!-- Form Name -->
+            <legend><center><h2><b>Create Form</b></h2></center></legend><br>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Category</label>
+                <div class="col-md-4 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <select th:field="*{category}" class="form-control selectpicker">
+                            <option th:each="c : ${categorys}"
+                                    th:value="${c.categoryId}"
+                                    th:text="${c.categoryName}">
+                            </option>
+                        </select>
+                    </div>
+                    <p th:errors="*{category}"></p>
+                </div>
+            </div>
+
+             <div class="form-group">
+                 <label class="col-md-4 control-label ">productName</label>
+                 <div class="col-md-4 inputGroupContainer">
+                     <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                         <input  th:field="*{productName}" placeholder="productName" class="form-control"  type="text">
+                     </div>
+                     <p th:errors="*{productName}"></p>
+                 </div>
+             </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label ">Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input  th:field="*{productCost}" placeholder="productCost" class="form-control"  type="text">
+                    </div>
+                    <p th:errors="*{productCost}"></p>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">productAmount</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input  th:field="*{productAmount}" placeholder="productAmount" class="form-control"  type="text">
+                    </div>
+                    <p th:errors="*{productAmount}"></p>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">productColor</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input th:field="*{productColor}" placeholder="productColor"  class="form-control" type="text">
+                    </div>
+                    <p th:errors="*{productColor}"></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">productDescription</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input th:field="*{productDescription}" placeholder="productDescription" class="form-control" type="text">
+                    </div>
+                    <p th:errors="*{productDescription}"></p>
+                </div>
+            </div>
+
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <button type="submit" class="btn btn-warning" ><span class="glyphicon glyphicon-send"></span>Submit</button>
+        </fieldset>
+    </form>
+</div>
+</div>
+
+
+
+</body>
+</html>
