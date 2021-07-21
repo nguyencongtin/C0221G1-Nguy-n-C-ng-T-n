@@ -1,0 +1,223 @@
+package model.repository;
+
+import model.bean.User;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+public class UserRepository {
+    BaseRepository baseRepository= new BaseRepository();
+    final  String SELECT_ALL_USERS="select* from users";
+    final String SELECT_USER_BY_ID="select* from users\n" +
+            "where id=?;";
+    final String UPDATE_USER_BY_ID ="update users \n" +
+            "set name =?, email=?,country=?" +
+            "where id =?;";
+    final String INSERT_USER="INSERT INTO users" + "  (name, email, country) VALUES " +
+            " (?, ?, ?);";
+    final String DELETE_USER= "delete from users\n"+
+            "where id =?;";
+    final String SELECT_BY_NAME="select * from users order by `name`;";
+    final String FIND_BY_COUNTRY="select* from users\n" +
+            "where country like ?;";
+    final String query = "{CALL get_user_by_id(?)}";
+    String query1 = "{CALL get_user_by_id(?)}";
+    public List<User> findByAll() {
+        // kết nối databe=> lấy lại cái danh sách
+        Connection connection =baseRepository.connectDataBase();
+        List<User> userList = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);
+            ResultSet resultSet= preparedStatement.executeQuery();// dùng cho câu lệnh select;
+            while (resultSet.next()){ // duyệt trên từng hàng của bảng
+                int id =resultSet.getInt("id");
+                String name =resultSet.getString("name");
+                String email =resultSet.getString("email");
+                String country =resultSet.getString("country");
+                User user = new User(id,name,email,country);
+                userList.add(user);
+            }
+//            while (resultSet.next()){ // duyệt trên từng hàng của bảng
+//                int id =resultSet.getInt(1);
+//                String name =resultSet.getString(2);
+//                int age =resultSet.getInt(3);
+//                String email =resultSet.getString(4);
+//                Student  student = new Student(id,name,age,email);
+//                studentList.add(student);
+//            }
+//            preparedStatement.close();
+//            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return userList;
+    }
+
+    public User findById(int id) {
+        Connection connection =baseRepository.connectDataBase();
+        User user =null;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_ID);
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                int id1 =resultSet.getInt("id");
+                String name =resultSet.getString("name");
+                String email =resultSet.getString("email");
+                String country=resultSet.getString("country");
+                user = new User(id1,name,email,country);
+            }
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
+
+    public boolean update(int id, User user) {
+        Connection connection =baseRepository.connectDataBase();
+        boolean check=false;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USER_BY_ID);
+            preparedStatement.setString(1,user.getName());
+            preparedStatement.setString(2,user.getEmail());
+            preparedStatement.setString(3,user.getCountry());
+            preparedStatement.setInt(4,id);
+            check =preparedStatement.executeUpdate()>0;
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
+
+    public void insertUserStore(User user) throws SQLException {
+
+        try (Connection connection = baseRepository.connectDataBase();
+             CallableStatement callableStatement = connection.prepareCall(query);) {
+
+            callableStatement.setString(1, user.getName());
+
+            callableStatement.setString(2, user.getEmail());
+
+            callableStatement.setString(3, user.getCountry());
+
+            System.out.println(callableStatement);
+
+            callableStatement.executeUpdate();
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
+
+    }
+
+    public User getUserById(int id) {
+
+        User user = null;
+
+        try (Connection connection = baseRepository.connectDataBase();
+
+
+             CallableStatement callableStatement = connection.prepareCall(query1);) {
+
+            callableStatement.setInt(1, id);
+
+
+            ResultSet rs = callableStatement.executeQuery();
+
+            while (rs.next()) {
+
+                String name = rs.getString("name");
+
+                String email = rs.getString("email");
+
+                String country = rs.getString("country");
+
+                user = new User(id, name, email, country);
+
+            }
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+        }
+
+        return user;
+
+    }
+    public boolean add(User user) {
+        Connection connection=baseRepository.connectDataBase();
+        boolean check=false;
+        try{
+            PreparedStatement preparedStatement=connection.prepareStatement(INSERT_USER);
+            preparedStatement.setString(1,user.getName());
+            preparedStatement.setString(2,user.getEmail());
+            preparedStatement.setString(3,user.getCountry());
+            check =preparedStatement.executeUpdate()>0;
+            preparedStatement.close();
+            connection.close();
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
+
+    public boolean remove(int id) {
+        Connection connection=baseRepository.connectDataBase();
+        boolean check=false;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USER);
+            preparedStatement.setInt(1,id);
+            check =preparedStatement.executeUpdate()>0;
+            preparedStatement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return check;
+    }
+
+    public List<User> sortByName() {
+        List<User> users = new ArrayList<>();
+        try {
+            Connection connection = baseRepository.connectDataBase();
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_NAME);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country = resultSet.getString("country");
+                users.add(new User(id, name, email, country));
+            }
+        } catch (SQLException e) { e.printStackTrace();}
+        return users;
+    }
+
+    public List<User> findByCountry(String country) {
+        Connection connection = baseRepository.connectDataBase();
+        List<User> users = new ArrayList<>();
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_COUNTRY);
+            preparedStatement.setString(1,"%"+country+"%");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country1 = resultSet.getString("country");
+                users.add(new User(id, name, email, country1));
+            }
+        } catch (SQLException e) { e.printStackTrace();}
+        return users;
+    }
+    public static void main(String[] args) {
+//        UserRepository studentRepository = new UserRepository();
+//        System.out.println(studentRepository.findByAll().size());
+    }
+}

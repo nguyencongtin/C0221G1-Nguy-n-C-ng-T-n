@@ -1,0 +1,1 @@
+DROP Database my_database;

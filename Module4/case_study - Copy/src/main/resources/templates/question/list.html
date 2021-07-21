@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Product List</title>
+    <title>Question List</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/dataTables.bootstrap.min.css">
 </head>
@@ -11,46 +11,41 @@
     <div class=""><img src="https://cdn.nhanlucnganhluat.vn/uploads/images/051D288B/logo/2018-12/Logo-FURAMA-RESORT.jpg"
                        height="60" width="60"/></div>
 </div>
-<h1 class="d-flex justify-content-center">Product List</h1>
+<h1 class="d-flex justify-content-center">Question List</h1>
 <p>
     <a href="/">Back to home</a>
 </p>
 <div class="col d-flex">
     <form class="form-inline my-2 my-lg-0 d-flex" href="/customer/search">
-        <input class="form-control mr-sm-2" type="search" name="productName" placeholder="Search productName" aria-label="Search">
-        <input class="form-control mr-sm-2" type="search" name="productColor" placeholder="Search productColor" aria-label="Search">
-        <input class="form-control mr-sm-2" type="search" name="productDescription" placeholder="Search productDescription" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" name="title" placeholder="Search title" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" name="name" placeholder="Search name" aria-label="Search">
         <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
     </form>
 </div>
 <table class=" table">
-    <caption>List of users</caption>
+    <caption>List of Question</caption>
     <thead>
     <tr>
         <th scope="col">No</th>
-        <th scope="col">Name</th>
-        <th scope="col">Cost</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Color</th>
-        <th scope="col">Description</th>
-        <th scope="col">Category</th>
+        <th scope="col">Title</th>
+        <th scope="col">Question Type</th>
+        <th scope="col">Date</th>
+        <th scope="col">Status</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="c,status : ${products}">
-                <td th:text="${status.count + products.number * products.size }"></td>
+    <tr th:each="c,status : ${questions}">
+                <td th:text="${status.count + questions.number * questions.size }"></td>
 <!--        <td th:text="${c.id}"></td>-->
-        <td th:text="${c.productName}"></td>
-        <td th:text="${c.productCost}"></td>
-        <td th:text="${c.productAmount}"></td>
-        <td th:text="${c.productColor}"></td>
-        <td th:text="${c.productDescription}"></td>
-        <td th:text="${c.category.categoryName}"></td>
-        <td><button type="button" class="btn btn-success"><a style="color: white" th:href="@{/product/edit/{idc}(idc=${c.productId})}">Edit</a></button></td>
+        <td th:text="${c.title}"></td>
+        <td th:text="${c.questionType.name}"></td>
+        <td th:text="${c.date}"></td>
+        <td th:text="${c.questionStatus}"></td>
+        <td><button type="button" class="btn btn-success"><a style="color: white" th:href="@{/question/edit/{idc}(idc=${c.id})}">Edit</a></button></td>
         <td>
-            <input type="checkbox" class="listId" th:value="${c.productId}">
+            <input type="checkbox" class="listId" th:value="${c.id}">
         </td>
     </tr>
     <tr>
@@ -71,18 +66,18 @@
 
 <div class="">
 
-    <a class="btn glyphicon glyphicon-arrow-left text-black" th:href="@{'/product'(page=${products.number - 1},productName=${productName},productColor=${productColor},productDescription=${productDescription})}"
-       th:if="${products.hasPrevious()}"> Previous
+    <a class="btn glyphicon glyphicon-arrow-left text-black" th:href="@{'/question'(page=${questions.number - 1},productName=${productName},productColor=${productColor})}"
+       th:if="${questions.hasPrevious()}"> Previous
     </a>
 
-    <span th:each="p : ${#numbers.sequence(0,products.totalPages -1)}" th:if="${products.hasContent()}">
+    <span th:each="p : ${#numbers.sequence(0,questions.totalPages -1)}" th:if="${questions.hasContent()}">
           <a class="btn btn-outline-dark" style="text-decoration: none"
-             th:href="@{'/product'(page=${p},search=${search},birthday=${birthday},idCard=${idCard})}"
+             th:href="@{'/question'(page=${p},search=${search},birthday=${birthday},idCard=${idCard})}"
              th:text="${p +1}"
-             th:if="${(p >(products.number)-2)&&(p <(products.number+3))}"
+             th:if="${(p >(questions.number)-2)&&(p <(questions.number+3))}"
           ></a>
     </span>
-    <a class="btn glyphicon glyphicon-arrow-right text-black" th:href="@{'/product'(page=${products.number + 1},productName=${productName},productColor=${productColor},productDescription=${productDescription})}" th:if="${products.hasNext()}">
+    <a class="btn glyphicon glyphicon-arrow-right text-black" th:href="@{'/question'(page=${questions.number + 1},title=${title},name=${name})}" th:if="${questions.hasNext()}">
         Next
     </a>
 

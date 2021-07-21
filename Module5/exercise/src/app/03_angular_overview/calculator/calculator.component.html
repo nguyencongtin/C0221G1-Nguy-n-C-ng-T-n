@@ -1,0 +1,11 @@
+<input type="number" placeholder="input number 1" #num1>
+<input type="number" placeholder="input number 2" #num2>
+<select #select>
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<button value="calculate" (click)="calculator(num1.value, num2.value, select.value)">calculate</button>
+<br>
+{{result}}
