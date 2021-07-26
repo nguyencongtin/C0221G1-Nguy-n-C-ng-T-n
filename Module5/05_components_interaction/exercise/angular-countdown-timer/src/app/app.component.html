@@ -1,0 +1,4 @@
+<input [(ngModel)]="times">
+<app-countdown-timer (finish)="display($event)"  [seconds]="times"></app-countdown-timer>
+{{time}} <br>
+{{msg}}
