@@ -1,0 +1,7 @@
+<input  [(ngModel)]="word" type="text" placeholder="Enter your word ">
+<button [routerLink]="['/detail',word]">Submit</button>
+<!--  <button routerLink="/detail/{{word}}">Submit</button>|-->
+<!--  <a routerLink="/detail/{{word}}">Submit</a>|-->
+<!--  <a [routerLink]="['/detail', word]">Submit</a>-->
+<h1>{{word|json}}
+</h1>
