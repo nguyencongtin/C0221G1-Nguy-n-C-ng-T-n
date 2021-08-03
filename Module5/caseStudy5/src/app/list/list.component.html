@@ -1,0 +1,36 @@
+<input type="text" [(ngModel)]="nameSearch" placeholder="search by name">
+<input type="text" [(ngModel)]="emailSearch" placeholder="search by email">
+<input type="submit" (click)="search()">
+<a href="/customer/create">Create</a>
+
+<table border="1">
+  <tr>
+    <th>STT</th>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Type</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let c of customers| paginate:{itemsPerPage: 3, currentPage:page};index as i">
+    <td>{{i + page * 3 - 2}}</td>
+    <td>{{c.id}}</td>
+    <td>{{c.name}}</td>
+    <td>{{c.birthday}}</td>
+    <td>{{c.gender== 1? 'Male': c.gender==0?'Female': 'other'}}</td>
+    <td>{{c.email}}</td>
+    <td>{{c.customerType.name}}</td>
+    <td>
+        <button [routerLink]="['/customer/edit',c.id]">
+          Edit
+        </button>
+    </td>
+    <td>
+      <button (click)="delete(c.id)">Delete</button>
+    </td>
+  </tr>
+</table>
+<pagination-controls (pageChange)="page=$event" nextLabel="Next" previousLabel="Previous"></pagination-controls>

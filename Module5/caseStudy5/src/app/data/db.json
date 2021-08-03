@@ -1,0 +1,70 @@
+{
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "customers": [
+    {
+      "name": "Tín bụng siêu bự b",
+      "birthday": "1999-06-27",
+      "gender": "1",
+      "email": "habungbu@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "id": 20
+    },
+    {
+      "name": "Nguyen Nam",
+      "birthday": "2021-07-03",
+      "gender": "0",
+      "email": "online@gmail.com",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "id": 22
+    },
+    {
+      "name": "ffff",
+      "birthday": "2021-08-18",
+      "gender": "0",
+      "email": "ddd@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "id": 23
+    },
+    {
+      "name": "dsadas",
+      "birthday": "2021-08-04",
+      "gender": "1",
+      "email": "ddaaa@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "id": 24
+    }
+  ]
+}
